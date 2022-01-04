@@ -1,4 +1,5 @@
 import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import LeftMain from "./components/LeftMain";
 
@@ -25,15 +26,27 @@ const RightMain = styled.section`
   background-color: #546e7a;
 `;
 
-function App() {
+const TestHome = () => <div>Home</div>;
+const TestMe = () => <div>Me</div>;
+const TestPro = () => <div>Projects</div>;
+const NoMatch = () => <div>No</div>;
+
+const App = () => {
   return (
     <Container>
       <Main>
-        <LeftMain />
-        <RightMain></RightMain>
+        <LeftMain></LeftMain>
+        <RightMain>
+          <Routes>
+            <Route path="/" element={<TestHome />} />
+            <Route path="me" element={<TestMe />} />
+            <Route path="projects" element={<TestPro />} />
+            <Route path="*" element={<NoMatch />} />
+          </Routes>
+        </RightMain>
       </Main>
     </Container>
   );
-}
+};
 
 export default App;

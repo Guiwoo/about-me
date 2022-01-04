@@ -3,6 +3,8 @@ import styled from "styled-components";
 import centerImg from "../assets/img/fitSize.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
+import routeName from "../routeName";
 
 const LeftMainBox = styled.section`
   width: 20%;
@@ -56,8 +58,9 @@ const LeftMain = () => {
         </PhotoBox>
         <Navigation>
           <Description>
-            <div>About Me</div>
-            <div>Projects</div>
+            <Link to={routeName.home}>Home</Link>
+            <Link to={routeName.me}>About Me</Link>
+            <Link to={routeName.projects}>Projects</Link>
           </Description>
         </Navigation>
         <GithubBox>

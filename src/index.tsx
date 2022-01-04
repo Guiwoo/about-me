@@ -1,16 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { ThemeProvider } from "styled-components";
 import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 import { dark, light } from "./styles/my-theme";
 import GlobalStyle from "./styles/resetCss";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={dark}>
-      <GlobalStyle />
-      <App />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={dark}>
+        <GlobalStyle />
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
