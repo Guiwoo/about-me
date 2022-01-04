@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation } from "react-router";
 import styled from "styled-components";
 import routeName from "../routeName";
-import { NewLine } from "./Shared";
+import { NewLink } from "./Shared";
 
 const SNavigation = styled.div`
   display: flex;
@@ -18,18 +18,18 @@ const Navigation = () => {
   return (
     <SNavigation>
       <Description>
-        <NewLine current={pathname === routeName.home} to={routeName.home}>
+        <NewLink current={pathname === routeName.home} to={routeName.home}>
           Home
-        </NewLine>
-        <NewLine current={pathname === routeName.me} to={routeName.me}>
+        </NewLink>
+        <NewLink current={pathname === routeName.me} to={routeName.me}>
           About Me
-        </NewLine>
-        <NewLine
+        </NewLink>
+        <NewLink
           current={pathname === routeName.projects}
           to={routeName.projects}
         >
           Projects
-        </NewLine>
+        </NewLink>
       </Description>
     </SNavigation>
   );

@@ -37,13 +37,17 @@ const Nametag = styled.div`
 const GithubBox = styled.div`
   display: flex;
   justify-content: center;
+  text-align: center;
+  transform: translateY(400%);
 `;
 
 const ToGitHub = styled(FontAwesomeIcon)`
-  position: absolute;
   bottom: 40px;
   color: gray;
   font-size: 30px;
+  &:hover {
+    color: #ffa801;
+  }
 `;
 
 const LeftMain = () => {
@@ -56,7 +60,9 @@ const LeftMain = () => {
         <Nametag>Guiwoo Park</Nametag>
         <Navigation />
         <GithubBox>
-          <ToGitHub icon={faGithub} />
+          <a href="https://github.com/guiwoo">
+            <ToGitHub icon={faGithub} />
+          </a>
         </GithubBox>
       </Content>
     </LeftMainBox>
