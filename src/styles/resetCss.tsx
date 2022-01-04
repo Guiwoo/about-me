@@ -10,6 +10,10 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${(props) => props.theme.bgColor.main};
     box-sizing: border-box;
   }
+  a{
+    color:${(props) => props.theme.fontColor.main};
+    text-decoration: none;
+  }
 `;
 
 export default GlobalStyle;

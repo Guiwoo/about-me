@@ -3,8 +3,7 @@ import styled from "styled-components";
 import centerImg from "../assets/img/fitSize.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
-import routeName from "../routeName";
+import Navigation from "./Navigation";
 
 const LeftMainBox = styled.section`
   width: 20%;
@@ -29,13 +28,11 @@ const Image = styled.div`
   border-radius: 50%;
 `;
 
-const Navigation = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 20px 0px;
+const Nametag = styled.div`
+  margin-top: 10px;
+  font-size: 24px;
+  text-align: center;
 `;
-
-const Description = styled.div``;
 
 const GithubBox = styled.div`
   display: flex;
@@ -56,13 +53,8 @@ const LeftMain = () => {
         <PhotoBox>
           <Image />
         </PhotoBox>
-        <Navigation>
-          <Description>
-            <Link to={routeName.home}>Home</Link>
-            <Link to={routeName.me}>About Me</Link>
-            <Link to={routeName.projects}>Projects</Link>
-          </Description>
-        </Navigation>
+        <Nametag>Guiwoo Park</Nametag>
+        <Navigation />
         <GithubBox>
           <ToGitHub icon={faGithub} />
         </GithubBox>
