@@ -1,7 +1,31 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-//Page Fade in add
+const Ascale = keyframes`
+  0% {
+    opacity: 0.2;
+    transform: scale(4) translateX(300px);
+    filter: blur(10px);
+  }
+  50%,
+  85% {
+    opacity: 0.8;
+    transform: scale(1) translateX(0);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }`;
+
+const Afade = keyframes` 
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.8;
+	}
+`;
 
 const Container = styled.div`
   border-radius: 30px;
@@ -16,30 +40,26 @@ const FirstLayer = styled.div`
   height: 50%;
 `;
 
-const PersonalBox = styled.div`
-  width: 50%;
+const Box = styled.div`
   height: 100%;
+  width: 50%;
+  animation: ${Ascale} 2s linear forwards;
 `;
 
-const AdditionalBox = styled.div`
-  width: 50%;
-  height: 100%;
+const PersonalBox = styled(Box)`
+  animation-duration: 0.5s;
 `;
 
-const SecondLayer = styled.div`
-  display: flex;
-  width: 100%;
-  height: 50%;
+const AdditionalBox = styled(Box)`
+  animation-duration: 1s;
 `;
 
-const CareerBox = styled.div`
-  width: 50%;
-  height: 100%;
+const CareerBox = styled(Box)`
+  animation-duration: 1.5s;
 `;
 
-const EducationBox = styled.div`
-  width: 50%;
-  height: 100%;
+const EducationBox = styled(Box)`
+  animation-duration: 2s;
 `;
 
 const AboutMe = () => {
@@ -49,10 +69,10 @@ const AboutMe = () => {
         <PersonalBox>Personal</PersonalBox>
         <AdditionalBox>Additional</AdditionalBox>
       </FirstLayer>
-      <SecondLayer>
+      <FirstLayer>
         <CareerBox>Carrer</CareerBox>
         <EducationBox>Education</EducationBox>
-      </SecondLayer>
+      </FirstLayer>
     </Container>
   );
 };
