@@ -35,5 +35,7 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 - Found this : https://overreacted.io/making-setinterval-declarative-with-react-hooks/
 
 [x] - Right Background css from [Check here 🚀](https://cssgradient.io/)
+
 [] - Circle connect to my onw project page and Intro Page should connect
+
 [x] - Make Next Button

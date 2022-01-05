@@ -35,4 +35,15 @@ export const NewLink = styled(Link)<CurrentProps>`
   }
 `;
 
-export const NextBtn = styled.button``;
+export const GoNextBtn = styled(Link)`
+  position: absolute;
+  bottom: 10px;
+  right: 47%;
+  font-size: 18px;
+  opacity: 0.6;
+  transition: 0.3s all linear;
+  &:hover {
+    transform: translateY(-10px) scale(1.2);
+    color: #ffa801;
+  }
+`;

@@ -12,3 +12,9 @@ const SecondLayer = styled.div``;
 const CarrerBox = styled.div``;
 
 const EducationBox = styled.div``;
+
+const AboutMe = () => {
+  return <div>Hi</div>;
+};
+
+export default AboutMe;

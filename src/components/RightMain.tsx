@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
+import AboutMe from "../screen/AboutMe";
 import Home from "../screen/Home";
 
 const SRightMain = styled.section`
@@ -10,7 +11,6 @@ const SRightMain = styled.section`
   background-color: #546e7a;
 `;
 
-const TestMe = () => <div>hoit</div>;
 const TestPro = () => <div>Projects</div>;
 const NoMatch = () => <div>No</div>;
 
@@ -19,7 +19,7 @@ const RightMain = () => {
     <SRightMain>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="me" element={<TestMe />} />
+        <Route path="me" element={<AboutMe />} />
         <Route path="projects" element={<TestPro />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
