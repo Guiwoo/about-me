@@ -28,7 +28,7 @@ const DajngoMove = keyframes`
 const SDjango = styled(Items)`
   width: 70px;
   height: 70px;
-  animation: ${DajngoMove} 0.6s linear forwards;
+  animation: ${DajngoMove} 2.2s linear forwards;
 `;
 
 export const Django = () => <SDjango>Django</SDjango>;
@@ -48,7 +48,7 @@ const PythonMove = keyframes`
 const SPython = styled(Items)`
   width: 70px;
   height: 70px;
-  animation: ${PythonMove} 0.4s linear forwards;
+  animation: ${PythonMove} 1.6s linear forwards;
 `;
 
 export const Python = () => <SPython>Python</SPython>;
@@ -67,7 +67,7 @@ const MongoDBMove = keyframes`
 const SMongoDB = styled(Items)`
   width: 70px;
   height: 70px;
-  animation: ${MongoDBMove} 0.6s linear forwards;
+  animation: ${MongoDBMove} 1.8s linear forwards;
 `;
 
 export const MongoDb = () => <SMongoDB>MongoDB</SMongoDB>;
@@ -86,7 +86,7 @@ const PostSqlMove = keyframes`
 const PostSql = styled(Items)`
   width: 80px;
   height: 80px;
-  animation: ${PostSqlMove} 0.5s linear forwards;
+  animation: ${PostSqlMove} 1.7s linear forwards;
 `;
 
 export const PostSQL = () => <PostSql>PostgresSQL</PostSql>;
@@ -105,7 +105,7 @@ const GraphQlMove = keyframes`
 const SGraphQL = styled(Items)`
   width: 70px;
   height: 70px;
-  animation: ${GraphQlMove} 0.4s linear forwards;
+  animation: ${GraphQlMove} 1.6s linear forwards;
 `;
 
 export const GraphQL = () => <SGraphQL>GraphQL</SGraphQL>;
@@ -124,7 +124,7 @@ const RNMove = keyframes`
 const SRn = styled(Items)`
   width: 80px;
   height: 80px;
-  animation: ${RNMove} 0.6s linear forwards;
+  animation: ${RNMove} 1.8s linear forwards;
 `;
 
 export const Rn = () => <SRn>React-Native</SRn>;
@@ -143,7 +143,7 @@ const TsMove = keyframes`
 const STs = styled(Items)`
   width: 70px;
   height: 70px;
-  animation: ${TsMove} 0.5s linear forwards;
+  animation: ${TsMove} 1.7s linear forwards;
 `;
 
 export const Ts = () => <STs>TypeScript</STs>;
@@ -162,7 +162,7 @@ const NodeMove = keyframes`
 const Node = styled(Items)`
   width: 50px;
   height: 50px;
-  animation: ${NodeMove} 0.6s linear forwards;
+  animation: ${NodeMove} 1.8s linear forwards;
 `;
 
 export const NodeJs = () => <Node>NodeJs</Node>;
@@ -181,7 +181,7 @@ const ReactMove = keyframes`
 const SRct = styled(Items)`
   width: 70px;
   height: 70px;
-  animation: ${ReactMove} 0.3s linear forwards;
+  animation: ${ReactMove} 1.5s linear forwards;
 `;
 
 export const Rct = () => <SRct>React</SRct>;
@@ -200,7 +200,7 @@ const JsMove = keyframes`
 const SJs = styled(Items)`
   width: 70px;
   height: 70px;
-  animation: ${JsMove} 0.2s linear forwards;
+  animation: ${JsMove} 1.4s linear forwards;
 `;
 
 export const JsBox = () => <SJs>JavaScript</SJs>;
@@ -219,7 +219,7 @@ const CssMove = keyframes`
 const SCss = styled(Items)`
   width: 60px;
   height: 60px;
-  animation: ${CssMove} 0.2s linear forwards;
+  animation: ${CssMove} 1.4s linear forwards;
 `;
 
 export const Css = () => <SCss>Css</SCss>;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useIntervalTitle } from "../../hooks";
 
 const Left = styled.section`
   width: 50%;
@@ -27,6 +28,7 @@ const TinySpan = styled.span`
 `;
 
 const HomeLeft = () => {
+  useIntervalTitle(0, 25); /* uncomment before deploy */
   return (
     <Left>
       <div>

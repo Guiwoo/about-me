@@ -1,20 +1,60 @@
 import React from "react";
 import styled from "styled-components";
 
-const FirstLayer = styled.div``;
+//Page Fade in add
 
-const PersonalBox = styled.div``;
+const Container = styled.div`
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+`;
 
-const AdditionalBox = styled.div``;
+const FirstLayer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 50%;
+`;
 
-const SecondLayer = styled.div``;
+const PersonalBox = styled.div`
+  width: 50%;
+  height: 100%;
+`;
 
-const CarrerBox = styled.div``;
+const AdditionalBox = styled.div`
+  width: 50%;
+  height: 100%;
+`;
 
-const EducationBox = styled.div``;
+const SecondLayer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 50%;
+`;
+
+const CareerBox = styled.div`
+  width: 50%;
+  height: 100%;
+`;
+
+const EducationBox = styled.div`
+  width: 50%;
+  height: 100%;
+`;
 
 const AboutMe = () => {
-  return <div>Hi</div>;
+  return (
+    <Container>
+      <FirstLayer>
+        <PersonalBox>Personal</PersonalBox>
+        <AdditionalBox>Additional</AdditionalBox>
+      </FirstLayer>
+      <SecondLayer>
+        <CareerBox>Carrer</CareerBox>
+        <EducationBox>Education</EducationBox>
+      </SecondLayer>
+    </Container>
+  );
 };
 
 export default AboutMe;

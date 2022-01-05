@@ -39,3 +39,9 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 [] - Circle connect to my onw project page and Intro Page should connect
 
 [x] - Make Next Button
+
+# About Me
+
+[] - Do I need to use same background Imgae ? Think later
+
+[]

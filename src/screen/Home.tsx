@@ -4,7 +4,6 @@ import bg1 from "../assets/img/bgBlack.png";
 import HomeLeft from "../components/Home/Left";
 import HomeRight from "../components/Home/Right";
 import { GoNextBtn } from "../components/Shared";
-import { useIntervalTitle } from "../hooks";
 import routeName from "../routeName";
 
 const Container = styled.div`
@@ -20,7 +19,6 @@ const Container = styled.div`
 `;
 
 const Home = () => {
-  useIntervalTitle(0, 50); /* uncomment before deploy */
   return (
     <Container>
       <HomeLeft />
