@@ -44,4 +44,4 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 
 [] - Do I need to use same background Imgae ? Think later
 
-[]
+[x] - Personal INFO done umm Animation needed ? don'tkonw

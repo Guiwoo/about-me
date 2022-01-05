@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import centerImg from "../assets/img/fitSize.jpg";
+import centerImg from "../../assets/img/fitSize.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import Navigation from "./Navigation";
+import Navigation from "../Navigation";
 
 const LeftMainBox = styled.section`
   width: 20%;

@@ -1,14 +1,14 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import styled from "styled-components";
-import AboutMe from "../screen/AboutMe";
-import Home from "../screen/Home";
+import AboutMe from "../../screen/AboutMe";
+import Home from "../../screen/Home";
 
 const SRightMain = styled.section`
   width: 80%;
   height: 100%;
   border-radius: 30px;
-  background-color: #546e7a;
+  background-color: #546e7a; /* need to fixed color for light version */
 `;
 
 const TestPro = () => <div>Projects</div>;

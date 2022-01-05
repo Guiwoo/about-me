@@ -25,19 +25,6 @@ const Right = styled.section`
 
 const CenterArea = styled.div``;
 
-const Items = styled.div`
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  border: 1px solid white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: 600;
-`;
-
 const HomeRight = () => {
   return (
     <Right>

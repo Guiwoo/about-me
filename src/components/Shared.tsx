@@ -28,7 +28,7 @@ export const NewLink = styled(Link)<CurrentProps>`
   margin-bottom: 10px;
   padding: 10px;
   border-bottom: ${(props) =>
-    props.current === "true" ? `1px solid ${props.theme.fontColor.main}` : ""};
+    props.current === "true" ? `1px solid #ffa901` : ""};
   border-radius: 10px;
   &:hover {
     color: #ffa801;
@@ -58,6 +58,7 @@ const Ascale = keyframes`
   85% {
     opacity: 0.8;
     transform: scale(1) translateX(0);
+    filter: blur(10px);
   }
 
   100% {
@@ -68,5 +69,5 @@ const Ascale = keyframes`
 export const Box = styled.div`
   height: 100%;
   width: 50%;
-  animation: ${Ascale} 2s linear forwards;
+  animation: ${Ascale} 4s linear forwards;
 `;

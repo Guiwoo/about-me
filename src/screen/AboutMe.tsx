@@ -10,7 +10,7 @@ const Container = styled.div`
   border-radius: 30px;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 20px;
 `;
 
 const AboutMe = () => {
