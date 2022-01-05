@@ -25,6 +25,8 @@ React Router !\_\_
 
 # TextAnimation
 
+[ x ] - Home Left
+
     > Next time ? Just use texteffect hooks , took so many time to implement
 
 Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexample.com/a-custom-react-hook-generating-crypting-text-effect/)

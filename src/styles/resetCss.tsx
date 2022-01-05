@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     opacity: 0;
   }
   .fadeIn{
-    transition: 0.5s all linear;
+    transition: 0.3s all linear;
     opacity:1;
   }
 `;
