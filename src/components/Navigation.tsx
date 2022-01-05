@@ -18,14 +18,20 @@ const Navigation = () => {
   return (
     <SNavigation>
       <Description>
-        <NewLink current={pathname === routeName.home} to={routeName.home}>
+        <NewLink
+          current={(pathname === routeName.home).toString()}
+          to={routeName.home}
+        >
           Home
         </NewLink>
-        <NewLink current={pathname === routeName.me} to={routeName.me}>
+        <NewLink
+          current={(pathname === routeName.me).toString()}
+          to={routeName.me}
+        >
           About Me
         </NewLink>
         <NewLink
-          current={pathname === routeName.projects}
+          current={(pathname === routeName.projects).toString()}
           to={routeName.projects}
         >
           Projects

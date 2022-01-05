@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 interface CurrentProps {
-  readonly current: boolean;
+  readonly current: string;
 }
 
 export const Container = styled.div`
@@ -28,7 +28,7 @@ export const NewLink = styled(Link)<CurrentProps>`
   margin-bottom: 10px;
   padding: 10px;
   border-bottom: ${(props) =>
-    props.current ? `1px solid ${props.theme.fontColor.main}` : ""};
+    props.current === "true" ? `1px solid ${props.theme.fontColor.main}` : ""};
   border-radius: 10px;
   &:hover {
     color: #ffa801;

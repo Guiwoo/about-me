@@ -14,6 +14,13 @@ const GlobalStyle = createGlobalStyle`
     color:${(props) => props.theme.fontColor.main};
     text-decoration: none;
   }
+  .hidden{
+    opacity: 0;
+  }
+  .fadeIn{
+    transition: 0.5s all linear;
+    opacity:1;
+  }
 `;
 
 export default GlobalStyle;
