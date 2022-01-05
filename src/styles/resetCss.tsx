@@ -14,6 +14,17 @@ const GlobalStyle = createGlobalStyle`
     color:${(props) => props.theme.fontColor.main};
     text-decoration: none;
   }
+  button{
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    color:${(props) => props.theme.fontColor.main};
+    background-color: transparent;
+  }
   .hidden{
     opacity: 0;
   }

@@ -34,3 +34,5 @@ export const NewLink = styled(Link)<CurrentProps>`
     color: #ffa801;
   }
 `;
+
+export const NextBtn = styled.button``;

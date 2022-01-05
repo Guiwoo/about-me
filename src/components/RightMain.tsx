@@ -10,7 +10,7 @@ const SRightMain = styled.section`
   background-color: #546e7a;
 `;
 
-const TestMe = () => <div>Me</div>;
+const TestMe = () => <div>hoit</div>;
 const TestPro = () => <div>Projects</div>;
 const NoMatch = () => <div>No</div>;
 
