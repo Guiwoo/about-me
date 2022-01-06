@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { Box, TitleText } from "../Shared";
 
 const EducationBox = styled(Box)`
-  animation-duration: 2s;
+  animation-duration: 1.4s;
 `;
 
 const MainBox = styled.div`
@@ -34,26 +34,26 @@ const FirstBox = styled.div`
   align-items: center;
   font-weight: 600;
   animation: ${SpreadBox} 0.5s linear forwards;
-  animation-delay: 3s;
+  animation-delay: 1.5s;
 `;
 const SecondBox = styled(FirstBox)`
   background-color: #2d6e77;
-  animation-delay: 3.2s;
+  animation-delay: 1.6s;
 `;
 const ThirdBox = styled(FirstBox)`
   background-color: #1e646e;
-  animation-delay: 3.4s;
+  animation-delay: 1.7s;
 `;
 const FourthBox = styled(FirstBox)`
   background-color: teal;
-  animation-delay: 3.6s;
+  animation-delay: 1.8s;
 `;
 
 const Empty = styled(FirstBox)`
   opacity: 0;
   background-color: transparent;
   font-size: 12px;
-  animation-delay: 3.8s;
+  animation-delay: 2s;
 `;
 
 const Education = () => {

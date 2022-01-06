@@ -1,9 +1,18 @@
+import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import bg1 from "../assets/img/bgBlack.png";
+import ReactTextTransition, { presets } from "react-text-transition";
 
 interface CurrentProps {
-  readonly current: string;
+  readonly current?: string | undefined;
+  routeName?: string | undefined;
+  title?: string | undefined;
+}
+
+interface NextPageProps {
+  routeName: string;
+  title: string;
 }
 
 export const Container = styled.div`
@@ -22,6 +31,7 @@ export const BgContainer = styled.div`
   background-repeat: none;
   background-size: cover;
   background-image: url(${bg1});
+  position: relative;
 `;
 
 export const Main = styled.main`
@@ -34,6 +44,8 @@ export const Main = styled.main`
   display: flex;
 `;
 
+const Arrow = ["↓", "✈️"];
+
 export const NewLink = styled(Link)<CurrentProps>`
   display: block;
   margin-bottom: 10px;
@@ -45,8 +57,7 @@ export const NewLink = styled(Link)<CurrentProps>`
     color: #ffa801;
   }
 `;
-
-export const GoNextBtn = styled(Link)`
+const GoNextBtn = styled(Link)`
   position: absolute;
   bottom: 10px;
   right: 47%;
@@ -58,6 +69,37 @@ export const GoNextBtn = styled(Link)`
     color: #ffa801;
   }
 `;
+
+export const GoNext = ({ routeName, title }: NextPageProps) => {
+  const [index, setIndex] = React.useState(0);
+  const [delay, setDelay] = React.useState(true);
+  const m = /[a-zA-Z]/gi;
+  const TheTitle = [`${title}`, `${title.replaceAll(m, "_")}`];
+  React.useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      1000 // every 3 seconds
+    );
+    setTimeout(() => setDelay(false), 3000);
+    return () => clearTimeout(intervalId);
+  }, []);
+  return delay ? null : (
+    <GoNextBtn to={routeName}>
+      <ReactTextTransition
+        text={TheTitle[index % TheTitle.length]}
+        springConfig={presets.gentle}
+        style={{ margin: "0 4px" }}
+        inline
+      />
+      <ReactTextTransition
+        text={Arrow[index % Arrow.length]}
+        springConfig={presets.gentle}
+        style={{ margin: "0 4px" }}
+        inline
+      />
+    </GoNextBtn>
+  );
+};
 
 const Ascale = keyframes`
   0% {

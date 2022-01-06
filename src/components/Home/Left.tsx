@@ -28,7 +28,7 @@ const TinySpan = styled.span`
 `;
 
 const HomeLeft = () => {
-  useIntervalTitle(0, 25); /* uncomment before deploy */
+  useIntervalTitle(0, 40); /* uncomment before deploy */
   return (
     <Left>
       <div>
@@ -37,7 +37,7 @@ const HomeLeft = () => {
           <ThickSpan>I'm Guiwoo Park</ThickSpan>
         </div>
         <TinySpanBox>
-          <TinySpan>Don't give up, do whatever I want.</TinySpan>
+          <TinySpan>Don't give up,I can do whatever I want.</TinySpan>
           <TinySpan>Do my best, Happy Coding</TinySpan>
         </TinySpanBox>
       </div>

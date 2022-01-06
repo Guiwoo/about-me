@@ -11,8 +11,8 @@ const TEXTS = ["Park.guiwoo@hotmail.com", "pbk12568@gmail.com"];
 const IAM = ["I am ", "_ __"];
 
 const AdditionalBox = styled(Box)`
+  animation-duration: 1.2s;
   border-left: 1px solid white;
-  animation-duration: 1s;
   display: flex;
   width: 50%;
 `;

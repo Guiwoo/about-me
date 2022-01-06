@@ -1,5 +1,16 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import HexagonOutlinedIcon from "@mui/icons-material/HexagonOutlined";
+import {
+  faHtml5,
+  faNodeJs,
+  faJs,
+  faCss3,
+  faReact,
+  faPython,
+} from "@fortawesome/free-brands-svg-icons";
+import { faHippo, faLeaf } from "@fortawesome/free-solid-svg-icons";
 
 const Items = styled.div`
   position: absolute;
@@ -12,6 +23,8 @@ const Items = styled.div`
   justify-content: center;
   font-size: 12px;
   font-weight: 600;
+  display: flex;
+  flex-direction: column;
 `;
 //Django Animation
 
@@ -51,7 +64,11 @@ const SPython = styled(Items)`
   animation: ${PythonMove} 1.6s linear forwards;
 `;
 
-export const Python = () => <SPython>Python</SPython>;
+export const Python = () => (
+  <SPython>
+    <FontAwesomeIcon icon={faPython} size="4x" />
+  </SPython>
+);
 
 //MongoDb Animation
 
@@ -70,7 +87,12 @@ const SMongoDB = styled(Items)`
   animation: ${MongoDBMove} 1.8s linear forwards;
 `;
 
-export const MongoDb = () => <SMongoDB>MongoDB</SMongoDB>;
+export const MongoDb = () => (
+  <SMongoDB>
+    <FontAwesomeIcon icon={faLeaf} size="3x" />
+    <span>Mongo DB</span>
+  </SMongoDB>
+);
 
 //PostSQL Animation
 
@@ -89,7 +111,12 @@ const PostSql = styled(Items)`
   animation: ${PostSqlMove} 1.7s linear forwards;
 `;
 
-export const PostSQL = () => <PostSql>PostgresSQL</PostSql>;
+export const PostSQL = () => (
+  <PostSql>
+    <FontAwesomeIcon icon={faHippo} size="3x" />
+    <span>PostgresSql</span>
+  </PostSql>
+);
 
 //GraphQL Animation..
 
@@ -108,7 +135,12 @@ const SGraphQL = styled(Items)`
   animation: ${GraphQlMove} 1.6s linear forwards;
 `;
 
-export const GraphQL = () => <SGraphQL>GraphQL</SGraphQL>;
+export const GraphQL = () => (
+  <SGraphQL>
+    <HexagonOutlinedIcon sx={{ color: "white" }} fontSize="large" />
+    <span>GrpahQL</span>
+  </SGraphQL>
+);
 
 //React Native Animation..
 
@@ -127,7 +159,15 @@ const SRn = styled(Items)`
   animation: ${RNMove} 1.8s linear forwards;
 `;
 
-export const Rn = () => <SRn>React-Native</SRn>;
+export const Rn = () => (
+  <SRn>
+    <FontAwesomeIcon icon={faReact} size="3x" />
+    <span>
+      React
+      <br /> Native
+    </span>
+  </SRn>
+);
 
 // TypeScript Animation
 
@@ -144,9 +184,10 @@ const STs = styled(Items)`
   width: 70px;
   height: 70px;
   animation: ${TsMove} 1.7s linear forwards;
+  font-size: 25px;
 `;
 
-export const Ts = () => <STs>TypeScript</STs>;
+export const Ts = () => <STs>Ts</STs>;
 
 // NodeJs Animation
 
@@ -165,7 +206,11 @@ const Node = styled(Items)`
   animation: ${NodeMove} 1.8s linear forwards;
 `;
 
-export const NodeJs = () => <Node>NodeJs</Node>;
+export const NodeJs = () => (
+  <Node>
+    <FontAwesomeIcon icon={faNodeJs} size="4x" />
+  </Node>
+);
 
 //React
 
@@ -184,7 +229,11 @@ const SRct = styled(Items)`
   animation: ${ReactMove} 1.5s linear forwards;
 `;
 
-export const Rct = () => <SRct>React</SRct>;
+export const Rct = () => (
+  <SRct>
+    <FontAwesomeIcon icon={faReact} size="4x" />
+  </SRct>
+);
 
 //Js Animation
 
@@ -203,7 +252,11 @@ const SJs = styled(Items)`
   animation: ${JsMove} 1.4s linear forwards;
 `;
 
-export const JsBox = () => <SJs>JavaScript</SJs>;
+export const JsBox = () => (
+  <SJs>
+    <FontAwesomeIcon icon={faJs} size="4x" />
+  </SJs>
+);
 
 //Css Animation
 
@@ -222,7 +275,11 @@ const SCss = styled(Items)`
   animation: ${CssMove} 1.4s linear forwards;
 `;
 
-export const Css = () => <SCss>Css</SCss>;
+export const Css = () => (
+  <SCss>
+    <FontAwesomeIcon icon={faCss3} size="4x"></FontAwesomeIcon>
+  </SCss>
+);
 
 //Html
 
@@ -234,4 +291,8 @@ const SHtml = styled(Items)`
   );
 `;
 
-export const HtmlBox = () => <SHtml>Html</SHtml>;
+export const HtmlBox = () => (
+  <SHtml>
+    <FontAwesomeIcon icon={faHtml5} size="4x" />
+  </SHtml>
+);

@@ -5,7 +5,8 @@ import Education from "../components/AboutMe/Education";
 import Personal from "../components/AboutMe/Personal";
 import SubPersonal from "../components/AboutMe/SubPersonal";
 import RightScreenLayOut from "../components/Layer";
-import { BgContainer } from "../components/Shared";
+import { BgContainer, GoNext } from "../components/Shared";
+import routeName from "../routeName";
 
 const AboutMe = () => {
   return (
@@ -26,6 +27,7 @@ const AboutMe = () => {
           <Career />
           <Education />
         </RightScreenLayOut>
+        <GoNext routeName={routeName.projects} title={"Projects"} />
       </div>
     </BgContainer>
   );
