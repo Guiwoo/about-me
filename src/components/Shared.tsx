@@ -69,5 +69,6 @@ const Ascale = keyframes`
 export const Box = styled.div`
   height: 100%;
   width: 50%;
+  padding: 0px 5px;
   animation: ${Ascale} 4s linear forwards;
 `;

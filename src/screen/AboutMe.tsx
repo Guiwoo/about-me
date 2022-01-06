@@ -16,14 +16,18 @@ const Container = styled.div`
 const AboutMe = () => {
   return (
     <Container>
-      <RightScreenLayOut>
-        <Personal />
-        <SubPersonal />
-      </RightScreenLayOut>
-      <RightScreenLayOut>
-        <Career />
-        <Education />
-      </RightScreenLayOut>
+      <div
+        style={{ display: "flex", flexWrap: "wrap", flexDirection: "column" }}
+      >
+        <RightScreenLayOut>
+          <Personal />
+          <SubPersonal />
+        </RightScreenLayOut>
+        <RightScreenLayOut>
+          <Career />
+          <Education />
+        </RightScreenLayOut>
+      </div>
     </Container>
   );
 };

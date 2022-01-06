@@ -25,6 +25,12 @@ const GlobalStyle = createGlobalStyle`
     color:${(props) => props.theme.fontColor.main};
     background-color: transparent;
   }
+  mark{
+    padding: 2px 3px;
+    background-color: transparent;
+    color:${(props) => props.theme.fontColor.main};
+    border-bottom: 1px solid yellow;
+  }
   .hidden{
     opacity: 0;
   }

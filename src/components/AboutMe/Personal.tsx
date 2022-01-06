@@ -5,28 +5,7 @@ import { Box } from "../Shared";
 
 const PersonalBox = styled(Box)`
   animation-duration: 1s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-const LeftBox = styled.div`
-  width: 40%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const PhotoBox = styled.div``;
-
-const Photo = styled.img`
-  width: 160px;
-  height: 200px;
-  border-radius: 10px;
-`;
-
-const RightBox = styled.div`
-  min-width: 60%;
+  width: 50%;
 `;
 
 const Title = styled.div`
@@ -35,6 +14,29 @@ const Title = styled.div`
   font-size: 18px;
 `;
 
+const ContentBox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const LeftBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const PhotoBox = styled.div``;
+
+const Photo = styled.img`
+  width: 100px;
+  height: 150px;
+  border-radius: 10px;
+  padding: 5px;
+`;
+
+const RightBox = styled.div`
+  margin: auto;
+`;
 const SubTitle = styled.div`
   margin: 5px 0px;
   color: rgba(255, 255, 255, 0.6);
@@ -49,34 +51,36 @@ const ContentText = styled.div`
 const Personal = () => {
   return (
     <PersonalBox>
-      <LeftBox>
-        <PhotoBox>
-          <Photo src={MyImg} />
-        </PhotoBox>
-      </LeftBox>
-      <RightBox>
-        <Title>PERSONAL INFO</Title>
-        <div>
-          <SubTitle>
-            <div>Name:</div>
-            <ContentText>Guiwoo Park</ContentText>
-          </SubTitle>
-          <SubTitle>
-            <div>Birthday: </div>
-            <ContentText>93.01.20</ContentText>
-          </SubTitle>
-          <SubTitle>
-            <div>City:</div>
-            <ContentText>
-              Uijeongbu-si, Gyeonggi-do, Republic of Korea
-            </ContentText>
-          </SubTitle>
-          <SubTitle>
-            <div>Address:</div>
-            <ContentText>902-Ho,4-Dong, 69, Neunggok-ro</ContentText>
-          </SubTitle>
-        </div>
-      </RightBox>
+      <Title>PERSONAL INFO</Title>
+      <ContentBox>
+        <LeftBox>
+          <PhotoBox>
+            <Photo src={MyImg} />
+          </PhotoBox>
+        </LeftBox>
+        <RightBox>
+          <div>
+            <SubTitle>
+              <div>Name:</div>
+              <ContentText>Guiwoo Park</ContentText>
+            </SubTitle>
+            <SubTitle>
+              <div>Birthday: </div>
+              <ContentText>93.01.20</ContentText>
+            </SubTitle>
+            <SubTitle>
+              <div>City:</div>
+              <ContentText>
+                Uijeongbu-si, Gyeonggi-do, Republic of Korea
+              </ContentText>
+            </SubTitle>
+            <SubTitle>
+              <div>Address:</div>
+              <ContentText>902-Ho,4-Dong, 69, Neunggok-ro</ContentText>
+            </SubTitle>
+          </div>
+        </RightBox>
+      </ContentBox>
     </PersonalBox>
   );
 };
