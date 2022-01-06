@@ -43,8 +43,8 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 
 # About Me
 
-[] - Do I need to use same background Imgae ? Think later
-[] - When is done , need to check width and height
+[x] - Do I need to use same background Imgae ? Think later
+[x] - When is done , need to check width and height
 
 [x] - Personal INFO done umm Animation needed ? don'tkonw
 
@@ -55,5 +55,6 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 [x] - About Me done
 --Need Refectoring ? idk\
 [x] - career
-[] - Education
+[x] - Education
 -- Use Figma, If i don't need Animation
+[] - Need To refectoring
