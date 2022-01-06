@@ -26,6 +26,7 @@ React Router !\_\_
 # TextAnimation
 
 [ x ] - Home Left
+[] - Do i need to add Drag screen ?
 
     > Next time ? Just use texteffect hooks , took so many time to implement
 
@@ -52,3 +53,7 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 - Mui React is awesome Tooltip for hover and show message [Check here 🚀]("https://mui.com/getting-started/installation/)\
 
 [x] - About Me done
+--Need Refectoring ? idk\
+[x] - career
+[] - Education
+-- Use Figma, If i don't need Animation

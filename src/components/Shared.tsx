@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
+import bg1 from "../assets/img/bgBlack.png";
 
 interface CurrentProps {
   readonly current: string;
@@ -11,6 +12,16 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+`;
+
+export const BgContainer = styled.div`
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  background-image: url(${bg1});
 `;
 
 export const Main = styled.main`
@@ -71,4 +82,10 @@ export const Box = styled.div`
   width: 50%;
   padding: 0px 5px;
   animation: ${Ascale} 4s linear forwards;
+`;
+
+export const TitleText = styled.div`
+  margin: 10px 0px;
+  font-weight: 600;
+  font-size: 18px;
 `;

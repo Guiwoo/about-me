@@ -2,19 +2,16 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ReactTextTransition, { presets } from "react-text-transition";
 import Tooltip from "@mui/material/Tooltip";
-import { Box } from "../Shared";
+import { Box, TitleText } from "../Shared";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMicrosoft,
-  faGoogle,
-  faTelegramPlane,
-} from "@fortawesome/free-brands-svg-icons";
+import { faMicrosoft, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 
 const TEXTS = ["Park.guiwoo@hotmail.com", "pbk12568@gmail.com"];
 const IAM = ["I am ", "_ __"];
 
 const AdditionalBox = styled(Box)`
+  border-left: 1px solid white;
   animation-duration: 1s;
   display: flex;
   width: 50%;
@@ -22,6 +19,7 @@ const AdditionalBox = styled(Box)`
 
 const MainContent = styled.div`
   padding: 10px 0px;
+  margin-left: 20px;
 `;
 
 const Mobile = styled(FontAwesomeIcon)`
@@ -29,11 +27,6 @@ const Mobile = styled(FontAwesomeIcon)`
   color: white;
 `;
 
-const Title = styled.div`
-  margin: 10px 0px;
-  font-weight: 600;
-  font-size: 18px;
-`;
 const Summary = styled.div`
   font-size: 14px;
   line-height: 1.6;
@@ -57,11 +50,6 @@ const Icon = styled(FontAwesomeIcon)`
   margin-right: 10px;
 `;
 
-const CopyBtn = styled.button`
-  padding: 0;
-  transform: translate(330%, -90%);
-`;
-
 const CopyMessage = styled.span`
   background-color: gray;
   border-radius: 5px;
@@ -72,6 +60,12 @@ const WhoText = styled.span`
   display: inline-block;
   margin-left: 18px;
   color: rgba(255, 255, 255, 0.8);
+`;
+
+const CopyText = styled.span`
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 20px;
 `;
 
 const SubPersonal = () => {
@@ -88,13 +82,13 @@ const SubPersonal = () => {
   return (
     <AdditionalBox>
       <MainContent>
-        <Title>Contact</Title>
+        <TitleText>Contact</TitleText>
         <Summary>
           <Contact>
             <Icon icon={faMobileAlt} />
             <span>010-7106-8657</span>
           </Contact>
-          <Mytool title="Copy Email">
+          <Mytool title="Copy Email" followCursor>
             <Email
               onClick={() => {
                 navigator.clipboard.writeText(TEXTS[index % TEXTS.length]);
@@ -115,18 +109,19 @@ const SubPersonal = () => {
                   inline
                 />
               </span>
+              {!copy ? <CopyText>Click to Copy</CopyText> : null}
               {copy ? <CopyMessage>Copied</CopyMessage> : null}
             </Email>
           </Mytool>
         </Summary>
-        <Title>
+        <TitleText>
           <ReactTextTransition
             text={IAM[index % IAM.length]}
             springConfig={presets.gentle}
             style={{ margin: "0 4px" }}
             inline
           />
-        </Title>
+        </TitleText>
         <Summary>
           <WhoText>
             <ReactTextTransition
@@ -139,7 +134,7 @@ const SubPersonal = () => {
             <br />
             I have worked in different industry in for a while.
             <br />
-            What I learned from my experience is Listening and Speaking.
+            What I learned from my experience is "Conversation".
             <br />
             Especially{" "}
             <ReactTextTransition
@@ -152,9 +147,9 @@ const SubPersonal = () => {
             <br />I like a challenge and don't get scared of brand new things.
           </WhoText>
         </Summary>
-        <Title>
+        <TitleText>
           What's My <mark>GOAL</mark> ?
-        </Title>
+        </TitleText>
         <Summary>
           <WhoText>
             • Frontend Developer - Create Creativity WebSite <br />• FullStack

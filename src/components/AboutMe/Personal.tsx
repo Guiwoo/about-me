@@ -1,17 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import MyImg from "../../assets/img/me1.jpg";
-import { Box } from "../Shared";
+import { Box, TitleText } from "../Shared";
 
 const PersonalBox = styled(Box)`
   animation-duration: 1s;
   width: 50%;
 `;
 
-const Title = styled.div`
+const Title = styled(TitleText)`
   margin: 30px 0px;
-  font-weight: 600;
-  font-size: 18px;
 `;
 
 const ContentBox = styled.div`
@@ -28,7 +26,7 @@ const LeftBox = styled.div`
 const PhotoBox = styled.div``;
 
 const Photo = styled.img`
-  width: 100px;
+  width: 120px;
   height: 150px;
   border-radius: 10px;
   padding: 5px;
@@ -43,9 +41,9 @@ const SubTitle = styled.div`
 `;
 const ContentText = styled.div`
   margin: 5px 0px;
-  margin-right: 20px;
   text-align: end;
   color: white;
+  padding: 1px 30px;
 `;
 
 const Personal = () => {
@@ -70,9 +68,7 @@ const Personal = () => {
             </SubTitle>
             <SubTitle>
               <div>City:</div>
-              <ContentText>
-                Uijeongbu-si, Gyeonggi-do, Republic of Korea
-              </ContentText>
+              <ContentText>Gyeonggi-do, Republic of Korea</ContentText>
             </SubTitle>
             <SubTitle>
               <div>Address:</div>

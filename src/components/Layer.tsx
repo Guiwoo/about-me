@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 const Layer = styled.div`
   display: flex;
+  width: 100%;
+  height: 50%;
 `;
 
 type ChildrenProp = {
