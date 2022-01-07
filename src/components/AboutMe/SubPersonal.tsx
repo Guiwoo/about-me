@@ -38,8 +38,6 @@ const Contact = styled.button`
   color: rgba(255, 255, 255, 0.8);
 `;
 
-const Mytool = styled(Tooltip)``;
-
 const Email = styled(Contact)`
   &:hover {
     color: #ffa801;
@@ -88,7 +86,7 @@ const SubPersonal = () => {
             <Icon icon={faMobileAlt} />
             <span>010-7106-8657</span>
           </Contact>
-          <Mytool title="Copy Email" followCursor>
+          <Tooltip title="Copy Email">
             <Email
               onClick={() => {
                 navigator.clipboard.writeText(TEXTS[index % TEXTS.length]);
@@ -112,7 +110,7 @@ const SubPersonal = () => {
               {!copy ? <CopyText>Click to Copy</CopyText> : null}
               {copy ? <CopyMessage>Copied</CopyMessage> : null}
             </Email>
-          </Mytool>
+          </Tooltip>
         </Summary>
         <TitleText>
           <ReactTextTransition

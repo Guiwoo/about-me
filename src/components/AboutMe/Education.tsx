@@ -58,47 +58,49 @@ const Empty = styled(FirstBox)`
 
 const Education = () => {
   return (
-    <EducationBox>
-      <div style={{ marginLeft: 20 }}>
-        <TitleText>Education</TitleText>
-        <MainBox>
-          <Empty></Empty>
-          <Empty>
-            ROTC,
-            <br />
-            Military Course
-          </Empty>
-          <Empty></Empty>
-          <Empty>
-            Nomad,
-            <br />
-            Onlie Course
-            <br />
-            Programing
-          </Empty>
-        </MainBox>
-        <MainBox>
-          <FirstBox>2011</FirstBox>
-          <SecondBox>2015</SecondBox>
-          <ThirdBox>2020</ThirdBox>
-          <FourthBox>2021</FourthBox>
-        </MainBox>
-        <MainBox>
-          <Empty>
-            Univ,
-            <br /> Social-Welfare
-          </Empty>
-          <Empty></Empty>
-          <Empty>
-            Udemy, <br />
-            Online Course
-            <br />
-            Programing
-          </Empty>
-          <Empty></Empty>
-        </MainBox>
-      </div>
-    </EducationBox>
+    <>
+      <EducationBox>
+        <div style={{ marginLeft: 20 }}>
+          <TitleText>Education</TitleText>
+          <MainBox>
+            <Empty></Empty>
+            <Empty>
+              ROTC,
+              <br />
+              Military Course
+            </Empty>
+            <Empty></Empty>
+            <Empty>
+              Nomad,
+              <br />
+              Onlie Course
+              <br />
+              Programing
+            </Empty>
+          </MainBox>
+          <MainBox>
+            <FirstBox>2011</FirstBox>
+            <SecondBox>2015</SecondBox>
+            <ThirdBox>2020</ThirdBox>
+            <FourthBox>2021</FourthBox>
+          </MainBox>
+          <MainBox>
+            <Empty>
+              Univ,
+              <br /> Social-Welfare
+            </Empty>
+            <Empty></Empty>
+            <Empty>
+              Udemy, <br />
+              Online Course
+              <br />
+              Programing
+            </Empty>
+            <Empty></Empty>
+          </MainBox>
+        </div>
+      </EducationBox>
+    </>
   );
 };
 

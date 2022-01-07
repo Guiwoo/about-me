@@ -42,7 +42,6 @@ const Arrow = ["↓", "✈️"];
 
 export const NewLink = styled(Link)<CurrentProps>`
   display: block;
-  margin-bottom: 10px;
   padding: 10px;
   border-bottom: ${(props) =>
     props.current === "true" ? `1px solid #ffa901` : ""};
@@ -53,9 +52,9 @@ export const NewLink = styled(Link)<CurrentProps>`
 `;
 const GoNextBtn = styled(Link)`
   position: absolute;
-  bottom: 10px;
-  right: 47%;
-  font-size: 18px;
+  bottom: 10%;
+  right: 8%;
+  font-size: 14px;
   opacity: 0.6;
   transition: 0.3s all linear;
   &:hover {

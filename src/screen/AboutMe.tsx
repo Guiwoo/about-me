@@ -8,12 +8,17 @@ import RightScreenLayOut from "../components/Layer";
 import { BgContainer, GoNext } from "../components/Shared";
 import routeName from "../routeName";
 
+const AboutContainer = styled(BgContainer)`
+  width: 100%;
+  height: 90%;
+  padding: 10px 0px 10px 20px;
+`;
+
 const AboutMe = () => {
   return (
-    <BgContainer>
+    <AboutContainer>
       <div
         style={{
-          padding: 20,
           display: "flex",
           flexWrap: "wrap",
           flexDirection: "column",
@@ -27,9 +32,8 @@ const AboutMe = () => {
           <Career />
           <Education />
         </RightScreenLayOut>
-        <GoNext routeName={routeName.projects} title={"Projects"} />
       </div>
-    </BgContainer>
+    </AboutContainer>
   );
 };
 

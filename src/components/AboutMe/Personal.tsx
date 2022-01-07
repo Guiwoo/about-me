@@ -14,7 +14,6 @@ const Title = styled(TitleText)`
 
 const ContentBox = styled.div`
   display: flex;
-  flex-wrap: wrap;
 `;
 
 const LeftBox = styled.div`
@@ -33,7 +32,7 @@ const Photo = styled.img`
 `;
 
 const RightBox = styled.div`
-  margin: auto;
+  margin-left: 20px;
 `;
 const SubTitle = styled.div`
   margin: 5px 0px;

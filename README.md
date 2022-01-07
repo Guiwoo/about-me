@@ -22,7 +22,9 @@ React Router ! [Check here 🚀](https://reactrouter.com/docs/en/v6)
 - I built worng way ,i missunderstood
   - Routes
   - Route for main url start ex> /, /login, /about >> path="/" | /bit/pirce, /bit/name >> path="bit/"
-  - for the main element ? need to put "<Outlet/> " renders whatever child route is currently active,
+  - for the main element ? need to put "Outlet Tag " renders whatever child route is currently active,
+  - Outlet Check [DemoSite 🚀](https://stackblitz.com/github/remix-run/react-router/tree/main/examples/basic?file=src/App.tsx)
+- Navigation myself useNavigate better than history
 
 # TextAnimation
 
