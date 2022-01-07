@@ -4,8 +4,7 @@ import AboutMe from "../../screen/AboutMe";
 import Home from "../../screen/Home";
 import routeName from "../../routeName";
 import { GoNext } from "../Shared";
-import ProjectsLayout from "../Project/ProjectsLayout";
-import MainLayOut from "./MainLayOut";
+import { MainLayOut, ProjectsLayout } from "./MainLayOut";
 
 /** Need to make 404 page or redirecting to home */
 const NoMatch = () => <div>No</div>;

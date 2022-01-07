@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router";
 import bg1 from "../../assets/img/bgBlack.png";
 import styled from "styled-components";
+import HeaderMenu from "../Project/HeaderMenu";
 
 const SRightMain = styled.section`
   width: 80%;
@@ -13,7 +14,7 @@ const SRightMain = styled.section`
   background-image: url(${bg1});
 `;
 
-const MainLayOut = () => {
+export const MainLayOut = () => {
   return (
     <SRightMain>
       <Outlet />
@@ -21,4 +22,11 @@ const MainLayOut = () => {
   );
 };
 
-export default MainLayOut;
+export const ProjectsLayout = () => {
+  return (
+    <>
+      <HeaderMenu />
+      <Outlet />
+    </>
+  );
+};

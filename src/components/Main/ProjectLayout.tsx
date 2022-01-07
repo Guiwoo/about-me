@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import HeaderMenu from "./HeaderMenu";
+import HeaderMenu from "../Project/HeaderMenu";
 
 const Project1 = () => <h1>project1</h1>;
 const Project2 = () => <h1>project2</h1>;

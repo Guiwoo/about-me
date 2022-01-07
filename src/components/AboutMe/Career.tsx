@@ -6,6 +6,7 @@ const CareerBox = styled(Box)`
   animation-duration: 1.3s;
   opacity: 0;
   width: 50%;
+  height: 70%;
   border-top: 1px solid white;
   border-right: 1px solid white;
 `;

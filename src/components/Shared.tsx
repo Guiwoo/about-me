@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
-import bg1 from "../assets/img/bgBlack.png";
 import ReactTextTransition, { presets } from "react-text-transition";
 
 interface CurrentProps {
@@ -123,4 +122,15 @@ export const TitleText = styled.div`
   margin: 10px 0px;
   font-weight: 600;
   font-size: 18px;
+`;
+
+export const Summary = styled.div`
+  font-size: 14px;
+  line-height: 1.6;
+`;
+
+export const WhoText = styled.span`
+  display: inline-block;
+  margin-left: 18px;
+  color: rgba(255, 255, 255, 0.8);
 `;
