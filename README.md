@@ -4,31 +4,32 @@
 
 # Initail
 
-npx create-react-app my-app --template typescript\_\_
-[Check here 🚀](https://create-react-app.dev/docs/adding-typescript/)
+npx create-react-app my-app --template typescript: [Check here 🚀](https://create-react-app.dev/docs/adding-typescript/)
 
-# Styled Component
+## Styled Component
 
-Reset-style , themeProvider, gradient :\_\_
-[Check here 🚀](https://cssgradient.io/gradient-backgrounds/)
+Reset-style , themeProvider, gradient : [Check here 🚀](https://cssgradient.io/gradient-backgrounds/)
 
-# FontAweSome
+## FontAweSome
 
-React Document FontAwesome\_\_
-[Check here 🚀](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react)
+React Document FontAwesome: [Check here 🚀](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react)
 
-# Router
+## Router
 
 [x] - Make Router
-React Router !\_\_
-[Check here 🚀](https://reactrouter.com/docs/en/v6)
+React Router ! [Check here 🚀](https://reactrouter.com/docs/en/v6)
+
+- I built worng way ,i missunderstood
+  - Routes
+  - Route for main url start ex> /, /login, /about >> path="/" | /bit/pirce, /bit/name >> path="bit/"
+  - for the main element ? need to put "<Outlet/> " renders whatever child route is currently active,
 
 # TextAnimation
 
 [ x ] - Home Left
 [] - Do i need to add Drag screen ?
 
-    > Next time ? Just use texteffect hooks , took so many time to implement
+- Next time ? Just use texteffect hooks , took so many time to implement
 
 Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexample.com/a-custom-react-hook-generating-crypting-text-effect/)
 
@@ -43,18 +44,25 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 
 # About Me
 
-[x] - Do I need to use same background Imgae ? Think later
+[x] - Do I need to use same background Imgae ? Think later<br/>
 [x] - When is done , need to check width and height
 
 [x] - Personal INFO done umm Animation needed ? don'tkonw
 
-- React Text Transition is amazing so fun to use [Check here 🚀]("ReactTextTransition)\
+- React Text Transition is amazing and so fun to use [Check here 🚀](https://www.npmjs.com/package/react-text-transition)
 
-- Mui React is awesome Tooltip for hover and show message [Check here 🚀]("https://mui.com/getting-started/installation/)\
+  > npm i react-text-transition
+
+- Mui React is awesome Tooltip for hover and show message [Check here 🚀](https://mui.com/getting-started/installation/)
+
+- They are offering premade-component as well check out
 
 [x] - About Me done
---Need Refectoring ? idk\
-[x] - career
+
+[x] - career<br/>
+
 [x] - Education
--- Use Figma, If i don't need Animation
+
+- Use Figma, If i don't need Animation
+
 [] - Need To refectoring

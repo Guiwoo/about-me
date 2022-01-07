@@ -6,8 +6,8 @@ import ReactTextTransition, { presets } from "react-text-transition";
 
 interface CurrentProps {
   readonly current?: string | undefined;
-  routeName?: string | undefined;
-  title?: string | undefined;
+  readonly routeName?: string | undefined;
+  readonly title?: string | undefined;
 }
 
 interface NextPageProps {
@@ -25,12 +25,6 @@ export const Container = styled.div`
 
 export const BgContainer = styled.div`
   border-radius: 30px;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-repeat: none;
-  background-size: cover;
-  background-image: url(${bg1});
   position: relative;
 `;
 

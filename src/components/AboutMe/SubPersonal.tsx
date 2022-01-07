@@ -130,21 +130,26 @@ const SubPersonal = () => {
               style={{ margin: "0 4px" }}
               inline
             />{" "}
-            a Passionate Person.
+            <span>a Passionate Person.</span>
             <br />
-            I have worked in different industry in for a while.
+            <span>I have worked in different industry in for a while.</span>
             <br />
-            What I learned from my experience is "Conversation".
+            <span>What I learned from my experience is "Conversation".</span>
             <br />
-            Especially{" "}
-            <ReactTextTransition
-              text={IAM[(index + 1) % IAM.length]}
-              springConfig={presets.gentle}
-              style={{ margin: "0 4px" }}
-              inline
-            />{" "}
-            a great listener.
-            <br />I like a challenge and don't get scared of brand new things.
+            <span>
+              Especially{" "}
+              <ReactTextTransition
+                text={IAM[(index + 1) % IAM.length]}
+                springConfig={presets.gentle}
+                style={{ margin: "0 4px" }}
+                inline
+              />{" "}
+              a great listener.
+            </span>
+            <br />
+            <span>
+              I like a challenge and don't get scared of brand new things.
+            </span>
           </WhoText>
         </Summary>
         <TitleText>
