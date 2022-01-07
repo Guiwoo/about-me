@@ -3,22 +3,20 @@ import { useNavigate } from "react-router";
 import styled from "styled-components";
 import HomeLeft from "../components/Home/Left";
 import HomeRight from "../components/Home/Right";
-import { BgContainer, GoNext } from "../components/Shared";
-import routeName from "../routeName";
+import { BgContainer } from "../components/Shared";
 
 const Container = styled(BgContainer)`
   display: flex;
-  position: relative;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 `;
 
 const Home = () => {
   return (
     <Container>
-      <div style={{ display: "flex", width: "100%" }}>
-        <HomeLeft />
-        <HomeRight />
-      </div>
+      <HomeLeft />
+      <HomeRight />
     </Container>
   );
 };
