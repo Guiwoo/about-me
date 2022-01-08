@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import YoutubeHome from "../../../assets/projectImg/youtube/YoutubeHome.png";
-import LoginPage from "../../../assets/projectImg/youtube/loginPage.png";
-import UploadPage from "../../../assets/projectImg/youtube/uploadPage.png";
-import Profile from "../../../assets/projectImg/youtube/profile.png";
+import IndexPage from "../../../assets/projectImg/reactMovie/index.png";
+import TvPage from "../../../assets/projectImg/reactMovie/Tv.png";
+import DetailPage from "../../../assets/projectImg/reactMovie/Detail.png";
+import SearchPage from "../../../assets/projectImg/reactMovie/search.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faJs, faNodeJs } from "@fortawesome/free-brands-svg-icons";
+import { faReact, faMediumM } from "@fortawesome/free-brands-svg-icons";
 import {
   ShowBoxLayout,
   ImgBox,
@@ -16,63 +16,49 @@ import {
   Img,
   TextCenter,
 } from "./ShowShared";
-import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 
-const JsIcon = styled(DefaultIcon)`
+const ReactIcon = styled(DefaultIcon)`
   background: radial-gradient(
     circle,
-    rgba(239, 216, 29, 1) 0%,
-    rgba(97, 97, 97, 1) 100%
+    rgba(3, 209, 247, 1) 0%,
+    rgba(218, 218, 218, 1) 100%
   );
 `;
 
-const NodeIcon = styled(DefaultIcon)`
-  background: radial-gradient(
-    circle,
-    rgba(59, 129, 60, 1) 0%,
-    rgba(8, 51, 0, 1) 100%
-  );
+const IMDB = styled(DefaultIcon)`
+  background: linear-gradient(70deg, #7eccaa, 60%, #0ab7dd);
 `;
-
-const MongoIcon = styled(DefaultIcon)`
-  background: linear-gradient(70deg, #449a43, 60%, #004d00);
-`;
-const MongoText = styled.span``;
 
 const FourthShow = () => {
   return (
     <ShowBoxLayout>
-      <ShowTitle>Youtube Clone • MongoDB</ShowTitle>
+      <ShowTitle>React Movie App • Api</ShowTitle>
       <TitleBox>
-        <MongoIcon>
-          <FontAwesomeIcon icon={faLeaf} />
-          <MongoText>MongoDB</MongoText>
-        </MongoIcon>
-        <NodeIcon>
-          <FontAwesomeIcon icon={faNodeJs} /> NodeJS
-        </NodeIcon>
-        <JsIcon>
-          <FontAwesomeIcon icon={faJs} /> JavaScript
-        </JsIcon>
+        <ReactIcon>
+          <FontAwesomeIcon icon={faReact} /> React
+        </ReactIcon>
+        <IMDB>
+          <FontAwesomeIcon icon={faMediumM} /> IMDB
+        </IMDB>
       </TitleBox>
       <ImgBox>
         <div>
-          <Img src={YoutubeHome} />
+          <Img src={IndexPage} />
           <TextCenter>• Index Page</TextCenter>
         </div>
         <div>
-          <Img src={LoginPage} />
-          <TextCenter>• Login Page</TextCenter>
+          <Img src={TvPage} />
+          <TextCenter>• Tv Page</TextCenter>
         </div>
       </ImgBox>
       <ImgBox2>
         <div>
-          <Img src={UploadPage} />
-          <TextCenter>• Upload Photo</TextCenter>
+          <Img src={DetailPage} />
+          <TextCenter>• Deatil Page</TextCenter>
         </div>
         <div>
-          <Img src={Profile} />
-          <TextCenter>• Profile</TextCenter>
+          <Img src={SearchPage} />
+          <TextCenter>• Search Page</TextCenter>
         </div>
       </ImgBox2>
     </ShowBoxLayout>

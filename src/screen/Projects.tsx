@@ -83,21 +83,25 @@ const ProjectHome = () => {
             onMouseOver={() => ToggleOne(3)}
             onMouseLeave={() => ToggleOne()}
           />
-          <FourthProject />
+          <FourthProject
+            onMouseOver={() => ToggleOne(4)}
+            onMouseLeave={() => ToggleOne()}
+          />
           <div style={{ backgroundColor: "purple" }}>Seven</div>
           <div style={{ backgroundColor: "pink" }}>Eight</div>
           <div style={{ backgroundColor: "gold" }}>Nine</div>
         </ProjectGrid>
-        <FourthShow />
-        {/* {!show ? (
+        {!show ? (
           <PieTable />
         ) : index === 1 ? (
           <FirstShow />
         ) : index === 2 ? (
           <SecondShow />
-        ) : (
+        ) : index === 3 ? (
           <ThirdShow />
-        )} */}
+        ) : (
+          <FourthShow />
+        )}
       </Box>
     </Container>
   );
