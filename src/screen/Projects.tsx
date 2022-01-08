@@ -4,8 +4,12 @@ import { TitleText } from "../components/Shared";
 import PieTable from "../components/Project/PieTable";
 import OnMacKakao from "../assets/projectImg/kakao/onMac.png";
 import onMacModal from "../assets/projectImg/modal/onMac.png";
+import onMacYou from "../assets/projectImg/youtube/onMacYou.png";
+import onMacMovie from "../assets/projectImg/reactMovie/onMac.png";
 import FirstShow from "../components/Project/ShowBox/FirstShow";
 import SecondShow from "../components/Project/ShowBox/SecondShow";
+import ThirdShow from "../components/Project/ShowBox/TrhidShow";
+import FourthShow from "../components/Project/ShowBox/FourthShow";
 
 const Container = styled.div`
   padding: 20px;
@@ -44,6 +48,13 @@ const SecondProject = styled(ProjectFrame)`
   background-image: url(${onMacModal});
 `;
 
+const ThirdProject = styled(ProjectFrame)`
+  background-image: url(${onMacYou});
+`;
+const FourthProject = styled(ProjectFrame)`
+  background-image: url(${onMacMovie});
+`;
+
 const ProjectHome = () => {
   const [index, setIndex] = React.useState(0);
   const [show, setShow] = React.useState(false);
@@ -53,29 +64,40 @@ const ProjectHome = () => {
     }
     setShow(!show);
   };
-  console.log(index);
   return (
     <Container>
       <Title>My Journeys..</Title>
       <Box>
         <ProjectGrid>
           <FirstProject
-            onMouseEnter={() => ToggleOne(1)}
+            onMouseOver={() => ToggleOne(1)}
             onMouseLeave={() => ToggleOne()}
           />
           <div></div>
           <div></div>
-          <div></div>
-          <div style={{ backgroundColor: "blue" }}>Five</div>
-          <div style={{ backgroundColor: "teal" }}>Six</div>
           <SecondProject
-            onMouseEnter={() => ToggleOne(2)}
+            onMouseOver={() => ToggleOne(2)}
             onMouseLeave={() => ToggleOne()}
           />
+          <ThirdProject
+            onMouseOver={() => ToggleOne(3)}
+            onMouseLeave={() => ToggleOne()}
+          />
+          <FourthProject />
+          <div style={{ backgroundColor: "purple" }}>Seven</div>
           <div style={{ backgroundColor: "pink" }}>Eight</div>
           <div style={{ backgroundColor: "gold" }}>Nine</div>
         </ProjectGrid>
-        {!show ? <PieTable /> : index === 1 ? <FirstShow /> : <SecondShow />}
+        <FourthShow />
+        {/* {!show ? (
+          <PieTable />
+        ) : index === 1 ? (
+          <FirstShow />
+        ) : index === 2 ? (
+          <SecondShow />
+        ) : (
+          <ThirdShow />
+        )} */}
       </Box>
     </Container>
   );

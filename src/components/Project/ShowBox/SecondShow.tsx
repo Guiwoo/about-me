@@ -18,20 +18,6 @@ import {
   TextCenter,
 } from "./ShowShared";
 
-const HtmlIcon = styled(DefaultIcon)`
-  background: linear-gradient(
-    90deg,
-    rgba(222, 8, 1, 1) 0%,
-    rgba(232, 99, 42, 1) 50%
-  );
-`;
-const CssIcon = styled(DefaultIcon)`
-  background: linear-gradient(
-    90deg,
-    rgba(3, 112, 181, 1) 0%,
-    rgba(3, 145, 212, 1) 50%
-  );
-`;
 const JsIcon = styled(DefaultIcon)`
   background: radial-gradient(
     circle,
