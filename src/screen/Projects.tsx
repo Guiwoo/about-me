@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { TitleText } from "../components/Shared";
 import PieTable from "../components/Project/PieTable";
 import KokoaImg from "../assets/projectImg/kakao/kokoaFirstPage.png";
+import OnMacKakao from "../assets/projectImg/kakao/onMac.png";
+import FirstShow from "../components/Project/ShowBox/FirstShow";
 
 const Container = styled.div`
   padding: 20px;
@@ -27,42 +29,30 @@ const ProjectGrid = styled.div`
 `;
 
 const FirstProject = styled.div`
-  background-image: url(${KokoaImg});
+  background-image: url(${OnMacKakao});
   background-position: center;
   background-size: cover;
   opacity: 0.9;
   text-align: end;
 `;
-const TextInBox = styled.span`
-  font-size: 14px;
-  font-weight: 600;
-  color: teal;
-  text-decoration: underline;
-`;
-
-const ShowBox = styled.div`
-  width: 380px;
-  height: 400px;
-  background-color: red;
-  margin-left: 10px;
-`;
 
 const ProjectHome = () => {
   const [show, setShow] = React.useState(false);
-  const handleOnMouse = () => {
-    console.log("on");
+  const handleOneIn = () => {
+    setShow(true);
+  };
+  const handleOneOut = () => {
+    setShow(false);
   };
   return (
     <Container>
       <Title>My Journeys..</Title>
       <Box>
         <ProjectGrid>
-          <FirstProject onMouseEnter={handleOnMouse}>
-            <TextInBox>
-              Kakao
-              <br /> Clone
-            </TextInBox>
-          </FirstProject>
+          <FirstProject
+            onMouseEnter={handleOneIn}
+            onMouseLeave={handleOneOut}
+          ></FirstProject>
           <div style={{ backgroundColor: "orange" }}>Two</div>
           <div style={{ backgroundColor: "yellow" }}>Three</div>
           <div style={{ backgroundColor: "green" }}>Four</div>
@@ -72,33 +62,7 @@ const ProjectHome = () => {
           <div style={{ backgroundColor: "pink" }}>Eight</div>
           <div style={{ backgroundColor: "gold" }}>Nine</div>
         </ProjectGrid>
-        <ShowBox>
-          <div style={{ padding: "10px" }}>
-            <h2>Kakao Clone</h2>
-            <div>
-              <div>Img</div>
-              <div>
-                <span>Html,Css</span>
-                <span>First Page</span>
-              </div>
-            </div>
-            <div>
-              <div>Img</div>
-              <div>
-                <span>Join and FullScreen</span>
-                <span>Responsive desgin</span>
-              </div>
-            </div>
-            <div>
-              <div>Img</div>
-              <div>
-                <span>Chat Lists</span>
-                <span>Bedge and use Animations</span>
-              </div>
-            </div>
-          </div>
-        </ShowBox>
-        {/* {<PieTable />} */}
+        {!show ? <PieTable /> : <FirstShow />}
       </Box>
     </Container>
   );
