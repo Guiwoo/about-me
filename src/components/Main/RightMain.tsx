@@ -5,12 +5,12 @@ import Home from "../../screen/Home";
 import routeName from "../../routeName";
 import { GoNext } from "../Shared";
 import { MainLayOut, ProjectsLayout } from "./MainLayOut";
+import ProjectHome from "../../screen/Projects";
 
 /** Need to make 404 page or redirecting to home */
 const NoMatch = () => <div>No</div>;
 const Project1 = () => <h1>project1</h1>;
 const Project2 = () => <h1>project2</h1>;
-const Now = () => <h1>home</h1>;
 
 const RightMain = () => {
   const { pathname } = useLocation();
@@ -21,7 +21,7 @@ const RightMain = () => {
           <Route path="/" element={<Home />} />
           <Route path="me" element={<AboutMe />} />
           <Route path="projects/" element={<ProjectsLayout />}>
-            <Route index element={<Now />} />
+            <Route index element={<ProjectHome />} />
             <Route path="1" element={<Project1 />} />
             <Route path="2" element={<Project2 />} />
           </Route>

@@ -72,3 +72,13 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 # Projects
 
 [] - Make a hamburger bar (https://github-readme-stats.vercel.app/api/top-langs/?username=Guiwoo&langs_count=10)
+
+## Victory for Graph and Pie awesome !!
+
+- [Check here 🚀](https://formidable.com/open-source/victory/docs/victory-pie)
+
+  - Vicotry Docs
+
+- [Check here🚀](https://formidable.com/open-source/victory/gallery/victory-pie-with-center-label/)
+
+  - Victory Pie with Center Title Demo

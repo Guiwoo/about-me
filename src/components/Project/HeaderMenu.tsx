@@ -11,6 +11,8 @@ type isOpenProps = {
 const Container = styled.div`
   padding: 20px;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
 `;
 
 const StarAnimation = keyframes`
@@ -27,7 +29,7 @@ const StarAnimation = keyframes`
 
 const MoonMove = keyframes`
     0%{
-      transform: translateX(-380px);
+      transform:translateX(380px);
       color:yellow
     }100%{
       color:red
@@ -48,6 +50,12 @@ const Moon = styled(Icon)<isOpenProps>`
 const MenuBtn = styled.button`
   padding: 0;
 `;
+const MenuSpan = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  font-size: 12px;
+`;
 
 const BarMenu = styled.div`
   margin: 0px 8px;
@@ -56,7 +64,7 @@ const BarMenu = styled.div`
 
 const ShowAnimation = keyframes`
     0%{
-      transform: translate(-50px);
+      transform: translate(-50px,-20px);
     }
     50%{
       opacity:0
@@ -73,19 +81,20 @@ const ShowAnimation = keyframes`
 const FirstMenu = styled(BarMenu)`
   opacity: 0;
   animation: ${ShowAnimation} 0.3s linear forwards;
+  animation-delay: 1.9s;
 `;
 const SecondMenu = styled(FirstMenu)`
-  animation-delay: 0.4s;
+  animation-delay: 1.4s;
 `;
 const ThirdMenu = styled(FirstMenu)`
-  animation-delay: 0.8s;
+  animation-delay: 1s;
 `;
 
 const FourthMenu = styled(FirstMenu)`
-  animation-delay: 1.2s;
+  animation-delay: 0.6s;
 `;
 const FifthMenu = styled(FirstMenu)`
-  animation-delay: 1.7s;
+  animation-delay: 0.2s;
 `;
 
 const HeaderMenu = (props: any) => {
@@ -94,8 +103,9 @@ const HeaderMenu = (props: any) => {
   return (
     <>
       <Container {...rest}>
+        {!show ? <MenuSpan>See All</MenuSpan> : null}
         <MenuBtn onClick={() => setShow(!show)}>
-          <Icon icon={faStar} color="#ffdd59" />
+          <Moon isopen={show.toString()} icon={faStar} color="#ffdd59" />
         </MenuBtn>
         {show ? (
           <div style={{ display: "flex" }}>
@@ -107,7 +117,7 @@ const HeaderMenu = (props: any) => {
           </div>
         ) : null}
         <MenuBtn onClick={() => setShow(!show)}>
-          <Moon isopen={show.toString()} icon={faMoon} color="#c9a309" />
+          <Icon icon={faMoon} color="#c9a309" />
         </MenuBtn>
       </Container>
     </>
