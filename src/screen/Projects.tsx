@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { TitleText } from "../components/Shared";
 import PieTable from "../components/Project/PieTable";
-import KokoaImg from "../assets/projectImg/kakao/kokoaFirstPage.png";
 import OnMacKakao from "../assets/projectImg/kakao/onMac.png";
+import onMacModal from "../assets/projectImg/modal/onMac.png";
 import FirstShow from "../components/Project/ShowBox/FirstShow";
+import SecondShow from "../components/Project/ShowBox/SecondShow";
 
 const Container = styled.div`
   padding: 20px;
@@ -28,41 +29,53 @@ const ProjectGrid = styled.div`
   gap: 5px;
 `;
 
-const FirstProject = styled.div`
-  background-image: url(${OnMacKakao});
+const ProjectFrame = styled.div`
   background-position: center;
   background-size: cover;
   opacity: 0.9;
-  text-align: end;
+`;
+
+const FirstProject = styled(ProjectFrame)`
+  background-image: url(${OnMacKakao});
+  border-bottom: 1px solid white;
+`;
+
+const SecondProject = styled(ProjectFrame)`
+  background-image: url(${onMacModal});
 `;
 
 const ProjectHome = () => {
+  const [index, setIndex] = React.useState(0);
   const [show, setShow] = React.useState(false);
-  const handleOneIn = () => {
-    setShow(true);
+  const ToggleOne = (num?: number) => {
+    if (num) {
+      setIndex(num);
+    }
+    setShow(!show);
   };
-  const handleOneOut = () => {
-    setShow(false);
-  };
+  console.log(index);
   return (
     <Container>
       <Title>My Journeys..</Title>
       <Box>
         <ProjectGrid>
           <FirstProject
-            onMouseEnter={handleOneIn}
-            onMouseLeave={handleOneOut}
-          ></FirstProject>
-          <div style={{ backgroundColor: "orange" }}>Two</div>
-          <div style={{ backgroundColor: "yellow" }}>Three</div>
-          <div style={{ backgroundColor: "green" }}>Four</div>
+            onMouseEnter={() => ToggleOne(1)}
+            onMouseLeave={() => ToggleOne()}
+          />
+          <div></div>
+          <div></div>
+          <div></div>
           <div style={{ backgroundColor: "blue" }}>Five</div>
           <div style={{ backgroundColor: "teal" }}>Six</div>
-          <div style={{ backgroundColor: "purple" }}>Seven</div>
+          <SecondProject
+            onMouseEnter={() => ToggleOne(2)}
+            onMouseLeave={() => ToggleOne()}
+          />
           <div style={{ backgroundColor: "pink" }}>Eight</div>
           <div style={{ backgroundColor: "gold" }}>Nine</div>
         </ProjectGrid>
-        {!show ? <PieTable /> : <FirstShow />}
+        {!show ? <PieTable /> : index === 1 ? <FirstShow /> : <SecondShow />}
       </Box>
     </Container>
   );
