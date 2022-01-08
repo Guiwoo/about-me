@@ -82,3 +82,9 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 - [Check here🚀](https://formidable.com/open-source/victory/gallery/victory-pie-with-center-label/)
 
   - Victory Pie with Center Title Demo
+
+### Hover to Show other Screen
+
+- Give a mouseOver evnetlistner each components
+- They are gonna figure number with setState()
+- Needs to rerender ? idk start

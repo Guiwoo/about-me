@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { TitleText } from "../components/Shared";
-import { VictoryPie, VictoryLabel } from "victory";
+import PieTable from "../components/Project/PieTable";
+import KokoaImg from "../assets/projectImg/kakao/kokoaFirstPage.png";
 
 const Container = styled.div`
   padding: 20px;
@@ -25,13 +26,43 @@ const ProjectGrid = styled.div`
   gap: 5px;
 `;
 
+const FirstProject = styled.div`
+  background-image: url(${KokoaImg});
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+  text-align: end;
+`;
+const TextInBox = styled.span`
+  font-size: 14px;
+  font-weight: 600;
+  color: teal;
+  text-decoration: underline;
+`;
+
+const ShowBox = styled.div`
+  width: 380px;
+  height: 400px;
+  background-color: red;
+  margin-left: 10px;
+`;
+
 const ProjectHome = () => {
+  const [show, setShow] = React.useState(false);
+  const handleOnMouse = () => {
+    console.log("on");
+  };
   return (
     <Container>
-      <Title>My Projects..</Title>
+      <Title>My Journeys..</Title>
       <Box>
         <ProjectGrid>
-          <div style={{ backgroundColor: "red" }}>One</div>
+          <FirstProject onMouseEnter={handleOnMouse}>
+            <TextInBox>
+              Kakao
+              <br /> Clone
+            </TextInBox>
+          </FirstProject>
           <div style={{ backgroundColor: "orange" }}>Two</div>
           <div style={{ backgroundColor: "yellow" }}>Three</div>
           <div style={{ backgroundColor: "green" }}>Four</div>
@@ -41,40 +72,33 @@ const ProjectHome = () => {
           <div style={{ backgroundColor: "pink" }}>Eight</div>
           <div style={{ backgroundColor: "gold" }}>Nine</div>
         </ProjectGrid>
-        <div style={{ transform: "translateX(50px)" }}>
-          <svg width={350} height={350}>
-            <VictoryPie
-              colorScale={["#efd81c", "#2F73BF", "#FFD445", "#E96228", "gray"]}
-              style={{
-                labels: {
-                  fontSize: 13,
-                  fill: "white" /**Light theme Check the font here */,
-                },
-              }}
-              standalone={false}
-              width={300}
-              height={300}
-              innerRadius={75}
-              data={[
-                { x: 1, y: 42, label: "JavaScript\n42%" },
-                { x: 2, y: 16, label: "TypeScript\n16%" },
-                { x: 3, y: 13, label: "Python\n13%" },
-                { x: 4, y: 13, label: "HTML\n13%" },
-                { x: 5, y: 15, label: "Css,Scss,Go,Etc..\n15%" },
-              ]}
-            />
-            <VictoryLabel
-              textAnchor="middle"
-              style={{
-                fontSize: 18,
-                fill: "white",
-              }}
-              x={150}
-              y={150}
-              text="Most Used"
-            />
-          </svg>
-        </div>
+        <ShowBox>
+          <div style={{ padding: "10px" }}>
+            <h2>Kakao Clone</h2>
+            <div>
+              <div>Img</div>
+              <div>
+                <span>Html,Css</span>
+                <span>First Page</span>
+              </div>
+            </div>
+            <div>
+              <div>Img</div>
+              <div>
+                <span>Join and FullScreen</span>
+                <span>Responsive desgin</span>
+              </div>
+            </div>
+            <div>
+              <div>Img</div>
+              <div>
+                <span>Chat Lists</span>
+                <span>Bedge and use Animations</span>
+              </div>
+            </div>
+          </div>
+        </ShowBox>
+        {/* {<PieTable />} */}
       </Box>
     </Container>
   );
