@@ -7,11 +7,13 @@ import onMacModal from "../assets/projectImg/modal/onMac.png";
 import onMacYou from "../assets/projectImg/youtube/onMacYou.png";
 import onMacMovie from "../assets/projectImg/reactMovie/onMac.png";
 import onMobile from "../assets/projectImg/movieApp/fatHome.png";
+import onMacCoffee from "../assets/projectImg/CoffeeApp/Home.png";
 import FirstShow from "../components/Project/ShowBox/FirstShow";
 import SecondShow from "../components/Project/ShowBox/SecondShow";
 import ThirdShow from "../components/Project/ShowBox/TrhidShow";
 import FourthShow from "../components/Project/ShowBox/FourthShow";
 import FifthShow from "../components/Project/ShowBox/FifthShow";
+import SixthShow from "../components/Project/ShowBox/SixthShow";
 
 const Container = styled.div`
   padding: 20px;
@@ -61,6 +63,9 @@ const FifthPorject = styled(ProjectFrame)`
   background-image: url(${onMobile});
   background-repeat: no-repeat;
 `;
+const SixthProject = styled(ProjectFrame)`
+  background-image: url(${onMacCoffee});
+`;
 
 const ProjectHome = () => {
   const [index, setIndex] = React.useState(0);
@@ -98,10 +103,13 @@ const ProjectHome = () => {
             onMouseOver={() => ToggleOne(4)}
             onMouseLeave={() => ToggleOne()}
           />
-          <div style={{ backgroundColor: "pink" }}>Eight</div>
+          <SixthProject
+            onMouseOver={() => ToggleOne(4)}
+            onMouseLeave={() => ToggleOne()}
+          />
           <div style={{ backgroundColor: "gold" }}>Nine</div>
         </ProjectGrid>
-        <FifthShow />
+        <SixthShow />
         {/* {!show ? (
           <PieTable />
         ) : index === 1 ? (
@@ -110,9 +118,9 @@ const ProjectHome = () => {
           <SecondShow />
         ) : index === 3 ? (
           <ThirdShow />
-        ) : (
+        ) : index === 4 ? (
           <FourthShow />
-        )} */}
+        ) : <FifthShow />} */}
       </Box>
     </Container>
   );
