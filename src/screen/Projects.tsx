@@ -6,10 +6,12 @@ import OnMacKakao from "../assets/projectImg/kakao/onMac.png";
 import onMacModal from "../assets/projectImg/modal/onMac.png";
 import onMacYou from "../assets/projectImg/youtube/onMacYou.png";
 import onMacMovie from "../assets/projectImg/reactMovie/onMac.png";
+import onMobile from "../assets/projectImg/movieApp/fatHome.png";
 import FirstShow from "../components/Project/ShowBox/FirstShow";
 import SecondShow from "../components/Project/ShowBox/SecondShow";
 import ThirdShow from "../components/Project/ShowBox/TrhidShow";
 import FourthShow from "../components/Project/ShowBox/FourthShow";
+import FifthShow from "../components/Project/ShowBox/FifthShow";
 
 const Container = styled.div`
   padding: 20px;
@@ -34,7 +36,8 @@ const ProjectGrid = styled.div`
 `;
 
 const ProjectFrame = styled.div`
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
 `;
@@ -53,6 +56,10 @@ const ThirdProject = styled(ProjectFrame)`
 `;
 const FourthProject = styled(ProjectFrame)`
   background-image: url(${onMacMovie});
+`;
+const FifthPorject = styled(ProjectFrame)`
+  background-image: url(${onMobile});
+  background-repeat: no-repeat;
 `;
 
 const ProjectHome = () => {
@@ -87,11 +94,15 @@ const ProjectHome = () => {
             onMouseOver={() => ToggleOne(4)}
             onMouseLeave={() => ToggleOne()}
           />
-          <div style={{ backgroundColor: "purple" }}>Seven</div>
+          <FifthPorject
+            onMouseOver={() => ToggleOne(4)}
+            onMouseLeave={() => ToggleOne()}
+          />
           <div style={{ backgroundColor: "pink" }}>Eight</div>
           <div style={{ backgroundColor: "gold" }}>Nine</div>
         </ProjectGrid>
-        {!show ? (
+        <FifthShow />
+        {/* {!show ? (
           <PieTable />
         ) : index === 1 ? (
           <FirstShow />
@@ -101,7 +112,7 @@ const ProjectHome = () => {
           <ThirdShow />
         ) : (
           <FourthShow />
-        )}
+        )} */}
       </Box>
     </Container>
   );

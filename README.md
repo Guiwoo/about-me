@@ -88,3 +88,8 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 - Give a mouseOver evnetlistner each components
 - They are gonna figure number with setState()
 - Needs to rerender ? idk start
+
+#### Need to Resize Photo
+
+[] - All Project Img needs to resize
+[] - Use AWS bucket for image upload Check it later

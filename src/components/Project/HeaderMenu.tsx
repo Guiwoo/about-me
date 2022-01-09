@@ -55,6 +55,7 @@ const MenuSpan = styled.div`
   justify-content: flex-end;
   margin-right: 15px;
   font-size: 12px;
+  cursor: pointer;
 `;
 
 const BarMenu = styled.div`
@@ -103,7 +104,9 @@ const HeaderMenu = (props: any) => {
   return (
     <>
       <Container {...rest}>
-        {!show ? <MenuSpan>See All</MenuSpan> : null}
+        {!show ? (
+          <MenuSpan onClick={() => setShow(!show)}>See All</MenuSpan>
+        ) : null}
         <MenuBtn onClick={() => setShow(!show)}>
           <Moon isopen={show.toString()} icon={faStar} color="#ffdd59" />
         </MenuBtn>
