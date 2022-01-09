@@ -12,8 +12,6 @@ import {
   ImgBox,
   TextCenter,
   ImgBox2,
-  HtmlIcon,
-  CssIcon,
 } from "../../components/Project/ShowBox/ShowShared";
 
 const Container = styled.div`
