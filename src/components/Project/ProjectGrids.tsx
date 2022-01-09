@@ -7,9 +7,12 @@ import onMacMovie from "../../assets/projectImg/reactMovie/onMac.png";
 import onMobile from "../../assets/projectImg/movieApp/fatHome.png";
 import onMacCoffee from "../../assets/projectImg/CoffeeApp/Home.png";
 import onMacReview from "../../assets/projectImg/reviewApp/onMac.png";
+import { useNavigate } from "react-router-dom";
+import routeName from "../../routeName";
 
 interface ToggleOneProps {
-  ToggleOne(num?: number): void;
+  mouseIn(num?: number): void;
+  mouseOut(): void;
 }
 
 const ProjectFrame = styled.div`
@@ -17,6 +20,7 @@ const ProjectFrame = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
+  cursor: pointer;
 `;
 
 const SProjectGrid = styled.div`
@@ -54,39 +58,68 @@ const SevenPrjoect = styled(ProjectFrame)`
   background-image: url(${onMacReview});
 `;
 
-const ProjectGrids: React.FC<ToggleOneProps> = ({ ToggleOne }) => {
+const GridText = styled.div`
+  text-align: end;
+  font-size: 12px;
+  color: #05c46b;
+`;
+
+const ProjectGrids: React.FC<ToggleOneProps> = ({ mouseIn, mouseOut }) => {
+  let navigate = useNavigate();
+  const linkTo = (url: string) => navigate(url);
   return (
     <SProjectGrid>
       <FirstProject
-        onMouseOver={() => ToggleOne(1)}
-        onMouseLeave={() => ToggleOne()}
-      />
+        onMouseOver={() => mouseIn(1)}
+        onMouseLeave={() => mouseOut()}
+        onClick={() => linkTo(routeName.first)}
+      >
+        <GridText>Project 1</GridText>
+      </FirstProject>
       <div></div>
       <div></div>
       <SecondProject
-        onMouseOver={() => ToggleOne(2)}
-        onMouseLeave={() => ToggleOne()}
-      />
+        onMouseOver={() => mouseIn(2)}
+        onMouseLeave={() => mouseOut()}
+        onClick={() => linkTo(routeName.second)}
+      >
+        <GridText>Project 2</GridText>
+      </SecondProject>
       <ThirdProject
-        onMouseOver={() => ToggleOne(3)}
-        onMouseLeave={() => ToggleOne()}
-      />
+        onMouseOver={() => mouseIn(3)}
+        onMouseLeave={() => mouseOut()}
+        onClick={() => linkTo(routeName.third)}
+      >
+        <GridText>Project 3</GridText>
+      </ThirdProject>
       <FourthProject
-        onMouseOver={() => ToggleOne(4)}
-        onMouseLeave={() => ToggleOne()}
-      />
+        onMouseOver={() => mouseIn(4)}
+        onMouseLeave={() => mouseOut()}
+        onClick={() => linkTo(routeName.fourth)}
+      >
+        <GridText>Project 4</GridText>
+      </FourthProject>
       <FifthPorject
-        onMouseOver={() => ToggleOne(5)}
-        onMouseLeave={() => ToggleOne()}
-      />
+        onMouseOver={() => mouseIn(5)}
+        onMouseLeave={() => mouseOut()}
+        onClick={() => linkTo(routeName.fifth)}
+      >
+        <GridText>Project 5</GridText>
+      </FifthPorject>
       <SixthProject
-        onMouseOver={() => ToggleOne(6)}
-        onMouseLeave={() => ToggleOne()}
-      />
+        onMouseOver={() => mouseIn(6)}
+        onMouseLeave={() => mouseOut()}
+        onClick={() => linkTo(routeName.sixth)}
+      >
+        <GridText>Project 6</GridText>
+      </SixthProject>
       <SevenPrjoect
-        onMouseOver={() => ToggleOne(7)}
-        onMouseLeave={() => ToggleOne()}
-      />
+        onMouseOver={() => mouseIn(7)}
+        onMouseLeave={() => mouseOut()}
+        onClick={() => linkTo(routeName.seven)}
+      >
+        <GridText>Project 7</GridText>
+      </SevenPrjoect>
     </SProjectGrid>
   );
 };

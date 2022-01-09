@@ -28,17 +28,18 @@ const Box = styled.div`
 const ProjectHome = () => {
   const [index, setIndex] = React.useState(0);
   const [show, setShow] = React.useState(false);
-  const ToggleOne = (num?: number): void => {
+  const mouseIn = (num?: number): void => {
     if (num) {
       setIndex(num);
     }
-    setShow(!show);
+    setShow(true);
   };
+  const mouseOut = () => setShow(false);
   return (
     <Container>
       <Title>My Journeys..</Title>
       <Box>
-        <ProjectGrids ToggleOne={ToggleOne} />
+        <ProjectGrids mouseIn={mouseIn} mouseOut={mouseOut} />
         {!show ? (
           <PieTable />
         ) : index === 1 ? (

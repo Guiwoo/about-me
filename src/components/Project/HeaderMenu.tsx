@@ -2,7 +2,8 @@ import { faMoon, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { isPropertyAssignment } from "typescript";
+import routeName from "../../routeName";
+import { LinkToProject } from "./ProjectShare";
 
 type isOpenProps = {
   readonly isopen: string;
@@ -117,13 +118,27 @@ const HeaderMenu = (props: any) => {
         </MenuBtn>
         {show ? (
           <div style={{ display: "flex" }}>
-            <FirstMenu>Project 1</FirstMenu>
-            <SecondMenu>Project 2</SecondMenu>
-            <ThirdMenu>Project 3</ThirdMenu>
-            <FourthMenu>Project 4</FourthMenu>
-            <FifthMenu>Project 5</FifthMenu>
-            <SixMenu>Project 6</SixMenu>
-            <SevenMenu>Project 7</SevenMenu>
+            <FirstMenu>
+              <LinkToProject url={routeName.first} text={"Project 1"} />
+            </FirstMenu>
+            <SecondMenu>
+              <LinkToProject url={routeName.second} text={"Project 2"} />
+            </SecondMenu>
+            <ThirdMenu>
+              <LinkToProject url={routeName.third} text={"Project 3"} />
+            </ThirdMenu>
+            <FourthMenu>
+              <LinkToProject url={routeName.fourth} text={"Project 4"} />
+            </FourthMenu>
+            <FifthMenu>
+              <LinkToProject url={routeName.fifth} text={"Project 5"} />
+            </FifthMenu>
+            <SixMenu>
+              <LinkToProject url={routeName.sixth} text={"Project 6"} />
+            </SixMenu>
+            <SevenMenu>
+              <LinkToProject url={routeName.seven} text={"Project 7"} />
+            </SevenMenu>
           </div>
         ) : null}
         <MenuBtn onClick={() => setShow(!show)}>
