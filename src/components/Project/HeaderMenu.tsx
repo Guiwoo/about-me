@@ -29,7 +29,7 @@ const StarAnimation = keyframes`
 
 const MoonMove = keyframes`
     0%{
-      transform:translateX(380px);
+      transform:translateX(560px);
       color:yellow
     }100%{
       color:red
@@ -82,20 +82,25 @@ const ShowAnimation = keyframes`
 const FirstMenu = styled(BarMenu)`
   opacity: 0;
   animation: ${ShowAnimation} 0.3s linear forwards;
-  animation-delay: 1.9s;
+  animation-delay: 1.8s;
 `;
 const SecondMenu = styled(FirstMenu)`
-  animation-delay: 1.4s;
+  animation-delay: 1.6s;
 `;
 const ThirdMenu = styled(FirstMenu)`
+  animation-delay: 1.3s;
+`;
+const FourthMenu = styled(FirstMenu)`
   animation-delay: 1s;
 `;
-
-const FourthMenu = styled(FirstMenu)`
-  animation-delay: 0.6s;
-`;
 const FifthMenu = styled(FirstMenu)`
-  animation-delay: 0.2s;
+  animation-delay: 0.7s;
+`;
+const SixMenu = styled(FirstMenu)`
+  animation-delay: 0.4s;
+`;
+const SevenMenu = styled(FirstMenu)`
+  animation-delay: 0.1s;
 `;
 
 const HeaderMenu = (props: any) => {
@@ -112,11 +117,13 @@ const HeaderMenu = (props: any) => {
         </MenuBtn>
         {show ? (
           <div style={{ display: "flex" }}>
-            <FirstMenu>Project1</FirstMenu>
-            <SecondMenu>Project2</SecondMenu>
-            <ThirdMenu>Project3</ThirdMenu>
-            <FourthMenu>Project4</FourthMenu>
-            <FifthMenu>Project5</FifthMenu>
+            <FirstMenu>Project 1</FirstMenu>
+            <SecondMenu>Project 2</SecondMenu>
+            <ThirdMenu>Project 3</ThirdMenu>
+            <FourthMenu>Project 4</FourthMenu>
+            <FifthMenu>Project 5</FifthMenu>
+            <SixMenu>Project 6</SixMenu>
+            <SevenMenu>Project 7</SevenMenu>
           </div>
         ) : null}
         <MenuBtn onClick={() => setShow(!show)}>

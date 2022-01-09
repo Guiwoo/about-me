@@ -5,7 +5,7 @@ import LoginPage from "../../../assets/projectImg/youtube/loginPage.png";
 import UploadPage from "../../../assets/projectImg/youtube/uploadPage.png";
 import Profile from "../../../assets/projectImg/youtube/profile.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faJs, faNodeJs } from "@fortawesome/free-brands-svg-icons";
+import { faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import {
   ShowBoxLayout,
   ImgBox,
@@ -15,16 +15,9 @@ import {
   DefaultIcon,
   Img,
   TextCenter,
+  JsIcon,
 } from "./ShowShared";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons";
-
-const JsIcon = styled(DefaultIcon)`
-  background: radial-gradient(
-    circle,
-    rgba(239, 216, 29, 1) 0%,
-    rgba(97, 97, 97, 1) 100%
-  );
-`;
 
 const NodeIcon = styled(DefaultIcon)`
   background: radial-gradient(
@@ -51,9 +44,7 @@ const ThirdShow = () => {
         <NodeIcon>
           <FontAwesomeIcon icon={faNodeJs} /> NodeJS
         </NodeIcon>
-        <JsIcon>
-          <FontAwesomeIcon icon={faJs} /> JavaScript
-        </JsIcon>
+        <JsIcon />
       </TitleBox>
       <ImgBox>
         <div>

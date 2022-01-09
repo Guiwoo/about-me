@@ -5,7 +5,6 @@ import Login from "../../../assets/projectImg/CoffeeApp/Login.png";
 import Create from "../../../assets/projectImg/CoffeeApp/Create.png";
 import Mobile from "../../../assets/projectImg/CoffeeApp/Mobile.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
 import {
   ShowBoxLayout,
   ImgBox,
@@ -15,16 +14,9 @@ import {
   DefaultIcon,
   Img,
   TextCenter,
+  ReactIcon,
 } from "./ShowShared";
 import { faHippo } from "@fortawesome/free-solid-svg-icons";
-
-const ReactIcon = styled(DefaultIcon)`
-  background: linear-gradient(
-    0deg,
-    rgba(94, 210, 243, 1) 0%,
-    rgba(207, 205, 205, 1) 100%
-  );
-`;
 
 const PostIcon = styled(DefaultIcon)`
   background: linear-gradient(120deg, #336790, 60%, white);
@@ -45,9 +37,7 @@ const SixthShow = () => {
         <PostIcon>
           <FontAwesomeIcon icon={faHippo} /> Postgres
         </PostIcon>
-        <ReactIcon>
-          <FontAwesomeIcon icon={faReact} /> React
-        </ReactIcon>
+        <ReactIcon />
       </TitleBox>
       <ImgBox>
         <div>

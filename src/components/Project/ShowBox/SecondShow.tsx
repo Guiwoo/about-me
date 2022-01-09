@@ -4,9 +4,6 @@ import MotionHome from "../../../assets/projectImg/modal/MotionHome.png";
 import MotionAdd from "../../../assets/projectImg/modal/MotionAddPage.png";
 import MotionPhoto from "../../../assets/projectImg/modal/MotionPhoto.png";
 import MotionFull from "../../../assets/projectImg/modal/MotionFull.png";
-import Kokoa4 from "../../../assets/projectImg/kakao/Mypage.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHtml5, faCss3, faJs } from "@fortawesome/free-brands-svg-icons";
 import {
   ShowBoxLayout,
   ImgBox,
@@ -16,15 +13,9 @@ import {
   DefaultIcon,
   Img,
   TextCenter,
+  JsIcon,
 } from "./ShowShared";
 
-const JsIcon = styled(DefaultIcon)`
-  background: radial-gradient(
-    circle,
-    rgba(239, 216, 29, 1) 0%,
-    rgba(97, 97, 97, 1) 100%
-  );
-`;
 const TsIcon = styled(DefaultIcon)`
   background: radial-gradient(
     circle,
@@ -51,9 +42,7 @@ const SecondShow = () => {
         <TsIcon>
           <TsText>Ts</TsText> <span>TypeScript</span>
         </TsIcon>
-        <JsIcon>
-          <FontAwesomeIcon icon={faJs} /> JavaScript
-        </JsIcon>
+        <JsIcon />
       </TitleBox>
       <ImgBox>
         <div>

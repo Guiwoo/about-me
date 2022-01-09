@@ -1,45 +1,27 @@
 import React from "react";
-import styled from "styled-components";
 import IndexPage from "../../../assets/projectImg/movieApp/google.png";
 import HomePage from "../../../assets/projectImg/movieApp/HomePage.png";
 import DetailPage from "../../../assets/projectImg/movieApp/Detail.png";
 import LikePage from "../../../assets/projectImg/movieApp/LikePage.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact, faMediumM } from "@fortawesome/free-brands-svg-icons";
 import {
   ShowBoxLayout,
   ImgBox,
   ImgBox2,
   ShowTitle,
   TitleBox,
-  DefaultIcon,
   Img,
   TextCenter,
+  ReactIcon,
+  ImdbIcon,
 } from "./ShowShared";
-
-const ReactIcon = styled(DefaultIcon)`
-  background: linear-gradient(
-    0deg,
-    rgba(94, 210, 243, 1) 0%,
-    rgba(207, 205, 205, 1) 100%
-  );
-`;
-
-const IMDB = styled(DefaultIcon)`
-  background: linear-gradient(70deg, #7eccaa, 60%, #0ab7dd);
-`;
 
 const FifthShow = () => {
   return (
     <ShowBoxLayout>
       <ShowTitle>React Movie App • Api</ShowTitle>
       <TitleBox>
-        <ReactIcon>
-          <FontAwesomeIcon icon={faReact} /> ReactNative(Expo)
-        </ReactIcon>
-        <IMDB>
-          <FontAwesomeIcon icon={faMediumM} /> IMDB
-        </IMDB>
+        <ReactIcon />
+        <ImdbIcon />
       </TitleBox>
       <ImgBox>
         <div>
