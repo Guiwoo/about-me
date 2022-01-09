@@ -8,12 +8,14 @@ import onMacYou from "../assets/projectImg/youtube/onMacYou.png";
 import onMacMovie from "../assets/projectImg/reactMovie/onMac.png";
 import onMobile from "../assets/projectImg/movieApp/fatHome.png";
 import onMacCoffee from "../assets/projectImg/CoffeeApp/Home.png";
+import onMacReview from "../assets/projectImg/reviewApp/onMac.png";
 import FirstShow from "../components/Project/ShowBox/FirstShow";
 import SecondShow from "../components/Project/ShowBox/SecondShow";
 import ThirdShow from "../components/Project/ShowBox/TrhidShow";
 import FourthShow from "../components/Project/ShowBox/FourthShow";
 import FifthShow from "../components/Project/ShowBox/FifthShow";
 import SixthShow from "../components/Project/ShowBox/SixthShow";
+import SevenShow from "../components/Project/ShowBox/SeventhShow";
 
 const Container = styled.div`
   padding: 20px;
@@ -67,6 +69,10 @@ const SixthProject = styled(ProjectFrame)`
   background-image: url(${onMacCoffee});
 `;
 
+const SevenPrjoect = styled(ProjectFrame)`
+  background-image: url(${onMacReview});
+`;
+
 const ProjectHome = () => {
   const [index, setIndex] = React.useState(0);
   const [show, setShow] = React.useState(false);
@@ -100,17 +106,19 @@ const ProjectHome = () => {
             onMouseLeave={() => ToggleOne()}
           />
           <FifthPorject
-            onMouseOver={() => ToggleOne(4)}
+            onMouseOver={() => ToggleOne(5)}
             onMouseLeave={() => ToggleOne()}
           />
           <SixthProject
-            onMouseOver={() => ToggleOne(4)}
+            onMouseOver={() => ToggleOne(6)}
             onMouseLeave={() => ToggleOne()}
           />
-          <div style={{ backgroundColor: "gold" }}>Nine</div>
+          <SevenPrjoect
+            onMouseOver={() => ToggleOne(7)}
+            onMouseLeave={() => ToggleOne()}
+          />
         </ProjectGrid>
-        <SixthShow />
-        {/* {!show ? (
+        {!show ? (
           <PieTable />
         ) : index === 1 ? (
           <FirstShow />
@@ -120,7 +128,13 @@ const ProjectHome = () => {
           <ThirdShow />
         ) : index === 4 ? (
           <FourthShow />
-        ) : <FifthShow />} */}
+        ) : index === 5 ? (
+          <FifthShow />
+        ) : index === 6 ? (
+          <SixthShow />
+        ) : (
+          <SevenShow />
+        )}
       </Box>
     </Container>
   );
