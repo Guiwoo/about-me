@@ -1,5 +1,11 @@
 import React, { ReactChild, ReactChildren } from "react";
-import { faJs, faMediumM, faReact } from "@fortawesome/free-brands-svg-icons";
+import {
+  faCss3,
+  faHtml5,
+  faJs,
+  faMediumM,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { TitleText } from "../../Shared";
@@ -94,4 +100,31 @@ export const ImdbIcon = () => (
   <IMDB>
     <FontAwesomeIcon icon={faMediumM} /> IMDB
   </IMDB>
+);
+
+const SHtmlIcon = styled(DefaultIcon)`
+  background: linear-gradient(
+    90deg,
+    rgba(222, 8, 1, 1) 0%,
+    rgba(232, 99, 42, 1) 50%
+  );
+`;
+const SCssIcon = styled(DefaultIcon)`
+  background: linear-gradient(
+    90deg,
+    rgba(3, 112, 181, 1) 0%,
+    rgba(3, 145, 212, 1) 50%
+  );
+`;
+
+export const HtmlIcon = () => (
+  <SHtmlIcon>
+    <FontAwesomeIcon icon={faHtml5} /> HTML
+  </SHtmlIcon>
+);
+
+export const CssIcon = () => (
+  <SCssIcon>
+    <FontAwesomeIcon icon={faCss3} /> CSS
+  </SCssIcon>
 );

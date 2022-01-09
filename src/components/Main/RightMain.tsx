@@ -6,13 +6,13 @@ import routeName from "../../routeName";
 import { GoNext } from "../Shared";
 import { MainLayOut, ProjectsLayout } from "./MainLayOut";
 import ProjectHome from "../../screen/Projects";
-import Detail_1 from "../Project/Detail/Detail_1";
-import Detail_2 from "../Project/Detail/Detail_2";
-import Detail_3 from "../Project/Detail/Detail_3";
-import Detail_4 from "../Project/Detail/Detail_4";
-import Detail_5 from "../Project/Detail/Detail_5";
-import Detail_6 from "../Project/Detail/Detail_6";
-import Detail_7 from "../Project/Detail/Detail_7";
+import Detail_1 from "../../screen/Detail/Detail_1";
+import Detail_2 from "../../screen/Detail/Detail_2";
+import Detail_3 from "../../screen/Detail/Detail_3";
+import Detail_4 from "../../screen/Detail/Detail_4";
+import Detail_5 from "../../screen/Detail/Detail_5";
+import Detail_6 from "../../screen/Detail/Detail_6";
+import Detail_7 from "../../screen/Detail/Detail_7";
 
 /** Need to make 404 page or redirecting to home */
 const NoMatch = () => <div>No</div>;
