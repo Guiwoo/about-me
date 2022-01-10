@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import MyImg from "../../assets/img/me1.jpg";
+import { aws_address } from "../../aws";
 import { Box, TitleText } from "../Shared";
 
 const PersonalBox = styled(Box)`
@@ -52,7 +52,7 @@ const Personal = () => {
       <ContentBox>
         <LeftBox>
           <PhotoBox>
-            <Photo src={MyImg} />
+            <Photo src={aws_address.img.meSqaure} />
           </PhotoBox>
         </LeftBox>
         <RightBox>

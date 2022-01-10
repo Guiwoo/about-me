@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { TitleText } from "../../components/Shared";
-import MacBook from "../../assets/img/맥북.png";
 import { Img, TextCenter } from "../../components/Project/ShowBox/ShowShared";
 import { aws_address } from "../../aws";
 
@@ -77,7 +76,7 @@ type VideoProps = {
 const SVideoSection = styled.div``;
 
 const MacBookImg = styled.div`
-  background: url(${MacBook});
+  background: url(${aws_address.img.mac});
   background-position: center;
   background-repeat: none;
   background-size: cover;

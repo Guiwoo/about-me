@@ -1,8 +1,4 @@
 import React from "react";
-import IndexPage from "../../../assets/projectImg/movieApp/google.png";
-import HomePage from "../../../assets/projectImg/movieApp/HomePage.png";
-import DetailPage from "../../../assets/projectImg/movieApp/Detail.png";
-import LikePage from "../../../assets/projectImg/movieApp/LikePage.png";
 import {
   ShowBoxLayout,
   ImgBox,
@@ -14,6 +10,7 @@ import {
   ReactIcon,
   ImdbIcon,
 } from "./ShowShared";
+import { aws_address } from "../../../aws";
 
 const FifthShow = () => {
   return (
@@ -25,21 +22,21 @@ const FifthShow = () => {
       </TitleBox>
       <ImgBox>
         <div>
-          <Img src={IndexPage} />
+          <Img src={aws_address.Mmovie.one} />
           <TextCenter>• Google Play</TextCenter>
         </div>
         <div>
-          <Img src={HomePage} />
+          <Img src={aws_address.Mmovie.two} />
           <TextCenter>• Home Page</TextCenter>
         </div>
       </ImgBox>
       <ImgBox2>
         <div>
-          <Img src={DetailPage} />
+          <Img src={aws_address.Mmovie.three} />
           <TextCenter>• Deatil Page</TextCenter>
         </div>
         <div>
-          <Img src={LikePage} />
+          <Img src={aws_address.Mmovie.five} />
           <TextCenter>• Like Page</TextCenter>
         </div>
       </ImgBox2>

@@ -1,8 +1,5 @@
 import React from "react";
-import KokoaImg from "../../../assets/projectImg/kakao/kokoaFirstPage.png";
-import Kokoa2 from "../../../assets/projectImg/kakao/kokoaJoin.png";
-import Kokoa3 from "../../../assets/projectImg/kakao/kokoChat.png";
-import Kokoa4 from "../../../assets/projectImg/kakao/Mypage.png";
+import { aws_address } from "../../../aws";
 import {
   ShowBoxLayout,
   ImgBox,
@@ -23,26 +20,28 @@ const FirstShow = () => {
         <HtmlIcon />
         <CssIcon />
       </TitleBox>
-      <ImgBox>
-        <div>
-          <Img src={KokoaImg} />
-          <TextCenter>• Index Page</TextCenter>
-        </div>
-        <div>
-          <Img src={Kokoa2} />
-          <TextCenter>• Join Page</TextCenter>
-        </div>
-      </ImgBox>
-      <ImgBox2>
-        <div>
-          <Img src={Kokoa3} />
-          <TextCenter>• Chat List</TextCenter>
-        </div>
-        <div>
-          <Img src={Kokoa4} />
-          <TextCenter>• My Page</TextCenter>
-        </div>
-      </ImgBox2>
+      <div>
+        <ImgBox>
+          <div>
+            <Img src={aws_address.kakao.one} />
+            <TextCenter>• Index Page</TextCenter>
+          </div>
+          <div>
+            <Img src={aws_address.kakao.two} />
+            <TextCenter>• Join Page</TextCenter>
+          </div>
+        </ImgBox>
+        <ImgBox2>
+          <div>
+            <Img src={aws_address.kakao.three} />
+            <TextCenter>• Chat List</TextCenter>
+          </div>
+          <div>
+            <Img src={aws_address.kakao.four} />
+            <TextCenter>• My Page</TextCenter>
+          </div>
+        </ImgBox2>
+      </div>
     </ShowBoxLayout>
   );
 };

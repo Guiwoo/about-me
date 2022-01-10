@@ -1,9 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import YoutubeHome from "../../../assets/projectImg/youtube/YoutubeHome.png";
-import LoginPage from "../../../assets/projectImg/youtube/loginPage.png";
-import UploadPage from "../../../assets/projectImg/youtube/uploadPage.png";
-import Profile from "../../../assets/projectImg/youtube/profile.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -18,6 +14,7 @@ import {
   JsIcon,
 } from "./ShowShared";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons";
+import { aws_address } from "../../../aws";
 
 const NodeIcon = styled(DefaultIcon)`
   background: radial-gradient(
@@ -48,21 +45,21 @@ const ThirdShow = () => {
       </TitleBox>
       <ImgBox>
         <div>
-          <Img src={YoutubeHome} />
+          <Img src={aws_address.youtube.one} />
           <TextCenter>• Index Page</TextCenter>
         </div>
         <div>
-          <Img src={LoginPage} />
+          <Img src={aws_address.youtube.two} />
           <TextCenter>• Login Page</TextCenter>
         </div>
       </ImgBox>
       <ImgBox2>
         <div>
-          <Img src={UploadPage} />
+          <Img src={aws_address.youtube.three} />
           <TextCenter>• Upload Photo</TextCenter>
         </div>
         <div>
-          <Img src={Profile} />
+          <Img src={aws_address.youtube.four} />
           <TextCenter>• Profile</TextCenter>
         </div>
       </ImgBox2>

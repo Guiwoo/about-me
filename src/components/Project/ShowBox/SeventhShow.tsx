@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import IndexPage from "../../../assets/projectImg/reviewApp/Home.png";
-import Login from "../../../assets/projectImg/reviewApp/Login.png";
-import Detail from "../../../assets/projectImg/reviewApp/Detail.png";
 import Search from "../../../assets/projectImg/reviewApp/Search.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPython } from "@fortawesome/free-brands-svg-icons";
@@ -17,6 +14,7 @@ import {
   TextCenter,
 } from "./ShowShared";
 import { faWind } from "@fortawesome/free-solid-svg-icons";
+import { aws_address } from "../../../aws";
 
 const TailIcon = styled(DefaultIcon)`
   background: linear-gradient(
@@ -44,21 +42,21 @@ const SevenShow = () => {
       </TitleBox>
       <ImgBox>
         <div>
-          <Img src={IndexPage} />
+          <Img src={aws_address.review.one} />
           <TextCenter>• Home Page</TextCenter>
         </div>
         <div>
-          <Img src={Login} />
+          <Img src={aws_address.review.two} />
           <TextCenter>• Login Page</TextCenter>
         </div>
       </ImgBox>
       <ImgBox2>
         <div>
-          <Img src={Detail} />
+          <Img src={aws_address.review.three} />
           <TextCenter>• Detail Page</TextCenter>
         </div>
         <div>
-          <Img src={Search} />
+          <Img src={aws_address.review.four} />
           <TextCenter>• Search Page</TextCenter>
         </div>
       </ImgBox2>

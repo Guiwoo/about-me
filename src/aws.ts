@@ -1,6 +1,12 @@
 const BasicURL = "https://instaclone-photos.s3.ap-northeast-2.amazonaws.com/"
 
 export const aws_address = {
+    img:{
+        bg:`${BasicURL}assets/img/bgBlack.png`,
+        meCircle:`${BasicURL}assets/img/fitSize.jpg`,
+        meSqaure:`${BasicURL}assets/img/me1.jpg`,
+        mac:`${BasicURL}assets/img/맥북.png`,
+    },
     modal:{
         video:`${BasicURL}assets/projectImg/modal/Modal.mov`,
         mac:`${BasicURL}assets/projectImg/modal/onMac.png`,
@@ -28,7 +34,7 @@ export const aws_address = {
     },
     movie:{
         video:`${BasicURL}assets/projectImg/reactMovie/MovieApp 480.mov`,
-        mac:`${BasicURL}assets/projectImg/reactMovie/onMacYou.png`,
+        mac:`${BasicURL}assets/projectImg/reactMovie/onMac.png`,
         one:`${BasicURL}assets/projectImg/reactMovie/index.png`,
         two:`${BasicURL}assets/projectImg/reactMovie/Tv.png`,
         three:`${BasicURL}assets/projectImg/reactMovie/Detail.png`,
@@ -36,6 +42,7 @@ export const aws_address = {
     },
     Mmovie:{
         video:`${BasicURL}assets/projectImg/movieApp/movieAppNew.mov`,
+        mac:`${BasicURL}assets/projectImg/reactMovie/onMac.png`,
         one:`${BasicURL}assets/projectImg/movieApp/google.png`,
         two:`${BasicURL}assets/projectImg/movieApp/HomePage.png`,
         three:`${BasicURL}assets/projectImg/movieApp/Detail.png`,
@@ -45,13 +52,14 @@ export const aws_address = {
     coffee:{
         video:`${BasicURL}assets/projectImg/CoffeeApp/coffeeApp.mov`,
         one:`${BasicURL}assets/projectImg/CoffeeApp/Index.png`,
-        two:`${BasicURL}assets/projectImg/CoffeeApp/Home.png`,
+        mac:`${BasicURL}assets/projectImg/CoffeeApp/Home.png`,
         three:`${BasicURL}assets/projectImg/CoffeeApp/Login.png`,
         four:`${BasicURL}assets/projectImg/CoffeeApp/Create.png`,
         five:`${BasicURL}assets/projectImg/CoffeeApp/Mobile.png`,
     },
     review:{
         video:`${BasicURL}assets/projectImg/reviewApp/review480.mov`,
+        mac:`${BasicURL}assets/projectImg/reactMovie/onMac.png`,
         one:`${BasicURL}assets/projectImg/reviewApp/Home.png`,
         two:`${BasicURL}assets/projectImg/reviewApp/Login.png`,
         three:`${BasicURL}assets/projectImg/reviewApp/Detail.png`,

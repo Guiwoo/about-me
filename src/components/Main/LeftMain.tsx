@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import centerImg from "../../assets/img/fitSize.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Navigation from "../Navigation";
+import { aws_address } from "../../aws";
 
 const LeftMainBox = styled.section`
   width: 20%;
@@ -21,7 +21,7 @@ const PhotoBox = styled.div``;
 const Image = styled.div`
   width: 150px;
   height: 150px;
-  background-image: url(${centerImg});
+  background-image: url(${aws_address.img.meCircle});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

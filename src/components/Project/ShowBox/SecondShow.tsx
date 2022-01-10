@@ -1,9 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import MotionHome from "../../../assets/projectImg/modal/MotionHome.png";
-import MotionAdd from "../../../assets/projectImg/modal/MotionAddPage.png";
-import MotionPhoto from "../../../assets/projectImg/modal/MotionPhoto.png";
-import MotionFull from "../../../assets/projectImg/modal/MotionFull.png";
 import {
   ShowBoxLayout,
   ImgBox,
@@ -15,6 +11,7 @@ import {
   TextCenter,
   JsIcon,
 } from "./ShowShared";
+import { aws_address } from "../../../aws";
 
 const TsIcon = styled(DefaultIcon)`
   background: radial-gradient(
@@ -46,21 +43,21 @@ const SecondShow = () => {
       </TitleBox>
       <ImgBox>
         <div>
-          <Img src={MotionHome} />
+          <Img src={aws_address.modal.one} />
           <TextCenter>• Index Page</TextCenter>
         </div>
         <div>
-          <Img src={MotionAdd} />
+          <Img src={aws_address.modal.two} />
           <TextCenter>• Add Page</TextCenter>
         </div>
       </ImgBox>
       <ImgBox2>
         <div>
-          <Img src={MotionPhoto} />
+          <Img src={aws_address.modal.three} />
           <TextCenter>• Add Photo</TextCenter>
         </div>
         <div>
-          <Img src={MotionFull} />
+          <Img src={aws_address.modal.four} />
           <TextCenter>• Add Yotube</TextCenter>
         </div>
       </ImgBox2>

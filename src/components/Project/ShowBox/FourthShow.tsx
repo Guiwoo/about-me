@@ -1,8 +1,4 @@
 import React from "react";
-import IndexPage from "../../../assets/projectImg/reactMovie/index.png";
-import TvPage from "../../../assets/projectImg/reactMovie/Tv.png";
-import DetailPage from "../../../assets/projectImg/reactMovie/Detail.png";
-import SearchPage from "../../../assets/projectImg/reactMovie/search.png";
 import {
   ShowBoxLayout,
   ImgBox,
@@ -14,6 +10,7 @@ import {
   ImdbIcon,
   ReactIcon,
 } from "./ShowShared";
+import { aws_address } from "../../../aws";
 
 const FourthShow = () => {
   return (
@@ -25,21 +22,21 @@ const FourthShow = () => {
       </TitleBox>
       <ImgBox>
         <div>
-          <Img src={IndexPage} />
+          <Img src={aws_address.movie.one} />
           <TextCenter>• Index Page</TextCenter>
         </div>
         <div>
-          <Img src={TvPage} />
+          <Img src={aws_address.movie.two} />
           <TextCenter>• Tv Page</TextCenter>
         </div>
       </ImgBox>
       <ImgBox2>
         <div>
-          <Img src={DetailPage} />
+          <Img src={aws_address.movie.three} />
           <TextCenter>• Deatil Page</TextCenter>
         </div>
         <div>
-          <Img src={SearchPage} />
+          <Img src={aws_address.movie.four} />
           <TextCenter>• Search Page</TextCenter>
         </div>
       </ImgBox2>

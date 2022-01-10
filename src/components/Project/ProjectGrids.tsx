@@ -1,14 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import OnMacKakao from "../../assets/projectImg/kakao/onMac.png";
-import onMacModal from "../../assets/projectImg/modal/onMac.png";
-import onMacYou from "../../assets/projectImg/youtube/onMacYou.png";
-import onMacMovie from "../../assets/projectImg/reactMovie/onMac.png";
-import onMobile from "../../assets/projectImg/movieApp/fatHome.png";
-import onMacCoffee from "../../assets/projectImg/CoffeeApp/Home.png";
-import onMacReview from "../../assets/projectImg/reviewApp/onMac.png";
 import { useNavigate } from "react-router-dom";
 import routeName from "../../routeName";
+import { aws_address } from "../../aws";
 
 interface ToggleOneProps {
   mouseIn(num?: number): void;
@@ -28,34 +22,34 @@ const SProjectGrid = styled.div`
   display: grid;
   height: 400px;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
+  gap: 10px;
 `;
 
 const FirstProject = styled(ProjectFrame)`
-  background-image: url(${OnMacKakao});
+  background-image: url(${aws_address.kakao.mac});
   border-bottom: 1px solid white;
 `;
 
 const SecondProject = styled(ProjectFrame)`
-  background-image: url(${onMacModal});
+  background-image: url(${aws_address.modal.mac});
 `;
 
 const ThirdProject = styled(ProjectFrame)`
-  background-image: url(${onMacYou});
+  background-image: url(${aws_address.youtube.mac});
 `;
 const FourthProject = styled(ProjectFrame)`
-  background-image: url(${onMacMovie});
+  background-image: url(${aws_address.movie.mac});
 `;
 const FifthPorject = styled(ProjectFrame)`
-  background-image: url(${onMobile});
+  background-image: url(${aws_address.Mmovie.mac});
   background-repeat: no-repeat;
 `;
 const SixthProject = styled(ProjectFrame)`
-  background-image: url(${onMacCoffee});
+  background-image: url(${aws_address.coffee.mac});
 `;
 
 const SevenPrjoect = styled(ProjectFrame)`
-  background-image: url(${onMacReview});
+  background-image: url(${aws_address.review.mac});
 `;
 
 const GridText = styled.div`

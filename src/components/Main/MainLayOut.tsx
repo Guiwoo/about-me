@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router";
-import bg1 from "../../assets/img/bgBlack.png";
 import styled from "styled-components";
+import { aws_address } from "../../aws";
 import HeaderMenu from "../Project/HeaderMenu";
 
 const SRightMain = styled.section`
@@ -11,7 +11,7 @@ const SRightMain = styled.section`
   background-position: center;
   background-repeat: none;
   background-size: cover;
-  background-image: url(${bg1});
+  background-image: url(${aws_address.img.bg});
 `;
 
 export const MainLayOut = () => {

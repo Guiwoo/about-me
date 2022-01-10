@@ -42,8 +42,8 @@ export const ImgBox2 = styled(ImgBox)`
 `;
 
 export const Img = styled.img`
-  width: 150px;
-  height: 160px;
+  width: 70%;
+  height: 70%;
 `;
 
 export const ShowTitle = styled(TitleText)`

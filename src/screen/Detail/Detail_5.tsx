@@ -8,7 +8,6 @@ import {
   MainBox,
   GoThere,
   Demo,
-  VideoSection,
   PhotoText,
   ImgText,
 } from "./DetailShare";

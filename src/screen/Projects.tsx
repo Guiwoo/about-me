@@ -13,6 +13,9 @@ import ProjectGrids from "../components/Project/ProjectGrids";
 
 const Container = styled.div`
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const Title = styled(TitleText)`
@@ -23,6 +26,7 @@ const Box = styled.div`
   padding: 20px;
   display: flex;
   align-items: center;
+  margin-top: 10%;
 `;
 
 const ProjectHome = () => {
@@ -38,26 +42,29 @@ const ProjectHome = () => {
   return (
     <Container>
       <Title>My Journeys..</Title>
-      <Box>
-        <ProjectGrids mouseIn={mouseIn} mouseOut={mouseOut} />
-        {!show ? (
-          <PieTable />
-        ) : index === 1 ? (
-          <FirstShow />
-        ) : index === 2 ? (
-          <SecondShow />
-        ) : index === 3 ? (
-          <ThirdShow />
-        ) : index === 4 ? (
-          <FourthShow />
-        ) : index === 5 ? (
-          <FifthShow />
-        ) : index === 6 ? (
-          <SixthShow />
-        ) : (
-          <SevenShow />
-        )}
-      </Box>
+      <div>
+        <Box>
+          <ProjectGrids mouseIn={mouseIn} mouseOut={mouseOut} />
+          {/* <FirstShow /> */}
+          {!show ? (
+            <PieTable />
+          ) : index === 1 ? (
+            <FirstShow />
+          ) : index === 2 ? (
+            <SecondShow />
+          ) : index === 3 ? (
+            <ThirdShow />
+          ) : index === 4 ? (
+            <FourthShow />
+          ) : index === 5 ? (
+            <FifthShow />
+          ) : index === 6 ? (
+            <SixthShow />
+          ) : (
+            <SevenShow />
+          )}
+        </Box>
+      </div>
     </Container>
   );
 };
