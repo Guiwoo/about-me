@@ -5,7 +5,12 @@ export const aws_address = {
         video:`${BasicURL}assets/projectImg/modal/Modal.mov`
     },
     kakao:{
-        video:`${BasicURL}assets/projectImg/kakao/html.mov`
+        video:`${BasicURL}assets/projectImg/kakao/html.mov`,
+        mac:`${BasicURL}assets/projectImg/kakao/onMac.png`,
+        one:`${BasicURL}assets/projectImg/kakao/kokoaFirstPage.png`,
+        two:`${BasicURL}assets/projectImg/kakao/kokoaJoin.png`,
+        three:`${BasicURL}assets/projectImg/kakao/kokoChat.png`,
+        four:`${BasicURL}assets/projectImg/kakao/Mypage.png`,
     }
 }
 

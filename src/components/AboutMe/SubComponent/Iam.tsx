@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import ReactTextTransition, { presets } from "react-text-transition";
 import { TitleText, Summary, WhoText } from "../../Shared";
 

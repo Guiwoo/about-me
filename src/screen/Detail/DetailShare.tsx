@@ -1,8 +1,9 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { TitleText } from "../../components/Shared";
 import MacBook from "../../assets/img/맥북.png";
 import { Img, TextCenter } from "../../components/Project/ShowBox/ShowShared";
+import { aws_address } from "../../aws";
 
 /** Detail LayOut with Type */
 type ChildrenProp = {
@@ -114,3 +115,53 @@ export const FixedImg = styled(Img)`
 export const FixedText = styled(TextCenter)`
   margin-top: 15px;
 `;
+
+const fadein = keyframes`
+    0%{
+        opacity:0
+    }
+    50%{
+        opacity:1
+    }
+    100%{
+        opacity:0
+    }
+`;
+
+const ImgAnimation = styled.div`
+  opacity: 0;
+  animation: ${fadein} 5s linear infinite;
+`;
+
+const AnimationImg = styled(Img)`
+  width: 220px;
+  height: 350px;
+  border-radius: 5px;
+  margin-top: 10px;
+`;
+
+export const PhotoText = styled.div`
+  font-size: 14px;
+  margin: 5px 0px;
+`;
+
+type ImgTextCards = {
+  cards: string[];
+};
+
+export const ImgText: React.FC<ImgTextCards> = ({ cards }) => {
+  const [num, setNum] = React.useState(0);
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setNum((prev) => prev + 1);
+    }, 5000);
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+  return (
+    <ImgAnimation style={{ display: "flex", justifyContent: "flex-start" }}>
+      <AnimationImg src={cards[num % cards.length]} />
+    </ImgAnimation>
+  );
+};
