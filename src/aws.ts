@@ -41,6 +41,21 @@ export const aws_address = {
         three:`${BasicURL}assets/projectImg/movieApp/Detail.png`,
         four:`${BasicURL}assets/projectImg/movieApp/Search.png`,
         five:`${BasicURL}assets/projectImg/movieApp/LikePage.png`,
+    },
+    coffee:{
+        video:`${BasicURL}assets/projectImg/CoffeeApp/coffeeApp.mov`,
+        one:`${BasicURL}assets/projectImg/CoffeeApp/Index.png`,
+        two:`${BasicURL}assets/projectImg/CoffeeApp/Home.png`,
+        three:`${BasicURL}assets/projectImg/CoffeeApp/Login.png`,
+        four:`${BasicURL}assets/projectImg/CoffeeApp/Create.png`,
+        five:`${BasicURL}assets/projectImg/CoffeeApp/Mobile.png`,
+    },
+    review:{
+        video:`${BasicURL}assets/projectImg/reviewApp/review480.mov`,
+        one:`${BasicURL}assets/projectImg/reviewApp/Home.png`,
+        two:`${BasicURL}assets/projectImg/reviewApp/Login.png`,
+        three:`${BasicURL}assets/projectImg/reviewApp/Detail.png`,
+        four:`${BasicURL}assets/projectImg/reviewApp/Search.png`,
     }
 }
 
