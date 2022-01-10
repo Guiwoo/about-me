@@ -93,3 +93,8 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 
 [] - All Project Img needs to resize
 [] - Use AWS bucket for image upload Check it later
+
+## TypeScript Interface and Type Extending
+
+- [Check Here](https://stackoverflow.com/questions/37233735/interfaces-vs-types-in-typescript)
+- [Read Blog Post 🚀](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)

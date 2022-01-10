@@ -59,16 +59,17 @@ const MacBookImg = styled.div`
   background-position: center;
   background-repeat: none;
   background-size: cover;
-  width: 413px;
-  height: 311px;
+  min-width: 406px;
+  min-height: 315px;
 `;
 
 const VideoBox = styled.video`
   max-width: 380px;
-  max-height: 300px;
+  max-height: 320px;
   position: absolute;
-  top: 30px;
-  right: 26px;
+  top: 35px;
+  right: 18px;
+  border-radius: 5px;
 `;
 const FixedImg = styled(Img)`
   width: 140px;
