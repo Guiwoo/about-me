@@ -21,7 +21,7 @@ const cards = [
 
 const Detail_1 = () => {
   return (
-    <DetailLayout text={"KAKAO CLONE"}>
+    <DetailLayout text={"Kakao Clone Project"}>
       <MainBox>
         <ItemBoxLayout text={"• Html and css Cloning Kakao Chat screen"}>
           <GoThere>

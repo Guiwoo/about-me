@@ -16,6 +16,15 @@ export const aws_address = {
         two:`${BasicURL}assets/projectImg/kakao/kokoaJoin.png`,
         three:`${BasicURL}assets/projectImg/kakao/kokoChat.png`,
         four:`${BasicURL}assets/projectImg/kakao/Mypage.png`,
+    },
+    youtube:{
+        video:`${BasicURL}assets/projectImg/youtube/Youtube480.mov`,
+        mac:`${BasicURL}assets/projectImg/youtube/onMacYou.png`,
+        one:`${BasicURL}assets/projectImg/youtube/YoutubeHome.png`,
+        two:`${BasicURL}assets/projectImg/youtube/loginPage.png`,
+        three:`${BasicURL}assets/projectImg/youtube/uploadPage.png`,
+        four:`${BasicURL}assets/projectImg/youtube/profile.png`,
+        five:`${BasicURL}assets/projectImg/youtube/editPage.png`,
     }
 }
 
