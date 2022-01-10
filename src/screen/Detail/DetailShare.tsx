@@ -74,9 +74,7 @@ type VideoProps = {
   videoUrl: string;
 };
 
-const SVideoSection = styled.div`
-  position: relative;
-`;
+const SVideoSection = styled.div``;
 
 const MacBookImg = styled.div`
   background: url(${MacBook});
@@ -90,8 +88,8 @@ const MacBookImg = styled.div`
 `;
 
 const VideoBox = styled.video`
-  max-width: 380px;
-  max-height: 320px;
+  width: 380px;
+  height: 320px;
   border-radius: 5px;
 `;
 

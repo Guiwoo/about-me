@@ -33,6 +33,14 @@ export const aws_address = {
         two:`${BasicURL}assets/projectImg/reactMovie/Tv.png`,
         three:`${BasicURL}assets/projectImg/reactMovie/Detail.png`,
         four:`${BasicURL}assets/projectImg/reactMovie/search.png`,
+    },
+    Mmovie:{
+        video:`${BasicURL}assets/projectImg/movieApp/movieAppNew.mov`,
+        one:`${BasicURL}assets/projectImg/movieApp/google.png`,
+        two:`${BasicURL}assets/projectImg/movieApp/HomePage.png`,
+        three:`${BasicURL}assets/projectImg/movieApp/Detail.png`,
+        four:`${BasicURL}assets/projectImg/movieApp/Search.png`,
+        five:`${BasicURL}assets/projectImg/movieApp/LikePage.png`,
     }
 }
 
