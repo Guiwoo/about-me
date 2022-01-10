@@ -109,6 +109,7 @@ const HeaderMenu = (props: any) => {
   const [show, setShow] = React.useState(false);
   const { isopen, ...rest } = props;
   const { pathname } = useLocation();
+  console.log(pathname);
   return (
     <>
       <Container {...rest}>
@@ -119,7 +120,7 @@ const HeaderMenu = (props: any) => {
           <Moon isopen={show.toString()} icon={faStar} color="#ffdd59" />
         </MenuBtn>
         {show ? (
-          <div style={{ display: "flex" }}>
+          <div onClick={() => setShow(false)} style={{ display: "flex" }}>
             <FirstMenu>
               <LinkToProject
                 here={pathname === routeName.first}

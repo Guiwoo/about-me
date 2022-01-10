@@ -25,10 +25,10 @@ const Detail_3 = () => {
       <MainBox>
         <ItemBoxLayout text={`• Build With React & TMDB API`}>
           <GoThere>
-            <Demo href="https://wetube-updated.herokuapp.com/" target="_blank">
+            <Demo href="https://guiflix.netlify.app/" target="_blank">
               Demo
             </Demo>
-            <Demo href="https://github.com/Guiwoo/wetube_mac" target="_blank">
+            <Demo href="https://github.com/Guiwoo/Guiflix" target="_blank">
               Github
             </Demo>
           </GoThere>

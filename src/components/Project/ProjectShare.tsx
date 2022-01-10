@@ -18,7 +18,7 @@ export const LinkToProject = ({ url, text, here }: LinkProps) => (
   <div
     style={{
       textAlign: "end",
-      borderBottom: `2px solid ${here ? "orange" : null}`,
+      borderBottom: `2px solid ${here ? "orange" : "none"}`,
       padding: "4px 0px",
     }}
   >
