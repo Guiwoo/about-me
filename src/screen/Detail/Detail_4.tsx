@@ -1,5 +1,58 @@
 import React from "react";
+import { aws_address } from "../../aws";
+import {
+  DetailLayout,
+  ItemBoxLayout,
+  Description,
+  MainBox,
+  GoThere,
+  Demo,
+  VideoSection,
+  PhotoText,
+  ImgText,
+} from "./DetailShare";
 
-const Detail_4 = () => <div>4 Screen</div>;
+const cards = [
+  aws_address.movie.one,
+  aws_address.movie.two,
+  aws_address.movie.three,
+  aws_address.movie.four,
+];
 
-export default Detail_4;
+const Detail_3 = () => {
+  return (
+    <DetailLayout text={"Movie App"}>
+      <MainBox>
+        <ItemBoxLayout text={`• Build With React & TMDB API`}>
+          <GoThere>
+            <Demo href="https://wetube-updated.herokuapp.com/" target="_blank">
+              Demo
+            </Demo>
+            <Demo href="https://github.com/Guiwoo/wetube_mac" target="_blank">
+              Github
+            </Demo>
+          </GoThere>
+          <Description>• Preview</Description>
+          <VideoSection videoUrl={aws_address.movie.video} />
+        </ItemBoxLayout>
+        <ItemBoxLayout text={"• Specific"}>
+          <div style={{ display: "flex", justifyContent: "space-around" }}>
+            <ImgText cards={cards} />
+            <div
+              style={{ display: "flex", alignItems: "end", marginLeft: "15px" }}
+            >
+              <div>
+                <PhotoText>• React</PhotoText>
+                <PhotoText>• State Management</PhotoText>
+                <PhotoText>• Styled-Components</PhotoText>
+                <PhotoText>• Data Fectching</PhotoText>
+              </div>
+            </div>
+          </div>
+        </ItemBoxLayout>
+      </MainBox>
+    </DetailLayout>
+  );
+};
+
+export default Detail_3;

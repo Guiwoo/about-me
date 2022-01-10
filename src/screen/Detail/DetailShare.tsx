@@ -85,14 +85,13 @@ const MacBookImg = styled.div`
   background-size: cover;
   min-width: 406px;
   min-height: 315px;
+  display: flex;
+  justify-content: center;
 `;
 
 const VideoBox = styled.video`
   max-width: 380px;
   max-height: 320px;
-  position: absolute;
-  top: 35px;
-  right: 18px;
   border-radius: 5px;
 `;
 
@@ -160,7 +159,7 @@ export const ImgText: React.FC<ImgTextCards> = ({ cards }) => {
     };
   }, []);
   return (
-    <ImgAnimation style={{ display: "flex", justifyContent: "flex-start" }}>
+    <ImgAnimation>
       <AnimationImg src={cards[num % cards.length]} />
     </ImgAnimation>
   );
