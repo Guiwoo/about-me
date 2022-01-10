@@ -5,6 +5,7 @@ import styled from "styled-components";
 type LinkProps = {
   url: string;
   text: string;
+  here: boolean;
 };
 
 const GridText = styled(Link)`
@@ -13,8 +14,14 @@ const GridText = styled(Link)`
   }
 `;
 // Link Prop On Project hover
-export const LinkToProject = ({ url, text }: LinkProps) => (
-  <div style={{ textAlign: "end" }}>
+export const LinkToProject = ({ url, text, here }: LinkProps) => (
+  <div
+    style={{
+      textAlign: "end",
+      borderBottom: `2px solid ${here ? "orange" : null}`,
+      padding: "4px 0px",
+    }}
+  >
     <GridText to={url}>{text}</GridText>
   </div>
 );

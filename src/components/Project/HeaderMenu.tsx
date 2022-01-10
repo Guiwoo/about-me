@@ -1,6 +1,7 @@
 import { faMoon, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { useLocation } from "react-router";
 import styled, { keyframes } from "styled-components";
 import routeName from "../../routeName";
 import { LinkToProject } from "./ProjectShare";
@@ -107,6 +108,7 @@ const SevenMenu = styled(FirstMenu)`
 const HeaderMenu = (props: any) => {
   const [show, setShow] = React.useState(false);
   const { isopen, ...rest } = props;
+  const { pathname } = useLocation();
   return (
     <>
       <Container {...rest}>
@@ -119,25 +121,53 @@ const HeaderMenu = (props: any) => {
         {show ? (
           <div style={{ display: "flex" }}>
             <FirstMenu>
-              <LinkToProject url={routeName.first} text={"Project 1"} />
+              <LinkToProject
+                here={pathname === routeName.first}
+                url={routeName.first}
+                text={"Project 1"}
+              />
             </FirstMenu>
             <SecondMenu>
-              <LinkToProject url={routeName.second} text={"Project 2"} />
+              <LinkToProject
+                here={pathname === routeName.second}
+                url={routeName.second}
+                text={"Project 2"}
+              />
             </SecondMenu>
             <ThirdMenu>
-              <LinkToProject url={routeName.third} text={"Project 3"} />
+              <LinkToProject
+                here={pathname === routeName.third}
+                url={routeName.third}
+                text={"Project 3"}
+              />
             </ThirdMenu>
             <FourthMenu>
-              <LinkToProject url={routeName.fourth} text={"Project 4"} />
+              <LinkToProject
+                here={pathname === routeName.fourth}
+                url={routeName.fourth}
+                text={"Project 4"}
+              />
             </FourthMenu>
             <FifthMenu>
-              <LinkToProject url={routeName.fifth} text={"Project 5"} />
+              <LinkToProject
+                here={pathname === routeName.fifth}
+                url={routeName.fifth}
+                text={"Project 5"}
+              />
             </FifthMenu>
             <SixMenu>
-              <LinkToProject url={routeName.sixth} text={"Project 6"} />
+              <LinkToProject
+                here={pathname === routeName.sixth}
+                url={routeName.sixth}
+                text={"Project 6"}
+              />
             </SixMenu>
             <SevenMenu>
-              <LinkToProject url={routeName.seven} text={"Project 7"} />
+              <LinkToProject
+                here={pathname === routeName.seven}
+                url={routeName.seven}
+                text={"Project 7"}
+              />
             </SevenMenu>
           </div>
         ) : null}
