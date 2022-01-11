@@ -5,7 +5,7 @@ export const aws_address = {
         bg:`${BasicURL}assets/img/bgBlack.png`,
         meCircle:`${BasicURL}assets/img/fitSize.jpg`,
         meSqaure:`${BasicURL}assets/img/me1.jpg`,
-        mac:`${BasicURL}assets/img/맥북.png`,
+        mac:`${BasicURL}assets/img/mac.png`,
     },
     modal:{
         video:`${BasicURL}assets/projectImg/modal/Modal.mov`,

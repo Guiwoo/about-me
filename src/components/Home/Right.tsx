@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../../resize";
 import {
   Django,
   GraphQL,
@@ -23,7 +24,18 @@ const Right = styled.section`
   align-items: center;
 `;
 
-const CenterArea = styled.div``;
+const CenterArea = styled.div`
+  @media ${device.mobile} {
+    display: none;
+  }
+  @media ${device.laptop} {
+    background-color: red;
+  }
+
+  @media ${device.desktop} {
+    //need to fix with over 27 monitor
+  }
+`;
 
 const HomeRight = () => {
   return (

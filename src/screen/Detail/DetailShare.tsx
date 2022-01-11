@@ -73,23 +73,24 @@ type VideoProps = {
   videoUrl: string;
 };
 
-const SVideoSection = styled.div``;
-
-const MacBookImg = styled.div`
+const SVideoSection = styled.div`
+  width: 100%;
+  height: 70%;
   background: url(${aws_address.img.mac});
   background-position: center;
   background-repeat: none;
   background-size: cover;
-  min-width: 406px;
-  min-height: 315px;
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
+const MacBookImg = styled.div``;
+
 const VideoBox = styled.video`
-  width: 380px;
-  height: 320px;
+  width: 85%;
   border-radius: 5px;
+  transform: translateX(9%);
 `;
 
 export const VideoSection: React.FC<VideoProps> = ({ videoUrl }) => {

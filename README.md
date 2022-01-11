@@ -2,7 +2,7 @@
 
 [ ] - Add later
 
-# Initail
+# Initialize Project
 
 npx create-react-app my-app --template typescript: [Check here 🚀](https://create-react-app.dev/docs/adding-typescript/)
 
@@ -98,3 +98,15 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 
 - [Check Here](https://stackoverflow.com/questions/37233735/interfaces-vs-types-in-typescript)
 - [Read Blog Post 🚀](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)
+
+## MediaQuery force screen size
+
+[x] - main Left
+
+## translate react
+
+[] idea use localstroage and choose language
+
+[x] add my contact things under left header
+[x] left desgin as well
+[x] circle animation around my photo

@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router";
 import styled from "styled-components";
+import { device } from "../resize";
 import routeName from "../routeName";
 import { NewLink } from "./Shared";
 
@@ -12,6 +13,16 @@ const SNavigation = styled.div`
 
 const Description = styled.div`
   text-align: center;
+  @media ${device.mobile} {
+    display: flex;
+  }
+  @media ${device.laptop} {
+    display: block;
+  }
+
+  @media ${device.desktop} {
+    display: block;
+  }
 `;
 const Navigation = () => {
   const { pathname } = useLocation();

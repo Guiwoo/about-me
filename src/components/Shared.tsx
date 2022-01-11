@@ -2,6 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import ReactTextTransition, { presets } from "react-text-transition";
+import { device } from "../resize";
 
 interface CurrentProps {
   readonly current?: string | undefined;
@@ -19,7 +20,17 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  @media ${device.mobile} {
+  }
+  @media ${device.laptop} {
+    max-width: 1500px;
+    height: 100vh;
+  }
+
+  @media ${device.desktop} {
+    max-width: 2560px;
+    background-color: blue;
+  }
 `;
 
 export const BgContainer = styled.div`
@@ -35,6 +46,16 @@ export const Main = styled.main`
   border-radius: 30px;
   background-color: ${(props) => props.theme.bgColor.second};
   display: flex;
+  @media ${device.mobile} {
+    flex-direction: column;
+  }
+  @media ${device.laptop} {
+    flex-direction: row;
+  }
+
+  @media ${device.desktop} {
+    flex-direction: row;
+  }
 `;
 
 const Arrow = ["↓", "✈️"];
@@ -59,6 +80,16 @@ const GoNextBtn = styled(Link)`
   &:hover {
     transform: translateY(-10px) scale(1.2);
     color: #ffa801;
+  }
+  @media ${device.mobile} {
+    display: none;
+  }
+  @media ${device.laptop} {
+    display: block;
+  }
+
+  @media ${device.desktop} {
+    display: block;
   }
 `;
 
