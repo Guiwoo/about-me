@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled, { keyframes } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -8,6 +8,7 @@ import { faMobileAlt, faMoon } from "@fortawesome/free-solid-svg-icons";
 import BurgerMenu from "../BurgerMenu";
 import { device } from "../../utils/resize";
 import { aws_address } from "../../utils/aws";
+import { LangContext } from "../../utils/toggleLang";
 
 const LeftMainBox = styled.section`
   display: flex;
@@ -17,7 +18,7 @@ const LeftMainBox = styled.section`
   }
   @media ${device.laptop} {
     width: 20%;
-    height: 100vh;
+    height: 100%;
   }
 
   @media ${device.desktop} {
@@ -121,7 +122,33 @@ const ContactSpan = styled.div`
   }
 `;
 
+const ChangeLanguage = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  font-size: 12px;
+  opacity: 0.7;
+  @media ${device.laptop} {
+    justify-content: flex-end;
+  }
+`;
+
+const En = styled.div`
+  margin-right: 5px;
+  cursor: pointer;
+  &:hover {
+    color: orange;
+  }
+`;
+const Ko = styled.div`
+  margin-left: 5px;
+  cursor: pointer;
+  &:hover {
+    color: orange;
+  }
+`;
+
 const LeftMain = () => {
+  const { isEn, toggleIsEn } = useContext(LangContext);
   const CopyText = (e: any) => {
     const textValue = e.target.innerText;
     navigator.clipboard.writeText(textValue);
@@ -130,16 +157,20 @@ const LeftMain = () => {
       e.target.innerText = textValue;
     }, 1500);
   };
+
   return (
     <LeftMainBox>
       <Content>
+        <ChangeLanguage>
+          <En onClick={toggleIsEn}>{isEn ? "한국어 !" : "En !"}</En>
+        </ChangeLanguage>
         <div>
           <PhotoBox>
             <Image>
               <IconMoon icon={faMoon} />
             </Image>
           </PhotoBox>
-          <Nametag>Guiwoo Park</Nametag>
+          <Nametag>{isEn ? "Guiwoo Park" : "박귀우"}</Nametag>
         </div>
         <div>
           <Navigation />

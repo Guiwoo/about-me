@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router";
 import styled from "styled-components";
 import { useIntervalTitle } from "../../utils/hooks";
 import { device } from "../../utils/resize";
 import routeName from "../../utils/routeName";
+import { LangContext } from "../../utils/toggleLang";
 import { MobileNav } from "../Shared";
 
 const Left = styled.section`
@@ -42,18 +43,29 @@ const TinySpan = styled.span`
 `;
 
 const HomeLeft = () => {
+  const { isEn, toggleIsEn: _ } = useContext(LangContext);
   useIntervalTitle(0, 40); /* uncomment before deploy */
   const navigation = useNavigate();
   return (
     <Left>
       <div>
         <div>
-          <ThickSpan>Hello,</ThickSpan>
-          <ThickSpan>I'm Guiwoo Park</ThickSpan>
+          <ThickSpan>{isEn ? "Hello ," : "안녕하세요 ,"}</ThickSpan>
+          <ThickSpan>
+            {isEn ? "I'm Guiwoo Park" : "저는 박귀우 입니다. "}
+          </ThickSpan>
         </div>
         <TinySpanBox>
-          <TinySpan>Don't give up,I can do whatever I want.</TinySpan>
-          <TinySpan>Do my best, Happy Coding</TinySpan>
+          <TinySpan>
+            {isEn
+              ? "Don't give up, I can do whatever I want."
+              : "포기하지 말자, 내가원하는 뭐든 할수있다."}
+          </TinySpan>
+          <TinySpan>
+            {isEn
+              ? "Always Do my best, Happy Coding"
+              : "항상 최선을 다하자, 행복하게 코딩 하자!"}
+          </TinySpan>
         </TinySpanBox>
       </div>
       <MobileNav onClick={() => navigation(routeName.me)}>

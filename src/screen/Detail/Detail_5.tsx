@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router";
 import styled from "styled-components";
 import { aws_address } from "../../utils/aws";
-import { device } from "../../utils/resize";
 import routeName from "../../utils/routeName";
 import {
   DetailLayout,

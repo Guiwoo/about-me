@@ -26,9 +26,6 @@ const Description = styled.div`
 `;
 const Navigation = () => {
   const { pathname } = useLocation();
-  window.addEventListener("resize", (e) => {
-    console.log(e);
-  });
   return (
     <SNavigation>
       <Description>

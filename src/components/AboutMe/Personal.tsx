@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { aws_address } from "../../utils/aws";
 import { device } from "../../utils/resize";
+import { LangContext } from "../../utils/toggleLang";
 import { Box, TitleText } from "../Shared";
 
 const PersonalBox = styled(Box)`
@@ -67,9 +68,10 @@ const ContentText = styled.div`
 `;
 
 const Personal = () => {
+  const { isEn, toggleIsEn: _ } = useContext(LangContext);
   return (
     <PersonalBox>
-      <Title>PERSONAL INFO</Title>
+      <Title>{isEn ? "PERSONAL INFO" : "개인정보"}</Title>
       <ContentBox>
         <LeftBox>
           <PhotoBox>
@@ -79,20 +81,26 @@ const Personal = () => {
         <RightBox>
           <div>
             <SubTitle>
-              <div>Name:</div>
-              <ContentText>Guiwoo Park</ContentText>
+              <div>{isEn ? "Name: " : "이름: "}</div>
+              <ContentText>{isEn ? "Guiwoo Park" : "박귀우"}</ContentText>
             </SubTitle>
             <SubTitle>
-              <div>Birthday: </div>
+              <div>{isEn ? "Birthday: " : "생년월일"}</div>
               <ContentText>93.01.20</ContentText>
             </SubTitle>
             <SubTitle>
-              <div>City:</div>
-              <ContentText>Gyeonggi-do, Republic of Korea</ContentText>
+              <div>{isEn ? "City: " : "도시, 국가: "}</div>
+              <ContentText>
+                {isEn ? "Gyeonggi-do, Republic of Korea" : "대한민국 경기도"}
+              </ContentText>
             </SubTitle>
             <SubTitle>
-              <div>Address:</div>
-              <ContentText>902-Ho,4-Dong, 69, Neunggok-ro</ContentText>
+              <div>{isEn ? "Address:" : "상세주소"}</div>
+              <ContentText>
+                {isEn
+                  ? "902-Ho,4-Dong, 69, Neunggok-ro"
+                  : "능곡로 69 4동 902호"}
+              </ContentText>
             </SubTitle>
           </div>
         </RightBox>

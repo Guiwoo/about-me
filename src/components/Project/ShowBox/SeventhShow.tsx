@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Search from "../../../assets/projectImg/reviewApp/Search.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPython } from "@fortawesome/free-brands-svg-icons";
 import {

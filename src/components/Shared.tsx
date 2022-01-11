@@ -24,7 +24,7 @@ export const Container = styled.div`
     height: 100%;
   }
   @media ${device.tablet} {
-    height: 100%;
+    height: 100vh;
   }
   @media ${device.laptop} {
     max-width: 1500px;

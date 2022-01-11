@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 export const useIntervalTitle = (count: number, time: number) => {
   let num = count;
@@ -12,6 +12,7 @@ export const useIntervalTitle = (count: number, time: number) => {
         eachSpan.innerText = char;
         eachSpan.className = "hidden";
         span.appendChild(eachSpan);
+        return null;
       });
     });
     let timer = setInterval(() => {
