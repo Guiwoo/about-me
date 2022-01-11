@@ -9,12 +9,8 @@ const SNavigation = styled.div`
   display: flex;
   justify-content: center;
   margin: 20px 0px;
-`;
-
-const Description = styled.div`
-  text-align: center;
   @media ${device.mobile} {
-    display: flex;
+    display: none;
   }
   @media ${device.laptop} {
     display: block;
@@ -24,8 +20,15 @@ const Description = styled.div`
     display: block;
   }
 `;
+
+const Description = styled.div`
+  text-align: center;
+`;
 const Navigation = () => {
   const { pathname } = useLocation();
+  window.addEventListener("resize", (e) => {
+    console.log(e);
+  });
   return (
     <SNavigation>
       <Description>

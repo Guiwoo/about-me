@@ -7,6 +7,7 @@ import { aws_address } from "../../aws";
 import { device } from "../../resize";
 import { faMicrosoft } from "@fortawesome/free-brands-svg-icons";
 import { faMobileAlt, faMoon } from "@fortawesome/free-solid-svg-icons";
+import BurgerMenu from "../BurgerMenu";
 
 const LeftMainBox = styled.section`
   display: flex;
@@ -142,6 +143,7 @@ const LeftMain = () => {
         </div>
         <div>
           <Navigation />
+          <BurgerMenu />
           <ContactBoxes>
             <GithubBox>
               <a href="https://github.com/guiwoo">

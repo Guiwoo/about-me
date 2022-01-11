@@ -69,6 +69,15 @@ export const NewLink = styled(Link)<CurrentProps>`
   &:hover {
     color: #ffa801;
   }
+  /* @media ${device.mobile} {
+  }
+  @media ${device.laptop} {
+    background-color: transparent;
+  }
+
+  @media ${device.desktop} {
+    background-color: transparent;
+  } */
 `;
 const GoNextBtn = styled(Link)`
   position: absolute;
