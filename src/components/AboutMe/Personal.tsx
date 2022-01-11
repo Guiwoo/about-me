@@ -1,11 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import { aws_address } from "../../aws";
+import { device } from "../../resize";
 import { Box, TitleText } from "../Shared";
 
 const PersonalBox = styled(Box)`
   animation-duration: 1s;
-  width: 50%;
+  @media ${device.mobile} {
+    width: 100%;
+  }
+  @media ${device.laptop} {
+    width: 50%;
+  }
+
+  @media ${device.desktop} {
+    width: 50%;
+  }
 `;
 
 const Title = styled(TitleText)`
@@ -22,7 +32,18 @@ const LeftBox = styled.div`
   align-items: center;
 `;
 
-const PhotoBox = styled.div``;
+const PhotoBox = styled.div`
+  @media ${device.mobile} {
+    display: none;
+  }
+  @media ${device.laptop} {
+    display: block;
+  }
+
+  @media ${device.desktop} {
+    display: block;
+  }
+`;
 
 const Photo = styled.img`
   width: 120px;

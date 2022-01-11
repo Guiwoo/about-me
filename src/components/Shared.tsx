@@ -174,3 +174,24 @@ export const WhoText = styled.span`
   margin-left: 18px;
   color: rgba(255, 255, 255, 0.8);
 `;
+
+export const MobileNav = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  font-size: 12px;
+  opacity: 0.8;
+  cursor: pointer;
+  &:hover {
+    color: orange;
+  }
+
+  @media ${device.laptop} {
+    display: none;
+  }
+
+  @media ${device.desktop} {
+    display: none;
+  }
+`;

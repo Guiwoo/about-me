@@ -1,10 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../../resize";
 
 const Layer = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
+  @media ${device.mobile} {
+    display: contents;
+  }
+  @media ${device.laptop} {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media ${device.desktop} {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 type ChildrenProp = {

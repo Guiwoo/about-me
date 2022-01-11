@@ -33,7 +33,7 @@ const CenterArea = styled.div`
   }
 
   @media ${device.desktop} {
-    //need to fix with over 27 monitor
+    display: block;
   }
 `;
 

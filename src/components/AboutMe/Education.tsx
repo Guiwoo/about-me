@@ -1,14 +1,26 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import styled, { keyframes } from "styled-components";
-import { Box, TitleText } from "../Shared";
+import { device } from "../../resize";
+import routeName from "../../routeName";
+import { Box, TitleText, MobileNav } from "../Shared";
 
 const EducationBox = styled(Box)`
   animation-duration: 1.4s;
+  @media ${device.mobile} {
+    width: 100%;
+    padding: 100px 0px;
+  }
+  @media ${device.laptop} {
+    width: 50%;
+  }
+  @media ${device.desktop} {
+    width: 50%;
+  }
 `;
 
 const MainBox = styled.div`
   display: flex;
-  position: relative;
   justify-content: center;
 `;
 
@@ -57,6 +69,7 @@ const Empty = styled(FirstBox)`
 `;
 
 const Education = () => {
+  const navigation = useNavigate();
   return (
     <>
       <EducationBox>
@@ -99,6 +112,9 @@ const Education = () => {
             <Empty></Empty>
           </MainBox>
         </div>
+        <MobileNav onClick={() => navigation(routeName.projects)}>
+          Projects ✈️
+        </MobileNav>
       </EducationBox>
     </>
   );

@@ -13,6 +13,7 @@ const SNavigation = styled.div`
     top: 0;
     right: 10%;
     padding: 20px;
+    z-index: 10;
   }
   @media ${device.laptop} {
     display: none;
@@ -25,6 +26,9 @@ const SNavigation = styled.div`
 
 const BurgerBox = styled.div`
   cursor: pointer;
+  background-color: #44616c;
+  padding: 5px;
+  border-radius: 5px;
   &:hover {
     color: orange;
   }

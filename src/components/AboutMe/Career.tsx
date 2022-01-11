@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { device } from "../../resize";
 import { Box, TitleText } from "../Shared";
 
 const CareerBox = styled(Box)`
   animation-duration: 1.3s;
   opacity: 0;
-  width: 50%;
-  height: 70%;
+  @media ${device.mobile} {
+    width: 100%;
+  }
+  @media ${device.laptop} {
+    width: 50%;
+  }
+  @media ${device.desktop} {
+    width: 50%;
+  }
   border-top: 1px solid white;
   border-right: 1px solid white;
 `;

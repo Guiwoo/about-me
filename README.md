@@ -102,6 +102,8 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 ## MediaQuery force screen size
 
 [x] - main Left
+[x] - main Right
+[x] - About me
 
 ## translate react
 

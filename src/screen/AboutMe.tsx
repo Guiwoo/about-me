@@ -13,7 +13,6 @@ const AboutContainer = styled(BgContainer)`
   align-items: center;
   flex-direction: column;
   margin: 20px 0px 0px 20px;
-  height: 100%;
 `;
 
 const AboutMe = () => {
