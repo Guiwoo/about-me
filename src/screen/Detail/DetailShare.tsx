@@ -1,8 +1,9 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import { TitleText } from "../../components/Shared";
+import { MobileNav, TitleText } from "../../components/Shared";
 import { Img, TextCenter } from "../../components/Project/ShowBox/ShowShared";
 import { aws_address } from "../../utils/aws";
+import { device } from "../../utils/resize";
 
 /** Detail LayOut with Type */
 type ChildrenProp = {
@@ -12,6 +13,16 @@ type ChildrenProp = {
 
 const Container = styled.div`
   padding: 20px;
+  @media ${device.mobile} {
+    padding: 60px 20px;
+  }
+  @media ${device.laptop} {
+    padding: 20px;
+  }
+
+  @media ${device.desktop} {
+    padding: 20px;
+  }
 `;
 const Title = styled(TitleText)`
   font-size: 24px;
@@ -31,13 +42,32 @@ export const DetailLayout: React.FC<ChildrenProp> = ({ text, children }) => {
 export const MainBox = styled.div`
   display: flex;
   justify-content: space-around;
+  @media ${device.mobile} {
+    flex-direction: column;
+  }
+  @media ${device.laptop} {
+    flex-direction: row;
+  }
+
+  @media ${device.desktop} {
+    flex-direction: row;
+  }
 `;
 const ItemBox = styled.div`
-  width: 45%;
+  @media ${device.mobile} {
+    width: 100%;
+  }
+  @media ${device.laptop} {
+    width: 45%;
+  }
+
+  @media ${device.desktop} {
+    width: 45%;
+  }
 `;
 export const Description = styled.div`
   font-size: 20px;
-  margin: 15px 0px;
+  margin: 10px 0px;
 `;
 
 export const ItemBoxLayout: React.FC<ChildrenProp> = ({ text, children }) => {
@@ -53,8 +83,10 @@ export const ItemBoxLayout: React.FC<ChildrenProp> = ({ text, children }) => {
 export const GoThere = styled.div`
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
 `;
 export const Demo = styled.a`
+  margin: 10px 0px;
   margin-right: 10px;
   background-color: #0093e9;
   background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
@@ -66,6 +98,11 @@ export const Demo = styled.a`
     color: pink;
     transform: scale(1.1);
   }
+`;
+
+/** Project links */
+export const FixedMobileNav = styled(MobileNav)`
+  bottom: -20px;
 `;
 
 /** Video Box */
@@ -128,6 +165,16 @@ const fadein = keyframes`
 const ImgAnimation = styled.div`
   opacity: 0;
   animation: ${fadein} 5s linear infinite;
+  @media ${device.mobile} {
+    display: none;
+  }
+  @media ${device.laptop} {
+    display: block;
+  }
+
+  @media ${device.desktop} {
+    display: block;
+  }
 `;
 
 const AnimationImg = styled(Img)`
@@ -162,3 +209,19 @@ export const ImgText: React.FC<ImgTextCards> = ({ cards }) => {
     </ImgAnimation>
   );
 };
+
+//Box Layout for Specific
+
+export const TheBox = styled.div`
+  display: flex;
+  position: relative;
+  @media ${device.mobile} {
+  }
+  @media ${device.laptop} {
+    justify-content: space-around;
+  }
+
+  @media ${device.desktop} {
+    justify-content: space-around;
+  }
+`;

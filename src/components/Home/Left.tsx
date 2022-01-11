@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { useIntervalTitle } from "../../utils/hooks";
 import { device } from "../../utils/resize";
 import routeName from "../../utils/routeName";
+import { MobileNav } from "../Shared";
 
 const Left = styled.section`
   width: 50%;
@@ -38,26 +39,6 @@ const TinySpanBox = styled.div`
 const TinySpan = styled.span`
   display: block;
   margin: 20px 0px;
-`;
-const MobileNav = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 20px;
-  font-size: 12px;
-  opacity: 0.8;
-  cursor: pointer;
-  &:hover {
-    color: orange;
-  }
-
-  @media ${device.laptop} {
-    display: none;
-  }
-
-  @media ${device.desktop} {
-    display: none;
-  }
 `;
 
 const HomeLeft = () => {

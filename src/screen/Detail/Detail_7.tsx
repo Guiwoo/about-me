@@ -1,5 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import { aws_address } from "../../utils/aws";
+import routeName from "../../utils/routeName";
 import {
   DetailLayout,
   ItemBoxLayout,
@@ -10,6 +12,8 @@ import {
   VideoSection,
   PhotoText,
   ImgText,
+  TheBox,
+  FixedMobileNav,
 } from "./DetailShare";
 
 const cards = [
@@ -20,6 +24,7 @@ const cards = [
 ];
 
 const Detail_7 = () => {
+  const navigate = useNavigate();
   return (
     <DetailLayout text={"Movie & Book Web"}>
       <MainBox>
@@ -39,7 +44,7 @@ const Detail_7 = () => {
           <VideoSection videoUrl={aws_address.review.video} />
         </ItemBoxLayout>
         <ItemBoxLayout text={"• Specific"}>
-          <div style={{ display: "flex", justifyContent: "space-around" }}>
+          <TheBox>
             <ImgText cards={cards} />
             <div
               style={{ display: "flex", alignItems: "end", marginLeft: "15px" }}
@@ -51,7 +56,10 @@ const Detail_7 = () => {
                 <PhotoText>• Tailwind Css </PhotoText>
               </div>
             </div>
-          </div>
+            <FixedMobileNav onClick={() => navigate(routeName.projects)}>
+              Projects ✈️
+            </FixedMobileNav>
+          </TheBox>
         </ItemBoxLayout>
       </MainBox>
     </DetailLayout>

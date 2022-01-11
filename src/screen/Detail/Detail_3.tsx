@@ -1,5 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import { aws_address } from "../../utils/aws";
+import routeName from "../../utils/routeName";
 import {
   DetailLayout,
   ItemBoxLayout,
@@ -10,6 +12,8 @@ import {
   VideoSection,
   PhotoText,
   ImgText,
+  FixedMobileNav,
+  TheBox,
 } from "./DetailShare";
 
 const cards = [
@@ -21,6 +25,7 @@ const cards = [
 ];
 
 const Detail_3 = () => {
+  const navigate = useNavigate();
   return (
     <DetailLayout text={"Youtube Clone Project"}>
       <MainBox>
@@ -37,7 +42,7 @@ const Detail_3 = () => {
           <VideoSection videoUrl={aws_address.youtube.video} />
         </ItemBoxLayout>
         <ItemBoxLayout text={"• Specific"}>
-          <div style={{ display: "flex", justifyContent: "space-around" }}>
+          <TheBox>
             <ImgText cards={cards} />
             <div
               style={{ display: "flex", alignItems: "end", marginLeft: "15px" }}
@@ -51,7 +56,10 @@ const Detail_3 = () => {
                 <PhotoText>• FFmpeg / Webassembly</PhotoText>
               </div>
             </div>
-          </div>
+            <FixedMobileNav onClick={() => navigate(routeName.fourth)}>
+              Project 4 ✈️
+            </FixedMobileNav>
+          </TheBox>
         </ItemBoxLayout>
       </MainBox>
     </DetailLayout>

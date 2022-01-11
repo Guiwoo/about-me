@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import styled from "styled-components";
 import { aws_address } from "../../utils/aws";
+import { device } from "../../utils/resize";
+import routeName from "../../utils/routeName";
 import {
   DetailLayout,
   ItemBoxLayout,
@@ -10,6 +13,8 @@ import {
   Demo,
   PhotoText,
   ImgText,
+  FixedMobileNav,
+  TheBox,
 } from "./DetailShare";
 
 const cards = [
@@ -21,12 +26,13 @@ const cards = [
 ];
 
 const VideoBox = styled.video`
-  width: 380px;
-  height: 320px;
   border-radius: 50px;
+  height: 320px;
+  width: 380px;
 `;
 
 const Detail_5 = () => {
+  const navigate = useNavigate();
   return (
     <DetailLayout text={"Movie App Mobie"}>
       <MainBox>
@@ -46,7 +52,7 @@ const Detail_5 = () => {
           <VideoBox src={aws_address.Mmovie.video} autoPlay loop muted />
         </ItemBoxLayout>
         <ItemBoxLayout text={"• Specific"}>
-          <div style={{ display: "flex", justifyContent: "space-around" }}>
+          <TheBox>
             <ImgText cards={cards} />
             <div
               style={{ display: "flex", alignItems: "end", marginLeft: "15px" }}
@@ -59,7 +65,10 @@ const Detail_5 = () => {
                 <PhotoText>• Gesture Animation</PhotoText>
               </div>
             </div>
-          </div>
+            <FixedMobileNav onClick={() => navigate(routeName.sixth)}>
+              Project 6 ✈️
+            </FixedMobileNav>
+          </TheBox>
         </ItemBoxLayout>
       </MainBox>
     </DetailLayout>
