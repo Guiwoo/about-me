@@ -112,3 +112,8 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 [x] add my contact things under left header
 [x] left desgin as well
 [x] circle animation around my photo
+
+## Publish
+
+[] - github for - main version
+[] - netlify for - master version
