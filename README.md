@@ -29,7 +29,7 @@ React Router ! [Check here 🚀](https://reactrouter.com/docs/en/v6)
 # TextAnimation
 
 [ x ] - Home Left
-[] - Do i need to add Drag screen ?
+[] - Do i need to add Drag screen ? No
 
 - Next time ? Just use texteffect hooks , took so many time to implement
 
@@ -40,7 +40,7 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 
 [x] - Right Background css from [Check here 🚀](https://cssgradient.io/)
 
-[] - Circle connect to my onw project page and Intro Page should connect
+[x] - Circle connect to my onw project page and Intro Page should connect
 
 [x] - Make Next Button
 
@@ -67,11 +67,11 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 
 - Use Figma, If i don't need Animation
 
-[] - Need To refectoring
+[x] - Need To refectoring
 
 # Projects
 
-[] - Make a hamburger bar (https://github-readme-stats.vercel.app/api/top-langs/?username=Guiwoo&langs_count=10)
+[x] - Make a hamburger bar (https://github-readme-stats.vercel.app/api/top-langs/?username=Guiwoo&langs_count=10)
 
 ## Victory for Graph and Pie awesome !!
 
@@ -91,8 +91,8 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 
 #### Need to Resize Photo
 
-[] - All Project Img needs to resize
-[] - Use AWS bucket for image upload Check it later
+[x] - All Project Img needs to resize
+[x] - Use AWS bucket for image upload Check it later
 
 ## TypeScript Interface and Type Extending
 
