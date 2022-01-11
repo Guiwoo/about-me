@@ -29,7 +29,7 @@ const CenterArea = styled.div`
     display: none;
   }
   @media ${device.laptop} {
-    background-color: red;
+    display: block;
   }
 
   @media ${device.desktop} {
