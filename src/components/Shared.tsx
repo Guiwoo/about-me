@@ -21,6 +21,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   @media ${device.mobile} {
+    height: 100%;
+  }
+  @media ${device.tablet} {
+    height: 100%;
   }
   @media ${device.laptop} {
     max-width: 1500px;
@@ -29,7 +33,6 @@ export const Container = styled.div`
 
   @media ${device.desktop} {
     max-width: 2560px;
-    background-color: blue;
   }
 `;
 
