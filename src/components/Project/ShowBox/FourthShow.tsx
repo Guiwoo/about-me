@@ -10,7 +10,7 @@ import {
   ImdbIcon,
   ReactIcon,
 } from "./ShowShared";
-import { aws_address } from "../../../aws";
+import { aws_address } from "../../../utils/aws";
 
 const FourthShow = () => {
   return (

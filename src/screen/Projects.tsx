@@ -26,7 +26,6 @@ const Box = styled.div`
   padding: 20px;
   display: flex;
   align-items: center;
-  margin-top: 10%;
 `;
 
 const ProjectHome = () => {

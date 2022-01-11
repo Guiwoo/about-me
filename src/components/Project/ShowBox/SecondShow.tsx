@@ -11,7 +11,7 @@ import {
   TextCenter,
   JsIcon,
 } from "./ShowShared";
-import { aws_address } from "../../../aws";
+import { aws_address } from "../../../utils/aws";
 
 const TsIcon = styled(DefaultIcon)`
   background: radial-gradient(

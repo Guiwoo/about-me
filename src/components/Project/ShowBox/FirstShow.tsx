@@ -1,5 +1,5 @@
 import React from "react";
-import { aws_address } from "../../../aws";
+import { aws_address } from "../../../utils/aws";
 import {
   ShowBoxLayout,
   ImgBox,

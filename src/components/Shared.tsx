@@ -2,7 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
 import ReactTextTransition, { presets } from "react-text-transition";
-import { device } from "../resize";
+import { device } from "../utils/resize";
 
 interface CurrentProps {
   readonly current?: string | undefined;

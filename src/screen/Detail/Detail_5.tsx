@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { aws_address } from "../../aws";
+import { aws_address } from "../../utils/aws";
 import {
   DetailLayout,
   ItemBoxLayout,

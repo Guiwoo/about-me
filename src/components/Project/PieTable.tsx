@@ -1,9 +1,25 @@
 import React from "react";
+import styled from "styled-components";
 import { VictoryPie, VictoryLabel } from "victory";
+import { device } from "../../utils/resize";
+
+const PieBox = styled.div`
+  transform: translateX(50px) translateY(50px);
+  @media ${device.mobile} {
+    display: none;
+  }
+  @media ${device.laptop} {
+    display: block;
+  }
+
+  @media ${device.desktop} {
+    display: block;
+  }
+`;
 
 const PieTable = () => {
   return (
-    <div style={{ transform: "translateX(50px)" }}>
+    <PieBox>
       <svg width={350} height={350}>
         <VictoryPie
           colorScale={["#efd81c", "#2F73BF", "#FFD445", "#E96228", "gray"]}
@@ -36,7 +52,7 @@ const PieTable = () => {
           text={`Github Repo\nMost Used Language`}
         />
       </svg>
-    </div>
+    </PieBox>
   );
 };
 

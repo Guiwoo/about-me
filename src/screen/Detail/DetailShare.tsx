@@ -2,7 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { TitleText } from "../../components/Shared";
 import { Img, TextCenter } from "../../components/Project/ShowBox/ShowShared";
-import { aws_address } from "../../aws";
+import { aws_address } from "../../utils/aws";
 
 /** Detail LayOut with Type */
 type ChildrenProp = {

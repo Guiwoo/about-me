@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import styled from "styled-components";
-import { useIntervalTitle } from "../../hooks";
-import { device } from "../../resize";
-import routeName from "../../routeName";
+import { useIntervalTitle } from "../../utils/hooks";
+import { device } from "../../utils/resize";
+import routeName from "../../utils/routeName";
 
 const Left = styled.section`
   width: 50%;

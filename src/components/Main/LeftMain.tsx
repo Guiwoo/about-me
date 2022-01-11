@@ -3,11 +3,11 @@ import styled, { keyframes } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Navigation from "../Navigation";
-import { aws_address } from "../../aws";
-import { device } from "../../resize";
 import { faMicrosoft } from "@fortawesome/free-brands-svg-icons";
 import { faMobileAlt, faMoon } from "@fortawesome/free-solid-svg-icons";
 import BurgerMenu from "../BurgerMenu";
+import { device } from "../../utils/resize";
+import { aws_address } from "../../utils/aws";
 
 const LeftMainBox = styled.section`
   display: flex;

@@ -14,7 +14,7 @@ import {
   TextCenter,
 } from "./ShowShared";
 import { faWind } from "@fortawesome/free-solid-svg-icons";
-import { aws_address } from "../../../aws";
+import { aws_address } from "../../../utils/aws";
 
 const TailIcon = styled(DefaultIcon)`
   background: linear-gradient(

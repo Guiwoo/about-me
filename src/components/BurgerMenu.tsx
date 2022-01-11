@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useNavigate } from "react-router";
 import styled from "styled-components";
-import { device } from "../resize";
-import routeName from "../routeName";
+import { device } from "../utils/resize";
+import routeName from "../utils/routeName";
 
 const SNavigation = styled.div`
   @media ${device.mobile} {

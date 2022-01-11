@@ -13,7 +13,7 @@ import {
   ReactIcon,
 } from "./ShowShared";
 import { faHippo } from "@fortawesome/free-solid-svg-icons";
-import { aws_address } from "../../../aws";
+import { aws_address } from "../../../utils/aws";
 
 const PostIcon = styled(DefaultIcon)`
   background: linear-gradient(120deg, #336790, 60%, white);

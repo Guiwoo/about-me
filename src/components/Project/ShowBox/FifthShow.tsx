@@ -1,4 +1,5 @@
 import React from "react";
+import { aws_address } from "../../../utils/aws";
 import {
   ShowBoxLayout,
   ImgBox,
@@ -10,7 +11,6 @@ import {
   ReactIcon,
   ImdbIcon,
 } from "./ShowShared";
-import { aws_address } from "../../../aws";
 
 const FifthShow = () => {
   return (

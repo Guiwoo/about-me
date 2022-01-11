@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { device } from "../../resize";
+import { device } from "../../utils/resize";
 
 const Layer = styled.div`
   @media ${device.mobile} {

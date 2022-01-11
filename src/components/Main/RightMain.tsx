@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import AboutMe from "../../screen/AboutMe";
 import Home from "../../screen/Home";
-import routeName from "../../routeName";
+import routeName from "../../utils/routeName";
 import { GoNext } from "../Shared";
 import { MainLayOut, ProjectsLayout } from "./MainLayOut";
 import ProjectHome from "../../screen/Projects";

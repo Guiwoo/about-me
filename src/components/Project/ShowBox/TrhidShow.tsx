@@ -14,7 +14,7 @@ import {
   JsIcon,
 } from "./ShowShared";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons";
-import { aws_address } from "../../../aws";
+import { aws_address } from "../../../utils/aws";
 
 const NodeIcon = styled(DefaultIcon)`
   background: radial-gradient(

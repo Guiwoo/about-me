@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
-import routeName from "../../routeName";
-import { aws_address } from "../../aws";
+import routeName from "../../utils/routeName";
+import { aws_address } from "../../utils/aws";
 
 interface ToggleOneProps {
   mouseIn(num?: number): void;
@@ -18,7 +18,7 @@ const ProjectFrame = styled.div`
 `;
 
 const SProjectGrid = styled.div`
-  width: 80%;
+  width: 100%;
   display: grid;
   height: 400px;
   grid-template-columns: repeat(3, 1fr);

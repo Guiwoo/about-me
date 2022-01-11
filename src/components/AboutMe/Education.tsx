@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import styled, { keyframes } from "styled-components";
-import { device } from "../../resize";
-import routeName from "../../routeName";
+import { device } from "../../utils/resize";
+import routeName from "../../utils/routeName";
 import { Box, TitleText, MobileNav } from "../Shared";
 
 const EducationBox = styled(Box)`
@@ -12,10 +12,12 @@ const EducationBox = styled(Box)`
     padding: 100px 0px;
   }
   @media ${device.laptop} {
-    width: 50%;
+    width: 51%;
+    padding: 0px;
   }
   @media ${device.desktop} {
     width: 50%;
+    padding: 0px;
   }
 `;
 

@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router";
 import styled from "styled-components";
-import { aws_address } from "../../aws";
-import { device } from "../../resize";
+import { aws_address } from "../../utils/aws";
+import { device } from "../../utils/resize";
 import HeaderMenu from "../Project/HeaderMenu";
 
 const SRightMain = styled.section`

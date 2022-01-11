@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useLocation } from "react-router";
 import styled, { keyframes } from "styled-components";
-import routeName from "../../routeName";
+import { device } from "../../utils/resize";
+import routeName from "../../utils/routeName";
 import { LinkToProject } from "./ProjectShare";
 
 type isOpenProps = {
@@ -12,9 +13,18 @@ type isOpenProps = {
 
 const Container = styled.div`
   padding: 20px;
-  display: flex;
   justify-content: flex-end;
   align-items: center;
+  @media ${device.mobile} {
+    display: none;
+  }
+  @media ${device.laptop} {
+    display: flex;
+  }
+
+  @media ${device.desktop} {
+    display: flex;
+  }
 `;
 
 const StarAnimation = keyframes`

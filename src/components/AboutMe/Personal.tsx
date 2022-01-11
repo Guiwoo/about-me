@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { aws_address } from "../../aws";
-import { device } from "../../resize";
+import { aws_address } from "../../utils/aws";
+import { device } from "../../utils/resize";
 import { Box, TitleText } from "../Shared";
 
 const PersonalBox = styled(Box)`

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { device } from "../../resize";
+import { device } from "../../utils/resize";
 import { Box, TitleText } from "../Shared";
 
 const CareerBox = styled(Box)`

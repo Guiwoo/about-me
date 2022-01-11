@@ -9,6 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { TitleText } from "../../Shared";
+import { device } from "../../../utils/resize";
 
 interface AuxProps {
   children: ReactChild | ReactChildren | ReactChild[] | ReactChildren[];
@@ -18,6 +19,16 @@ const ShowBox = styled.div`
   width: 600px;
   height: 400px;
   margin-left: 10px;
+  @media ${device.mobile} {
+    display: none;
+  }
+  @media ${device.laptop} {
+    display: block;
+  }
+
+  @media ${device.desktop} {
+    display: block;
+  }
 `;
 
 const Container = styled.div`

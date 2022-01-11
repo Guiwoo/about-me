@@ -4,7 +4,7 @@ import Goal from "./SubComponent/Goal";
 import Iam from "./SubComponent/Iam";
 import { Box } from "../Shared";
 import ContactMe from "./SubComponent/Contact";
-import { device } from "../../resize";
+import { device } from "../../utils/resize";
 
 const AdditionalBox = styled(Box)`
   animation-duration: 1.2s;

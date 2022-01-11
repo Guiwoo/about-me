@@ -1,8 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router";
 import styled from "styled-components";
-import { device } from "../resize";
-import routeName from "../routeName";
+import { device } from "../utils/resize";
+import routeName from "../utils/routeName";
 import { NewLink } from "./Shared";
 
 const SNavigation = styled.div`
