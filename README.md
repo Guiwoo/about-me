@@ -1,6 +1,6 @@
 # Translate En / Ko
 
-[ ] - Add later
+[x] - Add later
 
 # Initialize Project
 
@@ -29,7 +29,7 @@ React Router ! [Check here 🚀](https://reactrouter.com/docs/en/v6)
 # TextAnimation
 
 [ x ] - Home Left
-[] - Do i need to add Drag screen ? No
+[No] - Do i need to add Drag screen ? No
 
 - Next time ? Just use texteffect hooks , took so many time to implement
 
@@ -107,7 +107,7 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 
 ## translate react
 
-[] idea use localstroage and choose language
+[x] idea use localstroage and choose language
 
 [x] add my contact things under left header
 [x] left desgin as well

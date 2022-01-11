@@ -57,6 +57,11 @@ export const Img = styled.img`
   height: 70%;
 `;
 
+export const NewImg = styled(Img)`
+  width: 150px;
+  height: 180px;
+`;
+
 export const ShowTitle = styled(TitleText)`
   margin: 0 0 5px 0;
 `;

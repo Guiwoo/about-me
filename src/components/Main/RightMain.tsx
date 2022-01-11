@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import AboutMe from "../../screen/AboutMe";
 import Home from "../../screen/Home";
@@ -13,12 +13,14 @@ import Detail4 from "../../screen/Detail/Detail_4";
 import Detail5 from "../../screen/Detail/Detail_5";
 import Detail6 from "../../screen/Detail/Detail_6";
 import Detail7 from "../../screen/Detail/Detail_7";
+import { LangContext } from "../../utils/toggleLang";
 
 /** Need to make 404 page or redirecting to home */
 const NoMatch = () => <div>No</div>;
 
 const RightMain = () => {
   const { pathname } = useLocation();
+  const { isEn, toggleIsEn: _ } = useContext(LangContext);
   return (
     <>
       <Routes>
@@ -27,13 +29,13 @@ const RightMain = () => {
           <Route path="me" element={<AboutMe />} />
           <Route path="projects/" element={<ProjectsLayout />}>
             <Route index element={<ProjectHome />} />
-            <Route path="1" element={<Detail1 />} />
-            <Route path="2" element={<Detail2 />} />
-            <Route path="3" element={<Detail3 />} />
-            <Route path="4" element={<Detail4 />} />
-            <Route path="5" element={<Detail5 />} />
-            <Route path="6" element={<Detail6 />} />
-            <Route path="7" element={<Detail7 />} />
+            <Route path="1" element={<Detail1 isEn={isEn} />} />
+            <Route path="2" element={<Detail2 isEn={isEn} />} />
+            <Route path="3" element={<Detail3 isEn={isEn} />} />
+            <Route path="4" element={<Detail4 isEn={isEn} />} />
+            <Route path="5" element={<Detail5 isEn={isEn} />} />
+            <Route path="6" element={<Detail6 isEn={isEn} />} />
+            <Route path="7" element={<Detail7 isEn={isEn} />} />
           </Route>
         </Route>
         <Route path="*" element={<NoMatch />} />

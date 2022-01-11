@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { TitleText } from "../components/Shared";
 import PieTable from "../components/Project/PieTable";
@@ -10,6 +10,7 @@ import FifthShow from "../components/Project/ShowBox/FifthShow";
 import SixthShow from "../components/Project/ShowBox/SixthShow";
 import SevenShow from "../components/Project/ShowBox/SeventhShow";
 import ProjectGrids from "../components/Project/ProjectGrids";
+import { LangContext } from "../utils/toggleLang";
 
 const Container = styled.div`
   padding: 20px;
@@ -31,6 +32,7 @@ const Box = styled.div`
 const ProjectHome = () => {
   const [index, setIndex] = React.useState(0);
   const [show, setShow] = React.useState(false);
+  const { isEn, toggleIsEn: _ } = useContext(LangContext);
   const mouseIn = (num?: number): void => {
     if (num) {
       setIndex(num);
@@ -40,11 +42,11 @@ const ProjectHome = () => {
   const mouseOut = () => setShow(false);
   return (
     <Container>
-      <Title>My Journeys..</Title>
+      <Title>{isEn ? "My Journeys.." : "나의 여정.."}</Title>
       <div>
         <Box>
           <ProjectGrids mouseIn={mouseIn} mouseOut={mouseOut} />
-          {/* <FirstShow /> */}
+          {/* <ThirdShow /> */}
           {!show ? (
             <PieTable />
           ) : index === 1 ? (

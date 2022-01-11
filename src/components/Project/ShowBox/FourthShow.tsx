@@ -5,7 +5,7 @@ import {
   ImgBox2,
   ShowTitle,
   TitleBox,
-  Img,
+  NewImg,
   TextCenter,
   ImdbIcon,
   ReactIcon,
@@ -22,21 +22,21 @@ const FourthShow = () => {
       </TitleBox>
       <ImgBox>
         <div>
-          <Img src={aws_address.movie.one} />
+          <NewImg src={aws_address.movie.one} />
           <TextCenter>• Index Page</TextCenter>
         </div>
         <div>
-          <Img src={aws_address.movie.two} />
+          <NewImg src={aws_address.movie.two} />
           <TextCenter>• Tv Page</TextCenter>
         </div>
       </ImgBox>
       <ImgBox2>
         <div>
-          <Img src={aws_address.movie.three} />
+          <NewImg src={aws_address.movie.three} />
           <TextCenter>• Deatil Page</TextCenter>
         </div>
         <div>
-          <Img src={aws_address.movie.four} />
+          <NewImg src={aws_address.movie.four} />
           <TextCenter>• Search Page</TextCenter>
         </div>
       </ImgBox2>

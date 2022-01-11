@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { VictoryPie, VictoryLabel } from "victory";
 import { device } from "../../utils/resize";
+import { LangContext } from "../../utils/toggleLang";
 
 const PieBox = styled.div`
   transform: translateX(50px) translateY(50px);
@@ -18,6 +19,7 @@ const PieBox = styled.div`
 `;
 
 const PieTable = () => {
+  const { isEn, toggleIsEn: _ } = useContext(LangContext);
   return (
     <PieBox>
       <svg width={350} height={350}>
@@ -49,7 +51,11 @@ const PieTable = () => {
           }}
           x={150}
           y={150}
-          text={`Github Repo\nMost Used Language`}
+          text={
+            isEn
+              ? `Github Repo\nMost Used Language`
+              : `Github Repo\n주요 사용 언어`
+          }
         />
       </svg>
     </PieBox>

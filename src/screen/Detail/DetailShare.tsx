@@ -11,8 +11,14 @@ type ChildrenProp = {
   children: React.ReactNode;
 };
 
+/** Language Prop for Detail whole Pages */
+export interface IisEnProp {
+  isEn: boolean;
+}
+
 const Container = styled.div`
   padding: 20px;
+  position: relative;
   @media ${device.mobile} {
     padding: 60px 20px;
   }
@@ -99,8 +105,33 @@ export const Demo = styled.a`
     transform: scale(1.1);
   }
 `;
+/** Project links for big screen */
+export const NavForProject = styled.div`
+  position: absolute;
+  bottom: -20%;
+  right: 0;
+  cursor: pointer;
+  &:hover {
+    color: orange;
+  }
+  @media ${device.mobile} {
+    display: none;
+  }
+  @media ${device.laptop} {
+    display: block;
+  }
 
-/** Project links */
+  @media ${device.desktop} {
+    display: block;
+  }
+`;
+
+export const NavForProjectLeft = styled(NavForProject)`
+  bottom: -12%;
+  left: 5%;
+`;
+
+/** Project links for mobile*/
 export const FixedMobileNav = styled(MobileNav)`
   bottom: -20px;
 `;
@@ -128,6 +159,12 @@ const VideoBox = styled.video`
   width: 85%;
   border-radius: 5px;
   transform: translateX(9%);
+  @media ${device.laptop} {
+    width: 75%;
+    transform: translateX(17%);
+  }
+  @media ${device.desktop} {
+  }
 `;
 
 export const VideoSection: React.FC<VideoProps> = ({ videoUrl }) => {

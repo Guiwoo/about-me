@@ -9,7 +9,7 @@ import {
   ShowTitle,
   TitleBox,
   DefaultIcon,
-  Img,
+  NewImg,
   TextCenter,
 } from "./ShowShared";
 import { faWind } from "@fortawesome/free-solid-svg-icons";
@@ -41,21 +41,21 @@ const SevenShow = () => {
       </TitleBox>
       <ImgBox>
         <div>
-          <Img src={aws_address.review.one} />
+          <NewImg src={aws_address.review.one} />
           <TextCenter>• Home Page</TextCenter>
         </div>
         <div>
-          <Img src={aws_address.review.two} />
+          <NewImg src={aws_address.review.two} />
           <TextCenter>• Login Page</TextCenter>
         </div>
       </ImgBox>
       <ImgBox2>
         <div>
-          <Img src={aws_address.review.three} />
+          <NewImg src={aws_address.review.three} />
           <TextCenter>• Detail Page</TextCenter>
         </div>
         <div>
-          <Img src={aws_address.review.four} />
+          <NewImg src={aws_address.review.four} />
           <TextCenter>• Search Page</TextCenter>
         </div>
       </ImgBox2>

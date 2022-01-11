@@ -14,6 +14,9 @@ import {
   ImgText,
   TheBox,
   FixedMobileNav,
+  NavForProject,
+  NavForProjectLeft,
+  IisEnProp,
 } from "./DetailShare";
 
 const cards = [
@@ -23,7 +26,7 @@ const cards = [
   aws_address.review.four,
 ];
 
-const Detail_7 = () => {
+const Detail_7: React.FC<IisEnProp> = ({ isEn }) => {
   const navigate = useNavigate();
   return (
     <DetailLayout text={"Movie & Book Web"}>
@@ -40,10 +43,13 @@ const Detail_7 = () => {
               Github
             </Demo>
           </GoThere>
-          <Description>• Preview</Description>
+          <Description>{isEn ? "• Preview" : "• 미리보기"}</Description>
+          <NavForProjectLeft onClick={() => navigate(routeName.sixth)}>
+            ✈️ Project 6
+          </NavForProjectLeft>
           <VideoSection videoUrl={aws_address.review.video} />
         </ItemBoxLayout>
-        <ItemBoxLayout text={"• Specific"}>
+        <ItemBoxLayout text={isEn ? "• Details" : "• 세부사항"}>
           <TheBox>
             <ImgText cards={cards} />
             <div
@@ -59,6 +65,9 @@ const Detail_7 = () => {
             <FixedMobileNav onClick={() => navigate(routeName.projects)}>
               Projects ✈️
             </FixedMobileNav>
+            <NavForProject onClick={() => navigate(routeName.projects)}>
+              Projects ✈️
+            </NavForProject>
           </TheBox>
         </ItemBoxLayout>
       </MainBox>

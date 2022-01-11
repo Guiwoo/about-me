@@ -9,7 +9,7 @@ import {
   ShowTitle,
   TitleBox,
   DefaultIcon,
-  Img,
+  NewImg,
   TextCenter,
   JsIcon,
 } from "./ShowShared";
@@ -45,21 +45,21 @@ const ThirdShow = () => {
       </TitleBox>
       <ImgBox>
         <div>
-          <Img src={aws_address.youtube.one} />
+          <NewImg src={aws_address.youtube.one} />
           <TextCenter>• Index Page</TextCenter>
         </div>
         <div>
-          <Img src={aws_address.youtube.two} />
+          <NewImg src={aws_address.youtube.two} />
           <TextCenter>• Login Page</TextCenter>
         </div>
       </ImgBox>
       <ImgBox2>
         <div>
-          <Img src={aws_address.youtube.three} />
+          <NewImg src={aws_address.youtube.three} />
           <TextCenter>• Upload Photo</TextCenter>
         </div>
         <div>
-          <Img src={aws_address.youtube.four} />
+          <NewImg src={aws_address.youtube.four} />
           <TextCenter>• Profile</TextCenter>
         </div>
       </ImgBox2>

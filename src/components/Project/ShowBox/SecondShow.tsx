@@ -31,6 +31,11 @@ const TsText = styled.span`
   margin-right: 2px;
 `;
 
+const NewImg = styled(Img)`
+  width: 150px;
+  height: 180px;
+`;
+
 const SecondShow = () => {
   return (
     <ShowBoxLayout>
@@ -43,21 +48,21 @@ const SecondShow = () => {
       </TitleBox>
       <ImgBox>
         <div>
-          <Img src={aws_address.modal.one} />
+          <NewImg src={aws_address.modal.one} />
           <TextCenter>• Index Page</TextCenter>
         </div>
         <div>
-          <Img src={aws_address.modal.two} />
+          <NewImg src={aws_address.modal.two} />
           <TextCenter>• Add Page</TextCenter>
         </div>
       </ImgBox>
       <ImgBox2>
         <div>
-          <Img src={aws_address.modal.three} />
+          <NewImg src={aws_address.modal.three} />
           <TextCenter>• Add Photo</TextCenter>
         </div>
         <div>
-          <Img src={aws_address.modal.four} />
+          <NewImg src={aws_address.modal.four} />
           <TextCenter>• Add Yotube</TextCenter>
         </div>
       </ImgBox2>

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import { device } from "../../utils/resize";
+import { LangContext } from "../../utils/toggleLang";
 import { Box, TitleText } from "../Shared";
 
 const CareerBox = styled(Box)`
@@ -52,29 +53,35 @@ const ContentText = styled.span`
 `;
 
 const Career = () => {
-  const [hover, setHover] = useState(false);
-  const onHover = () => {
-    setHover(!hover);
-  };
-
+  const { isEn, toggleIsEn: _ } = useContext(LangContext);
   return (
     <CareerBox>
       <MainBox>
-        <TitleText>Career</TitleText>
+        <TitleText>{isEn ? "Career" : "경력"}</TitleText>
         <ContentBox>
           <Bar />
           <Contents>
-            <Content onMouseEnter={onHover} onMouseLeave={onHover}>
+            <Content>
               <span>• 2015.03-2017.06 </span>
-              <ContentText>Military • First lieutenant</ContentText>
+              <ContentText>
+                {isEn ? "Military • First lieutenant" : "육군 • 중위"}
+              </ContentText>
             </Content>
             <Content>
               <span>• 2017.09-2017.11</span>
-              <ContentText>Nack DäckService(Stockholm) • Staff</ContentText>
+              <ContentText>
+                {isEn
+                  ? "Nack DäckService(Stockholm) • Staff"
+                  : "나카 타이어 서비스(스톡홀름) • 직원"}
+              </ContentText>
             </Content>
             <Content>
               <span>• 2018.02-2020.10</span>
-              <ContentText>Vapiano(Stockholm) • Chef</ContentText>
+              <ContentText>
+                {isEn
+                  ? "Vapiano(Stockholm) • Chef"
+                  : "바피아노(스톡홀름) • 요리사"}
+              </ContentText>
             </Content>
           </Contents>
         </ContentBox>

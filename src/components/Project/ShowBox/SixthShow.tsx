@@ -8,7 +8,7 @@ import {
   ShowTitle,
   TitleBox,
   DefaultIcon,
-  Img,
+  NewImg,
   TextCenter,
   ReactIcon,
 } from "./ShowShared";
@@ -38,21 +38,21 @@ const SixthShow = () => {
       </TitleBox>
       <ImgBox>
         <div>
-          <Img src={aws_address.coffee.one} />
+          <NewImg src={aws_address.coffee.one} />
           <TextCenter>• Home Page</TextCenter>
         </div>
         <div>
-          <Img src={aws_address.coffee.three} />
+          <NewImg src={aws_address.coffee.three} />
           <TextCenter>• Login Page</TextCenter>
         </div>
       </ImgBox>
       <ImgBox2>
         <div>
-          <Img src={aws_address.coffee.four} />
+          <NewImg src={aws_address.coffee.four} />
           <TextCenter>• Create Page</TextCenter>
         </div>
         <div>
-          <Img src={aws_address.coffee.five} />
+          <NewImg src={aws_address.coffee.five} />
           <TextCenter>• Mobile</TextCenter>
         </div>
       </ImgBox2>

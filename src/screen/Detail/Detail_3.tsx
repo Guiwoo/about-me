@@ -14,6 +14,9 @@ import {
   ImgText,
   FixedMobileNav,
   TheBox,
+  NavForProjectLeft,
+  NavForProject,
+  IisEnProp,
 } from "./DetailShare";
 
 const cards = [
@@ -24,7 +27,7 @@ const cards = [
   aws_address.youtube.five,
 ];
 
-const Detail_3 = () => {
+const Detail_3: React.FC<IisEnProp> = ({ isEn }) => {
   const navigate = useNavigate();
   return (
     <DetailLayout text={"Youtube Clone Project"}>
@@ -38,10 +41,13 @@ const Detail_3 = () => {
               Github
             </Demo>
           </GoThere>
-          <Description>• Preview</Description>
+          <Description>{isEn ? "• Preview" : "• 미리보기"}</Description>
+          <NavForProjectLeft onClick={() => navigate(routeName.second)}>
+            ✈️ Project 2
+          </NavForProjectLeft>
           <VideoSection videoUrl={aws_address.youtube.video} />
         </ItemBoxLayout>
-        <ItemBoxLayout text={"• Specific"}>
+        <ItemBoxLayout text={isEn ? "• Details" : "• 세부사항"}>
           <TheBox>
             <ImgText cards={cards} />
             <div
@@ -59,6 +65,9 @@ const Detail_3 = () => {
             <FixedMobileNav onClick={() => navigate(routeName.fourth)}>
               Project 4 ✈️
             </FixedMobileNav>
+            <NavForProject onClick={() => navigate(routeName.fourth)}>
+              Project 4 ✈️
+            </NavForProject>
           </TheBox>
         </ItemBoxLayout>
       </MainBox>

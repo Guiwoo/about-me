@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router";
 import styled, { keyframes } from "styled-components";
 import { device } from "../../utils/resize";
 import routeName from "../../utils/routeName";
+import { LangContext } from "../../utils/toggleLang";
 import { Box, TitleText, MobileNav } from "../Shared";
 
 const EducationBox = styled(Box)`
@@ -72,25 +73,26 @@ const Empty = styled(FirstBox)`
 
 const Education = () => {
   const navigation = useNavigate();
+  const { isEn, toggleIsEn: _ } = useContext(LangContext);
   return (
     <>
       <EducationBox>
         <div style={{ marginLeft: 20 }}>
-          <TitleText>Education</TitleText>
+          <TitleText>{isEn ? "Education" : "교육"}</TitleText>
           <MainBox>
             <Empty></Empty>
             <Empty>
               ROTC,
               <br />
-              Military Course
+              {isEn ? "• Military Course" : "• 기초 군사 교육"}
             </Empty>
             <Empty></Empty>
             <Empty>
               Nomad,
               <br />
-              Onlie Course
+              {isEn ? "Onlie Course" : "• 온라인 교육"}
               <br />
-              Programing
+              {isEn ? "Prgramming" : "• 프로그래밍"}
             </Empty>
           </MainBox>
           <MainBox>
@@ -107,9 +109,9 @@ const Education = () => {
             <Empty></Empty>
             <Empty>
               Udemy, <br />
-              Online Course
+              {isEn ? "Onlie Course" : "• 온라인 교육"}
               <br />
-              Programing
+              {isEn ? "Prgramming" : "• 프로그래밍"}
             </Empty>
             <Empty></Empty>
           </MainBox>

@@ -1,10 +1,11 @@
 import { faMoon, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useContext } from "react";
 import { useLocation } from "react-router";
 import styled, { keyframes } from "styled-components";
 import { device } from "../../utils/resize";
 import routeName from "../../utils/routeName";
+import { LangContext } from "../../utils/toggleLang";
 import { LinkToProject } from "./ProjectShare";
 
 type isOpenProps = {
@@ -119,12 +120,14 @@ const HeaderMenu = (props: any) => {
   const [show, setShow] = React.useState(false);
   const { isopen, ...rest } = props;
   const { pathname } = useLocation();
-  console.log(pathname);
+  const { isEn, toggleIsEn: _ } = useContext(LangContext);
   return (
     <>
       <Container {...rest}>
         {!show ? (
-          <MenuSpan onClick={() => setShow(!show)}>See All</MenuSpan>
+          <MenuSpan onClick={() => setShow(!show)}>
+            {isEn ? "See All" : "모두보기"}
+          </MenuSpan>
         ) : null}
         <MenuBtn onClick={() => setShow(!show)}>
           <Moon isopen={show.toString()} icon={faStar} color="#ffdd59" />

@@ -14,6 +14,9 @@ import {
   ImgText,
   TheBox,
   FixedMobileNav,
+  NavForProject,
+  NavForProjectLeft,
+  IisEnProp,
 } from "./DetailShare";
 
 const cards = [
@@ -23,7 +26,7 @@ const cards = [
   aws_address.coffee.five,
 ];
 
-const Detail_6 = () => {
+const Detail_6: React.FC<IisEnProp> = ({ isEn }) => {
   const navigate = useNavigate();
   return (
     <DetailLayout text={"Coffee App"}>
@@ -54,10 +57,13 @@ const Detail_6 = () => {
               Github(Mobile)
             </Demo>
           </GoThere>
-          <Description>• Preview</Description>
+          <Description>{isEn ? "• Preview" : "• 미리보기"}</Description>
+          <NavForProjectLeft onClick={() => navigate(routeName.fifth)}>
+            ✈️ Project 5
+          </NavForProjectLeft>
           <VideoSection videoUrl={aws_address.coffee.video} />
         </ItemBoxLayout>
-        <ItemBoxLayout text={"• Specific"}>
+        <ItemBoxLayout text={isEn ? "• Details" : "• 세부사항"}>
           <TheBox>
             <ImgText cards={cards} />
             <div
@@ -73,6 +79,9 @@ const Detail_6 = () => {
             <FixedMobileNav onClick={() => navigate(routeName.seven)}>
               Project 7 ✈️
             </FixedMobileNav>
+            <NavForProject onClick={() => navigate(routeName.seven)}>
+              Project 7 ✈️
+            </NavForProject>
           </TheBox>
         </ItemBoxLayout>
       </MainBox>
