@@ -32,7 +32,7 @@ const Box = styled.div`
 const ProjectHome = () => {
   const [index, setIndex] = React.useState(0);
   const [show, setShow] = React.useState(false);
-  const { isEn, toggleIsEn: _ } = useContext(LangContext);
+  const { isEn } = useContext(LangContext);
   const mouseIn = (num?: number): void => {
     if (num) {
       setIndex(num);

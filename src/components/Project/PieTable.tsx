@@ -19,7 +19,7 @@ const PieBox = styled.div`
 `;
 
 const PieTable = () => {
-  const { isEn, toggleIsEn: _ } = useContext(LangContext);
+  const { isEn } = useContext(LangContext);
   return (
     <PieBox>
       <svg width={350} height={350}>

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import routeName from "./routeName";
 
 export const extracText = (url: string) => {
@@ -12,12 +12,12 @@ export const extracText = (url: string) => {
     case routeName.projects:
       return "Projects"
       break;
-    case routeName.fifth:
+    case routeName.first:
       return "Projects 1"
       break;
     case routeName.second:
       return "Projects 2"
-      break; 
+      break;
     case routeName.third:
       return "Projects 3"
       break;
@@ -38,8 +38,10 @@ export const extracText = (url: string) => {
   }
 };
 
+
+
 export const useIntervalTitle = (count: number, time: number) => {
-  let num = count;
+  let num =0;
   useEffect(() => {
     const getText = document.querySelectorAll("span");
     getText.forEach((span) => {
@@ -56,7 +58,7 @@ export const useIntervalTitle = (count: number, time: number) => {
     let timer = setInterval(() => {
       const span = document.querySelectorAll(".hidden")[num];
       span.classList.add("fadeIn");
-      num++;
+      num++
       if (num === document.querySelectorAll(".hidden").length) {
         clearInterval(timer);
       }

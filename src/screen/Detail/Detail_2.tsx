@@ -27,11 +27,6 @@ const cards = [
   aws_address.modal.four,
 ];
 
-const GoBackNav = styled.div`
-  position: absolute;
-  bottom: -12%;
-`;
-
 const Detail_2: React.FC<IisEnProp> = ({ isEn }) => {
   const navigate = useNavigate();
   return (

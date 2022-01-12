@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { dark, light } from "./styles/my-theme";
+import { dark } from "./styles/my-theme";
 import GlobalStyle from "./styles/resetCss";
 
 ReactDOM.render(

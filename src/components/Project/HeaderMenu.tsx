@@ -120,7 +120,7 @@ const HeaderMenu = (props: any) => {
   const [show, setShow] = React.useState(false);
   const { isopen, ...rest } = props;
   const { pathname } = useLocation();
-  const { isEn, toggleIsEn: _ } = useContext(LangContext);
+  const { isEn } = useContext(LangContext);
   return (
     <>
       <Container {...rest}>
