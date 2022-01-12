@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import AboutMe from "../../screen/AboutMe";
 import Home from "../../screen/Home";
 import routeName from "../../utils/routeName";
@@ -16,7 +16,13 @@ import Detail7 from "../../screen/Detail/Detail_7";
 import { LangContext } from "../../utils/toggleLang";
 
 /** Need to make 404 page or redirecting to home */
-const NoMatch = () => <div>No</div>;
+const NoMatch = () => {
+  const navigate = useNavigate();
+  React.useEffect(() => {
+    navigate(routeName.home);
+  }, []);
+  return null;
+};
 
 const RightMain = () => {
   const { pathname } = useLocation();
