@@ -3,7 +3,7 @@ import { LangContext } from "../../../utils/toggleLang";
 import { TitleText, Summary, WhoText } from "../../Shared";
 
 const Goal = () => {
-  const { isEn, toggleIsEn: _ } = useContext(LangContext);
+  const { isEn } = useContext(LangContext);
   return (
     <>
       <TitleText>

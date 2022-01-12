@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { device } from "../../utils/resize";
 import { LangContext } from "../../utils/toggleLang";
@@ -53,7 +53,7 @@ const ContentText = styled.span`
 `;
 
 const Career = () => {
-  const { isEn, toggleIsEn: _ } = useContext(LangContext);
+  const { isEn } = useContext(LangContext);
   return (
     <CareerBox>
       <MainBox>

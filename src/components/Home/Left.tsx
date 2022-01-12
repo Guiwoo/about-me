@@ -43,7 +43,7 @@ const TinySpan = styled.span`
 `;
 
 const HomeLeft = () => {
-  const { isEn, toggleIsEn: _ } = useContext(LangContext);
+  const { isEn } = useContext(LangContext);
   useIntervalTitle(0, 40); /* uncomment before deploy */
   const navigation = useNavigate();
   return (

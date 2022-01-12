@@ -68,7 +68,7 @@ const ContentText = styled.div`
 `;
 
 const Personal = () => {
-  const { isEn, toggleIsEn: _ } = useContext(LangContext);
+  const { isEn } = useContext(LangContext);
   return (
     <PersonalBox>
       <Title>{isEn ? "PERSONAL INFO" : "개인정보"}</Title>

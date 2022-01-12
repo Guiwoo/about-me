@@ -19,14 +19,14 @@ import { LangContext } from "../../utils/toggleLang";
 const NoMatch = () => {
   const navigate = useNavigate();
   React.useEffect(() => {
-    navigate(routeName.home);
+    return navigate(routeName.home);
   }, []);
   return null;
 };
 
 const RightMain = () => {
   const { pathname } = useLocation();
-  const { isEn, toggleIsEn: _ } = useContext(LangContext);
+  const { isEn } = useContext(LangContext);
   return (
     <>
       <Routes>

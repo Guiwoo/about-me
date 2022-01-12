@@ -1,7 +1,9 @@
 # Translate En / Ko
 
 [x] - Add later
+
 [x] - Header Name Change defends on url
+
 [x] - Made redirect
 
 # Initialize Project

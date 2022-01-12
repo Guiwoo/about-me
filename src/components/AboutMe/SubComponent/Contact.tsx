@@ -8,11 +8,6 @@ import { faMicrosoft, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import { IndexProp } from "./Iam";
 
-const Mobile = styled(FontAwesomeIcon)`
-  font-size: 15px;
-  color: white;
-`;
-
 const Contact = styled.button`
   display: flex;
   padding: 2px 18px;

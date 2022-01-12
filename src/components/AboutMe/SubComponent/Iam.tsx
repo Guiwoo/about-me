@@ -10,7 +10,7 @@ export type IndexProp = {
 };
 
 const Iam: React.FC<IndexProp> = ({ index }) => {
-  const { isEn, toggleIsEn: _ } = useContext(LangContext);
+  const { isEn } = useContext(LangContext);
   const FilterIam = ["나는", "__"];
   return (
     <>

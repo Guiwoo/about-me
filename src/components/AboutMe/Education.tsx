@@ -73,7 +73,7 @@ const Empty = styled(FirstBox)`
 
 const Education = () => {
   const navigation = useNavigate();
-  const { isEn, toggleIsEn: _ } = useContext(LangContext);
+  const { isEn } = useContext(LangContext);
   return (
     <>
       <EducationBox>

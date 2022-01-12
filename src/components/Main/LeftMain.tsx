@@ -139,13 +139,6 @@ const En = styled.div`
     color: orange;
   }
 `;
-const Ko = styled.div`
-  margin-left: 5px;
-  cursor: pointer;
-  &:hover {
-    color: orange;
-  }
-`;
 
 const LeftMain = () => {
   const { isEn, toggleIsEn } = useContext(LangContext);

@@ -30,8 +30,11 @@ export const extracText = (url: string) => {
     case routeName.sixth:
       return "Projects 6"
       break;
+    case routeName.seven:
+      return "Projects 7"
+      break;
     default:
-      return "Project 7"
+      return "404"
   }
 };
 
