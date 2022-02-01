@@ -1,5 +1,6 @@
 ## Update
 
+[x] - Fixed netlify to github
 [] - Recoil for light dark ,and language mode
 [] - resizing
 [] - frammer motion for the main page and last page
