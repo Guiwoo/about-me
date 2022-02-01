@@ -1,8 +1,8 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
-import { Link } from "react-router-dom";
-import ReactTextTransition, { presets } from "react-text-transition";
-import { device } from "../utils/resize";
+import styled, {keyframes} from "styled-components";
+import {Link} from "react-router-dom";
+import ReactTextTransition, {presets} from "react-text-transition";
+import {device} from "../utils/resize";
 
 interface CurrentProps {
   readonly current?: string | undefined;
@@ -27,12 +27,10 @@ export const Container = styled.div`
     height: 100vh;
   }
   @media ${device.laptop} {
-    max-width: 1500px;
     height: 100vh;
   }
 
   @media ${device.desktop} {
-    max-width: 2560px;
   }
 `;
 
@@ -105,7 +103,7 @@ const GoNextBtn = styled(Link)`
   }
 `;
 
-export const GoNext = ({ routeName, title }: NextPageProps) => {
+export const GoNext = ({routeName, title}: NextPageProps) => {
   const [index, setIndex] = React.useState(0);
   const [delay, setDelay] = React.useState(true);
   const m = /[a-zA-Z]/gi;
@@ -123,13 +121,13 @@ export const GoNext = ({ routeName, title }: NextPageProps) => {
       <ReactTextTransition
         text={TheTitle[index % TheTitle.length]}
         springConfig={presets.gentle}
-        style={{ margin: "0 4px" }}
+        style={{margin: "0 4px"}}
         inline
       />
       <ReactTextTransition
         text={Arrow[index % Arrow.length]}
         springConfig={presets.gentle}
-        style={{ margin: "0 4px" }}
+        style={{margin: "0 4px"}}
         inline
       />
     </GoNextBtn>

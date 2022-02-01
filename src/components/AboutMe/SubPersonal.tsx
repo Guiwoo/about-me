@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import styled from "styled-components";
 import Goal from "./SubComponent/Goal";
 import Iam from "./SubComponent/Iam";
-import { Box } from "../Shared";
+import {Box} from "../Shared";
 import ContactMe from "./SubComponent/Contact";
-import { device } from "../../utils/resize";
+import {device} from "../../utils/resize";
 
 const AdditionalBox = styled(Box)`
   animation-duration: 1.2s;
@@ -14,11 +14,13 @@ const AdditionalBox = styled(Box)`
     width: 100%;
   }
   @media ${device.laptop} {
-    width: 50%;
+    width: 30vw;
+    height: 35vh;
   }
 
   @media ${device.desktop} {
-    width: 50%;
+    width: 30vw;
+    height: 35vh;
   }
 `;
 

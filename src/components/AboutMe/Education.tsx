@@ -1,23 +1,25 @@
-import React, { useContext } from "react";
-import { useNavigate } from "react-router";
-import styled, { keyframes } from "styled-components";
-import { device } from "../../utils/resize";
+import React, {useContext} from "react";
+import {useNavigate} from "react-router";
+import styled, {keyframes} from "styled-components";
+import {device} from "../../utils/resize";
 import routeName from "../../utils/routeName";
-import { LangContext } from "../../utils/toggleLang";
-import { Box, TitleText, MobileNav } from "../Shared";
+import {LangContext} from "../../utils/toggleLang";
+import {Box, TitleText, MobileNav} from "../Shared";
 
 const EducationBox = styled(Box)`
+  flex: 1;
   animation-duration: 1.4s;
   @media ${device.mobile} {
     width: 100%;
     padding: 100px 0px;
   }
   @media ${device.laptop} {
-    width: 51%;
+    width: 100%;
     padding: 0px;
+    height: 35vh;
   }
   @media ${device.desktop} {
-    width: 50%;
+    width: 100%;
     padding: 0px;
   }
 `;
@@ -73,11 +75,11 @@ const Empty = styled(FirstBox)`
 
 const Education = () => {
   const navigation = useNavigate();
-  const { isEn } = useContext(LangContext);
+  const {isEn} = useContext(LangContext);
   return (
     <>
       <EducationBox>
-        <div style={{ marginLeft: 20 }}>
+        <div style={{marginLeft: 20}}>
           <TitleText>{isEn ? "Education" : "교육"}</TitleText>
           <MainBox>
             <Empty></Empty>

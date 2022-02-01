@@ -1,22 +1,24 @@
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
-import { aws_address } from "../../utils/aws";
-import { device } from "../../utils/resize";
-import { LangContext } from "../../utils/toggleLang";
-import { Box, TitleText } from "../Shared";
+import {aws_address} from "../../utils/aws";
+import {device} from "../../utils/resize";
+import {LangContext} from "../../utils/toggleLang";
+import {Box, TitleText} from "../Shared";
 
 const PersonalBox = styled(Box)`
+  flex: 1;
   animation-duration: 1s;
   @media ${device.mobile} {
     width: 100%;
   }
   @media ${device.laptop} {
-    width: 50%;
+    width: 30vw;
   }
 
   @media ${device.desktop} {
-    width: 50%;
+    width: 30vw;
   }
+  flex-direction: column;
 `;
 
 const Title = styled(TitleText)`
@@ -25,6 +27,8 @@ const Title = styled(TitleText)`
 
 const ContentBox = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const LeftBox = styled.div`
@@ -68,7 +72,7 @@ const ContentText = styled.div`
 `;
 
 const Personal = () => {
-  const { isEn } = useContext(LangContext);
+  const {isEn} = useContext(LangContext);
   return (
     <PersonalBox>
       <Title>{isEn ? "PERSONAL INFO" : "개인정보"}</Title>

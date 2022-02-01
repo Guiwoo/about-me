@@ -4,30 +4,56 @@ import Career from "../components/AboutMe/Career";
 import Education from "../components/AboutMe/Education";
 import Personal from "../components/AboutMe/Personal";
 import SubPersonal from "../components/AboutMe/SubPersonal";
-import { BgContainer } from "../components/Shared";
+import {BgContainer} from "../components/Shared";
 import AboutMeLayout from "../components/AboutMe/ScreenLayout";
+import {device} from "../utils/resize";
 
 const AboutContainer = styled(BgContainer)`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin: 20px 0px 0px 20px;
+  height: 100%;
+`;
+
+const FlexContainer = styled.div`
+  @media ${device.mobile} {
+    display: flex;
+    flex-direction: column;
+  }
+  @media ${device.laptop} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media ${device.desktop} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const AboutMe = () => {
   return (
     <AboutContainer>
-      <AboutMeLayout>
+      <FlexContainer>
         <Personal />
         <SubPersonal />
-      </AboutMeLayout>
-      <AboutMeLayout>
         <Career />
         <Education />
-      </AboutMeLayout>
+      </FlexContainer>
     </AboutContainer>
   );
 };
 
 export default AboutMe;
+
+{
+  /* <div>
+        <AboutMeLayout>
+          <Personal />
+          <SubPersonal />
+        </AboutMeLayout>
+        <AboutMeLayout>
+          <Career />
+          <Education />
+        </AboutMeLayout>
+      </div> */
+}

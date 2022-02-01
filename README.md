@@ -1,3 +1,9 @@
+## Update
+
+[] - Recoil for light dark ,and language mode
+[] - resizing
+[] - frammer motion for the main page and last page
+
 # Translate En / Ko
 
 [x] - Add later
@@ -119,5 +125,5 @@ Pre-made one Custom react hook text Effect [Check here 🚀](https://reactjsexam
 
 ## Publish
 
-[] - github for - main version
-[] - netlify for - master version
+[x] - github for - main version
+[x] - netlify for - master version

@@ -1,23 +1,25 @@
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
-import { device } from "../../utils/resize";
-import { LangContext } from "../../utils/toggleLang";
-import { Box, TitleText } from "../Shared";
+import {device} from "../../utils/resize";
+import {LangContext} from "../../utils/toggleLang";
+import {Box, TitleText} from "../Shared";
 
 const CareerBox = styled(Box)`
+  flex: 1;
   animation-duration: 1.3s;
   opacity: 0;
   @media ${device.mobile} {
     width: 100%;
   }
   @media ${device.laptop} {
-    width: 50%;
+    width: 100%;
   }
   @media ${device.desktop} {
-    width: 50%;
+    width: 100%;
   }
   border-top: 1px solid white;
   border-right: 1px solid white;
+  margin: -10px;
 `;
 
 const MainBox = styled.div`
@@ -53,7 +55,7 @@ const ContentText = styled.span`
 `;
 
 const Career = () => {
-  const { isEn } = useContext(LangContext);
+  const {isEn} = useContext(LangContext);
   return (
     <CareerBox>
       <MainBox>
