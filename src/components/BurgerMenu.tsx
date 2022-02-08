@@ -1,9 +1,10 @@
-import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import { useNavigate } from "react-router";
+import {keyframes} from "@emotion/react";
+import {faEllipsisH} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import React, {useEffect} from "react";
+import {useNavigate} from "react-router";
 import styled from "styled-components";
-import { device } from "../utils/resize";
+import {device} from "../utils/resize";
 import routeName from "../utils/routeName";
 
 const SNavigation = styled.div`
@@ -31,16 +32,48 @@ const BurgerBox = styled.div`
   border-radius: 5px;
   &:hover {
     color: orange;
+    background-color: #393e3f;
   }
 `;
-const MenuBox = styled.div``;
+
+const Menuanimation = keyframes`
+  from{
+    transform: scale(0)
+  }to{
+    transform:scale(1)
+  }
+`;
+
+const MenuBox = styled.div`
+  width: 20%;
+  height: 17%;
+  padding: 0px 5px;
+  box-shadow: 2px 2px 5px white;
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(30, 39, 46, 1) 0%,
+    rgba(52, 61, 74, 1) 100%
+  );
+  animation: ${Menuanimation} 1.4s linear forwards;
+`;
 
 const Navigations = styled.div`
-  margin: 10px 0px;
+  padding: 12px 0px;
   cursor: pointer;
   &:hover {
     color: orange;
+    background-color: #393e3f;
   }
+`;
+const Cover = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
 `;
 
 const BurgerMenu = () => {
@@ -54,17 +87,19 @@ const BurgerMenu = () => {
   return (
     <SNavigation>
       {show ? (
-        <MenuBox>
-          <Navigations onClick={() => navigaetClick(routeName.home)}>
-            Home
-          </Navigations>
-          <Navigations onClick={() => navigaetClick(routeName.me)}>
-            About Me
-          </Navigations>
-          <Navigations onClick={() => navigaetClick(routeName.projects)}>
-            Projects
-          </Navigations>
-        </MenuBox>
+        <Cover onClick={() => setShow(false)}>
+          <MenuBox>
+            <Navigations onClick={() => navigaetClick(routeName.home)}>
+              • Home
+            </Navigations>
+            <Navigations onClick={() => navigaetClick(routeName.me)}>
+              • About Me
+            </Navigations>
+            <Navigations onClick={() => navigaetClick(routeName.projects)}>
+              • Projects
+            </Navigations>
+          </MenuBox>
+        </Cover>
       ) : (
         <BurgerBox onClick={clickBurger}>
           <FontAwesomeIcon icon={faEllipsisH} />
