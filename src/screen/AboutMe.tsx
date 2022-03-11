@@ -23,10 +23,13 @@ const FlexContainer = styled.div`
   @media ${device.laptop} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    overflow-y: auto;
+    height: 100%;
   }
   @media ${device.desktop} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    height: 100%;
   }
 `;
 

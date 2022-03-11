@@ -1,6 +1,6 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styled, {keyframes} from "styled-components";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import HexagonOutlinedIcon from "@mui/icons-material/HexagonOutlined";
 import {
   faHtml5,
@@ -10,7 +10,7 @@ import {
   faReact,
   faPython,
 } from "@fortawesome/free-brands-svg-icons";
-import { faHippo, faLeaf } from "@fortawesome/free-solid-svg-icons";
+import {faHippo, faLeaf} from "@fortawesome/free-solid-svg-icons";
 
 const Items = styled.div`
   position: absolute;
@@ -137,7 +137,7 @@ const SGraphQL = styled(Items)`
 
 export const GraphQL = () => (
   <SGraphQL>
-    <HexagonOutlinedIcon sx={{ color: "white" }} fontSize="large" />
+    <HexagonOutlinedIcon sx={{color: "white"}} fontSize="large" />
     <span>GrpahQL</span>
   </SGraphQL>
 );
@@ -177,7 +177,7 @@ const TsMove = keyframes`
     }
     to{
         background: radial-gradient(circle, rgba(47,115,191,1) 0%, rgba(148,187,233,1) 100%);
-        transform: translateX(150px) translateY(-200px);
+        transform: translateX(120px) translateY(-200px);
     }
 `;
 const STs = styled(Items)`

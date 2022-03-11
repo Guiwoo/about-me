@@ -17,9 +17,6 @@ const CareerBox = styled(Box)`
   @media ${device.desktop} {
     width: 100%;
   }
-  border-top: 1px solid white;
-  border-right: 1px solid white;
-  margin: -10px;
 `;
 
 const MainBox = styled.div`
@@ -33,7 +30,7 @@ const Bar = styled.div`
 `;
 
 const ContentBox = styled.div`
-  margin: 30px 0px 0px 18px;
+  margin: 30px 0px 0px 16px;
   display: flex;
   align-items: center;
 `;

@@ -1,9 +1,9 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
-import { MobileNav, TitleText } from "../../components/Shared";
-import { Img, TextCenter } from "../../components/Project/ShowBox/ShowShared";
-import { aws_address } from "../../utils/aws";
-import { device } from "../../utils/resize";
+import styled, {keyframes} from "styled-components";
+import {MobileNav, TitleText} from "../../components/Shared";
+import {Img, TextCenter} from "../../components/Project/ShowBox/ShowShared";
+import {aws_address} from "../../utils/aws";
+import {device} from "../../utils/resize";
 
 /** Detail LayOut with Type */
 type ChildrenProp = {
@@ -34,7 +34,7 @@ const Title = styled(TitleText)`
   font-size: 24px;
 `;
 
-export const DetailLayout: React.FC<ChildrenProp> = ({ text, children }) => {
+export const DetailLayout: React.FC<ChildrenProp> = ({text, children}) => {
   return (
     <Container>
       <Title>{text}</Title>
@@ -76,7 +76,7 @@ export const Description = styled.div`
   margin: 10px 0px;
 `;
 
-export const ItemBoxLayout: React.FC<ChildrenProp> = ({ text, children }) => {
+export const ItemBoxLayout: React.FC<ChildrenProp> = ({text, children}) => {
   return (
     <ItemBox>
       <Description>{text}</Description>
@@ -108,7 +108,7 @@ export const Demo = styled.a`
 /** Project links for big screen */
 export const NavForProject = styled.div`
   position: absolute;
-  bottom: -20%;
+  bottom: -10%;
   right: 0;
   cursor: pointer;
   &:hover {
@@ -127,7 +127,7 @@ export const NavForProject = styled.div`
 `;
 
 export const NavForProjectLeft = styled(NavForProject)`
-  bottom: -12%;
+  bottom: -4%;
   left: 5%;
 `;
 
@@ -167,7 +167,7 @@ const VideoBox = styled.video`
   }
 `;
 
-export const VideoSection: React.FC<VideoProps> = ({ videoUrl }) => {
+export const VideoSection: React.FC<VideoProps> = ({videoUrl}) => {
   return (
     <SVideoSection>
       <MacBookImg>
@@ -230,7 +230,7 @@ type ImgTextCards = {
   cards: string[];
 };
 
-export const ImgText: React.FC<ImgTextCards> = ({ cards }) => {
+export const ImgText: React.FC<ImgTextCards> = ({cards}) => {
   const [num, setNum] = React.useState(0);
   React.useEffect(() => {
     const timer = setInterval(() => {

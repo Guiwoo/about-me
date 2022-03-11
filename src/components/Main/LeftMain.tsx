@@ -1,14 +1,14 @@
-import React, { useContext } from "react";
-import styled, { keyframes } from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import React, {useContext} from "react";
+import styled, {keyframes} from "styled-components";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import Navigation from "../Navigation";
-import { faMicrosoft } from "@fortawesome/free-brands-svg-icons";
-import { faMobileAlt, faMoon } from "@fortawesome/free-solid-svg-icons";
+import {faMicrosoft} from "@fortawesome/free-brands-svg-icons";
+import {faMobileAlt, faMoon} from "@fortawesome/free-solid-svg-icons";
 import BurgerMenu from "../BurgerMenu";
-import { device } from "../../utils/resize";
-import { aws_address } from "../../utils/aws";
-import { LangContext } from "../../utils/toggleLang";
+import {device} from "../../utils/resize";
+import {aws_address} from "../../utils/aws";
+import {LangContext} from "../../utils/toggleLang";
 
 const LeftMainBox = styled.section`
   display: flex;
@@ -81,7 +81,7 @@ const ContactBoxes = styled.div`
     transform: translateY(0px);
   }
   @media ${device.laptop} {
-    transform: translateY(150px);
+    transform: translateY(100px);
   }
 
   @media ${device.desktop} {
@@ -141,7 +141,7 @@ const En = styled.div`
 `;
 
 const LeftMain = () => {
-  const { isEn, toggleIsEn } = useContext(LangContext);
+  const {isEn, toggleIsEn} = useContext(LangContext);
   const CopyText = (e: any) => {
     const textValue = e.target.innerText;
     navigator.clipboard.writeText(textValue);
@@ -175,11 +175,11 @@ const LeftMain = () => {
               </a>
             </GithubBox>
             <ContactBox>
-              <div style={{ display: "flex" }}>
+              <div style={{display: "flex"}}>
                 <FontAwesomeIcon icon={faMobileAlt} />
                 <ContactSpan onClick={CopyText}>010-7106-8657</ContactSpan>
               </div>
-              <div style={{ display: "flex" }}>
+              <div style={{display: "flex"}}>
                 <FontAwesomeIcon icon={faMicrosoft} />
                 <ContactSpan onClick={CopyText}>
                   Park.guiwoo@hotmail.com

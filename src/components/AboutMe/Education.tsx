@@ -9,17 +9,16 @@ import {Box, TitleText, MobileNav} from "../Shared";
 const EducationBox = styled(Box)`
   flex: 1;
   animation-duration: 1.4s;
+  width: 100%;
+  height: 50vh;
   @media ${device.mobile} {
-    width: 100%;
     padding: 100px 0px;
   }
   @media ${device.laptop} {
-    width: 100%;
     padding: 0px;
     height: 35vh;
   }
   @media ${device.desktop} {
-    width: 100%;
     padding: 0px;
   }
 `;
