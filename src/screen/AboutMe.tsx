@@ -5,7 +5,6 @@ import Education from "../components/AboutMe/Education";
 import Personal from "../components/AboutMe/Personal";
 import SubPersonal from "../components/AboutMe/SubPersonal";
 import {BgContainer} from "../components/Shared";
-import AboutMeLayout from "../components/AboutMe/ScreenLayout";
 import {device} from "../utils/resize";
 
 const AboutContainer = styled(BgContainer)`
@@ -25,6 +24,9 @@ const FlexContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
     overflow-y: auto;
     height: 100%;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
   @media ${device.desktop} {
     display: grid;
@@ -47,16 +49,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
-{
-  /* <div>
-        <AboutMeLayout>
-          <Personal />
-          <SubPersonal />
-        </AboutMeLayout>
-        <AboutMeLayout>
-          <Career />
-          <Education />
-        </AboutMeLayout>
-      </div> */
-}

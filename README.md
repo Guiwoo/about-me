@@ -3,10 +3,8 @@
 [x] - Fixed netlify to github
 
 [x] - mobile burger menu fixed(08.Feb)
-[] - Need to give animation (Considering Framer React)
-
-[] - Recoil for light dark ,and language mode
-[] - resizing
+[x] - Recoil for light dark ,and language mode
+[] - Need to fix Light Color
 [] - frammer motion for the main page and last page
 
 # Translate En / Ko

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, {FC} from "react";
 
 interface ILang {
   isEn: boolean;
@@ -11,7 +11,7 @@ export const currentLang = {
 
 export const LangContext = React.createContext<ILang>(currentLang);
 
-export const LangProvider: FC = ({ children }) => {
+export const LangProvider: FC = ({children}) => {
   const [isEn, setIsEn] = React.useState(currentLang.isEn);
   const toggleIsEn = () => {
     setIsEn(!isEn);

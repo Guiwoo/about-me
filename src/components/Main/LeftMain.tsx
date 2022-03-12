@@ -4,11 +4,13 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import Navigation from "../Navigation";
 import {faMicrosoft} from "@fortawesome/free-brands-svg-icons";
-import {faMobileAlt, faMoon} from "@fortawesome/free-solid-svg-icons";
+import {faMobileAlt, faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
 import BurgerMenu from "../BurgerMenu";
 import {device} from "../../utils/resize";
 import {aws_address} from "../../utils/aws";
 import {LangContext} from "../../utils/toggleLang";
+import {useRecoilState} from "recoil";
+import {darkState} from "../../utils/recoilAtom";
 
 const LeftMainBox = styled.section`
   display: flex;
@@ -68,6 +70,12 @@ const Rotating = keyframes`
 const IconMoon = styled(FontAwesomeIcon)`
   color: #ffc048;
   animation: ${Rotating} 10s linear infinite;
+`;
+const DarkLightMode = styled.div`
+  cursor: pointer;
+  &:hover {
+    color: #ffa801;
+  }
 `;
 
 const Nametag = styled.div`
@@ -141,6 +149,7 @@ const En = styled.div`
 `;
 
 const LeftMain = () => {
+  const [isDark, setIsDark] = useRecoilState(darkState);
   const {isEn, toggleIsEn} = useContext(LangContext);
   const CopyText = (e: any) => {
     const textValue = e.target.innerText;
@@ -150,17 +159,23 @@ const LeftMain = () => {
       e.target.innerText = textValue;
     }, 1500);
   };
+  const toggleDark = () => {
+    return setIsDark(!isDark);
+  };
 
   return (
     <LeftMainBox>
       <Content>
         <ChangeLanguage>
-          <En onClick={toggleIsEn}>{isEn ? "한국어 !" : "En !"}</En>
+          <En onClick={toggleIsEn}>{isEn ? "한국어" : "En"}</En>
+          <DarkLightMode onClick={toggleDark}>
+            <FontAwesomeIcon icon={isDark ? faSun : faMoon} />
+          </DarkLightMode>
         </ChangeLanguage>
         <div>
           <PhotoBox>
             <Image>
-              <IconMoon icon={faMoon} />
+              <IconMoon icon={isDark ? faMoon : faSun} />
             </Image>
           </PhotoBox>
           <Nametag>{isEn ? "Guiwoo Park" : "박귀우"}</Nametag>

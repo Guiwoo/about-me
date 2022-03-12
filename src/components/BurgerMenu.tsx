@@ -1,7 +1,7 @@
 import {keyframes} from "@emotion/react";
 import {faEllipsisH} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import React, {useEffect} from "react";
+import React from "react";
 import {useNavigate} from "react-router";
 import styled from "styled-components";
 import {device} from "../utils/resize";

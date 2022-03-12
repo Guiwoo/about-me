@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import React, {useContext} from "react";
+import {Routes, Route, useLocation, useNavigate} from "react-router-dom";
 import AboutMe from "../../screen/AboutMe";
 import Home from "../../screen/Home";
 import routeName from "../../utils/routeName";
-import { GoNext } from "../Shared";
-import { MainLayOut, ProjectsLayout } from "./MainLayOut";
+import {GoNext} from "../Shared";
+import {MainLayOut, ProjectsLayout} from "./MainLayOut";
 import ProjectHome from "../../screen/Projects";
 import Detail1 from "../../screen/Detail/Detail_1";
 import Detail2 from "../../screen/Detail/Detail_2";
@@ -13,20 +13,19 @@ import Detail4 from "../../screen/Detail/Detail_4";
 import Detail5 from "../../screen/Detail/Detail_5";
 import Detail6 from "../../screen/Detail/Detail_6";
 import Detail7 from "../../screen/Detail/Detail_7";
-import { LangContext } from "../../utils/toggleLang";
+import {LangContext} from "../../utils/toggleLang";
 
-/** Need to make 404 page or redirecting to home */
 const NoMatch = () => {
   const navigate = useNavigate();
   React.useEffect(() => {
     return navigate(routeName.home);
-  }, []);
+  }, [navigate]);
   return null;
 };
 
 const RightMain = () => {
-  const { pathname } = useLocation();
-  const { isEn } = useContext(LangContext);
+  const {pathname} = useLocation();
+  const {isEn} = useContext(LangContext);
   return (
     <>
       <Routes>

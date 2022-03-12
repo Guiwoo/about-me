@@ -1,38 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import routeName from "./routeName";
 
 export const extracText = (url: string) => {
   switch (url) {
     case routeName.home:
       return "Home"
-      break;
     case routeName.me:
       return "About Me"
-      break;
     case routeName.projects:
       return "Projects"
-      break;
     case routeName.first:
       return "Projects 1"
-      break;
     case routeName.second:
       return "Projects 2"
-      break;
     case routeName.third:
       return "Projects 3"
-      break;
     case routeName.fourth:
       return "Projects 4"
-      break;
     case routeName.fifth:
       return "Projects 5"
-      break;
     case routeName.sixth:
       return "Projects 6"
-      break;
     case routeName.seven:
       return "Projects 7"
-      break;
     default:
       return "404"
   }
@@ -41,7 +31,7 @@ export const extracText = (url: string) => {
 
 
 export const useIntervalTitle = (count: number, time: number) => {
-  let num =0;
+  let num = 0;
   useEffect(() => {
     const getText = document.querySelectorAll("span");
     getText.forEach((span) => {
@@ -66,5 +56,5 @@ export const useIntervalTitle = (count: number, time: number) => {
     return () => {
       clearInterval(timer);
     };
-  }, [num]);
+  }, [num, time]);
 };

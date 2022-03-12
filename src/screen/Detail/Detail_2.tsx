@@ -1,7 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router";
-import styled from "styled-components";
-import { aws_address } from "../../utils/aws";
+import {useNavigate} from "react-router";
+import {aws_address} from "../../utils/aws";
 import routeName from "../../utils/routeName";
 import {
   DetailLayout,
@@ -27,7 +26,7 @@ const cards = [
   aws_address.modal.four,
 ];
 
-const Detail_2: React.FC<IisEnProp> = ({ isEn }) => {
+const Detail_2: React.FC<IisEnProp> = ({isEn}) => {
   const navigate = useNavigate();
   return (
     <DetailLayout text={"Motion Project"}>
@@ -55,7 +54,7 @@ const Detail_2: React.FC<IisEnProp> = ({ isEn }) => {
           <TheBox>
             <ImgText cards={cards} />
             <div
-              style={{ display: "flex", alignItems: "end", marginLeft: "15px" }}
+              style={{display: "flex", alignItems: "end", marginLeft: "15px"}}
             >
               <div>
                 <PhotoText>• {isEn ? "Learn" : "학습"} JavaSciprt</PhotoText>
