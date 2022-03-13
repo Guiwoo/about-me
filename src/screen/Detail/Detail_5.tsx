@@ -29,7 +29,7 @@ const cards = [
 ];
 
 const VideoBox = styled.video`
-  max-height: 220px;
+  max-height: 180px;
   display: flex;
 `;
 
@@ -75,7 +75,7 @@ const Detail_5: React.FC<IisEnProp> = ({isEn}) => {
           </TheBox>
         </ItemBoxLayout>
       </MainBox>
-      <FixedNav>
+      <FixedNav style={{bottom: "-20px"}}>
         <NavForProjectLeft onClick={() => navigate(routeName.fourth)}>
           ✈️ Projects 4
         </NavForProjectLeft>

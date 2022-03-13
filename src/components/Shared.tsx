@@ -41,7 +41,7 @@ export const BgContainer = styled.div`
 
 export const Main = styled.main`
   margin: auto;
-  border: 1px solid "#1e272e";
+  border: 1px solid ${(props) => props.theme.border.main};
   width: 85%;
   height: 83%;
   border-radius: 30px;
@@ -65,20 +65,11 @@ export const NewLink = styled(Link)<CurrentProps>`
   display: block;
   padding: 10px;
   border-bottom: ${(props) =>
-    props.current === "true" ? `1px solid #ffa901` : ""};
+    props.current === "true" ? `1px solid white` : ""};
   border-radius: 10px;
   &:hover {
-    color: #ffa801;
+    color: ${(props) => props.theme.underline.main};
   }
-  /* @media ${device.mobile} {
-  }
-  @media ${device.laptop} {
-    background-color: transparent;
-  }
-
-  @media ${device.desktop} {
-    background-color: transparent;
-  } */
 `;
 const GoNextBtn = styled(Link)`
   position: absolute;
@@ -89,7 +80,7 @@ const GoNextBtn = styled(Link)`
   transition: 0.3s all linear;
   &:hover {
     transform: translateY(-10px) scale(1.2);
-    color: #ffa801;
+    color: ${(props) => props.theme.underline.main};
   }
   @media ${device.mobile} {
     display: none;
@@ -163,6 +154,7 @@ export const TitleText = styled.div`
   margin: 10px 0px;
   font-weight: 600;
   font-size: 18px;
+  color: ${(props) => props.theme.fontColor.main};
 `;
 
 export const Summary = styled.div`
@@ -180,7 +172,7 @@ export const Summary = styled.div`
 export const WhoText = styled.span`
   display: inline-block;
   margin-left: 18px;
-  color: rgba(255, 255, 255, 0.8);
+  color: ${(props) => props.theme.fontColor.sub};
 `;
 
 export const MobileNav = styled.div`

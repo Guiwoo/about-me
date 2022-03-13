@@ -23,7 +23,7 @@ const Container = styled.div`
     padding: 60px 20px;
   }
   @media ${device.laptop} {
-    padding: 20px;
+    padding: 10px;
   }
 
   @media ${device.desktop} {
@@ -100,7 +100,8 @@ export const Demo = styled.a`
   padding: 2px 3px;
   border-radius: 3px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: 600;
   &:hover {
     color: pink;
     transform: scale(1.1);
@@ -110,7 +111,7 @@ export const Demo = styled.a`
 export const NavForProject = styled.div`
   cursor: pointer;
   &:hover {
-    color: orange;
+    color: ${(props) => props.theme.underline.main};
   }
   @media ${device.mobile} {
     display: none;
@@ -144,7 +145,7 @@ const SVideoSection = styled.div`
   align-items: center;
   @media ${device.laptop} {
     width: 100%;
-    height: 55%;
+    height: 45%;
     background: url(${aws_address.img.mac});
     background-position: center;
     background-repeat: none;

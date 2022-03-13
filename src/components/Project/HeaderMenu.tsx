@@ -53,7 +53,7 @@ const MoonMove = keyframes`
 const Icon = styled(FontAwesomeIcon)`
   animation: ${StarAnimation} 2s linear infinite;
   &:hover {
-    color: orange;
+    color: ${(props) => props.theme.underline.main};
   }
 `;
 

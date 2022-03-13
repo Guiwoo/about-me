@@ -25,7 +25,7 @@ const Title = styled(TitleText)`
 `;
 
 const Box = styled.div`
-  padding: 20px;
+  padding: 40px;
   display: flex;
   align-items: center;
 `;

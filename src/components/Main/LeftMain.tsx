@@ -68,13 +68,13 @@ const Rotating = keyframes`
 `;
 
 const IconMoon = styled(FontAwesomeIcon)`
-  color: #ffc048;
+  color: ${(props) => props.theme.underline.main};
   animation: ${Rotating} 10s linear infinite;
 `;
 const DarkLightMode = styled.div`
   cursor: pointer;
   &:hover {
-    color: #ffa801;
+    color: ${(props) => props.theme.underline.main};
   }
 `;
 
@@ -102,7 +102,7 @@ const ToGitHub = styled(FontAwesomeIcon)`
   color: gray;
   font-size: 30px;
   &:hover {
-    color: #ffa801;
+    color: ${(props) => props.theme.underline.main};
   }
 `;
 
@@ -120,7 +120,7 @@ const ContactSpan = styled.div`
   font-size: 12px;
   cursor: pointer;
   &:hover {
-    color: orange;
+    color: ${(props) => props.theme.underline.main};
   }
 `;
 
@@ -138,7 +138,7 @@ const En = styled.div`
   margin-right: 5px;
   cursor: pointer;
   &:hover {
-    color: orange;
+    color: ${(props) => props.theme.underline.main};
   }
 `;
 

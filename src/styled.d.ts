@@ -4,13 +4,21 @@ import 'styled-components';
 // and extend them!
 declare module 'styled-components' {
   export interface DefaultTheme {
-    fontColor:{
-        main:string;
+    fontColor: {
+      main: string;
+      sub: string;
+      projectsSub: string
     }
-    bgColor:{
-        main:string;
-        second:string;
+    bgColor: {
+      main: string;
+      second: string;
     }
-    gradient:string
+    border: {
+      main: string
+    }
+    underline: {
+      main: string
+    }
+    gradient: string
   }
 }

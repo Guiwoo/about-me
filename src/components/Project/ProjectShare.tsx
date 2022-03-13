@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 
 type LinkProps = {
@@ -10,11 +10,11 @@ type LinkProps = {
 
 const GridText = styled(Link)`
   &:hover {
-    color: orange;
+    color: ${(props) => props.theme.underline.main};
   }
 `;
 // Link Prop On Project hover
-export const LinkToProject = ({ url, text, here }: LinkProps) => (
+export const LinkToProject = ({url, text, here}: LinkProps) => (
   <div
     style={{
       textAlign: "end",

@@ -64,12 +64,12 @@ const RightBox = styled.div`
 `;
 const SubTitle = styled.div`
   margin: 5px 0px;
-  color: rgba(255, 255, 255, 0.6);
+  color: ${(props) => props.theme.fontColor.main};
 `;
 const ContentText = styled.div`
   margin: 5px 0px;
   text-align: end;
-  color: white;
+  color: ${(props) => props.theme.fontColor.sub};
   padding: 1px 30px;
 `;
 

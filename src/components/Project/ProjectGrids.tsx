@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import routeName from "../../utils/routeName";
-import { aws_address } from "../../utils/aws";
+import {aws_address} from "../../utils/aws";
 
 interface ToggleOneProps {
   mouseIn(num?: number): void;
@@ -55,10 +55,10 @@ const SevenPrjoect = styled(ProjectFrame)`
 const GridText = styled.div`
   text-align: end;
   font-size: 12px;
-  color: #05c46b;
+  color: ${(props) => props.theme.fontColor.projectsSub};
 `;
 
-const ProjectGrids: React.FC<ToggleOneProps> = ({ mouseIn, mouseOut }) => {
+const ProjectGrids: React.FC<ToggleOneProps> = ({mouseIn, mouseOut}) => {
   let navigate = useNavigate();
   const linkTo = (url: string) => navigate(url);
   return (

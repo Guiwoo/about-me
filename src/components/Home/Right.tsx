@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { device } from "../../utils/resize";
+import {device} from "../../utils/resize";
 import {
   Django,
   GraphQL,
@@ -22,6 +22,7 @@ const Right = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 `;
 
 const CenterArea = styled.div`

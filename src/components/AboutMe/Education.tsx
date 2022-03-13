@@ -15,7 +15,6 @@ const EducationBox = styled(Box)`
   }
   @media ${device.laptop} {
     padding: 0px;
-    height: 35vh;
   }
   @media ${device.desktop} {
     padding: 0px;
@@ -85,7 +84,9 @@ const Education = () => {
     <>
       <EducationBox>
         <div style={{marginLeft: 20}}>
-          <TitleText>{isEn ? "Education" : "교육"}</TitleText>
+          <div style={{paddingLeft: "20px"}}>
+            <TitleText>{isEn ? "Education" : "교육"}</TitleText>
+          </div>
           <MainBox>
             <Empty></Empty>
             <Empty>

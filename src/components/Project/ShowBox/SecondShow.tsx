@@ -11,7 +11,7 @@ import {
   TextCenter,
   JsIcon,
 } from "./ShowShared";
-import { aws_address } from "../../../utils/aws";
+import {aws_address} from "../../../utils/aws";
 
 const TsIcon = styled(DefaultIcon)`
   background: radial-gradient(
@@ -33,7 +33,7 @@ const TsText = styled.span`
 
 const NewImg = styled(Img)`
   width: 150px;
-  height: 180px;
+  height: 160px;
 `;
 
 const SecondShow = () => {

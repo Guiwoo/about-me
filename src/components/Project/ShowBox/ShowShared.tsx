@@ -1,4 +1,4 @@
-import React, { ReactChild, ReactChildren } from "react";
+import React, {ReactChild, ReactChildren} from "react";
 import {
   faCss3,
   faHtml5,
@@ -6,10 +6,10 @@ import {
   faMediumM,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
-import { TitleText } from "../../Shared";
-import { device } from "../../../utils/resize";
+import {TitleText} from "../../Shared";
+import {device} from "../../../utils/resize";
 
 interface AuxProps {
   children: ReactChild | ReactChildren | ReactChild[] | ReactChildren[];
@@ -35,7 +35,7 @@ const Container = styled.div`
   padding: 10px;
 `;
 
-export const ShowBoxLayout = ({ children }: AuxProps) => {
+export const ShowBoxLayout = ({children}: AuxProps) => {
   return (
     <ShowBox>
       <Container>{children}</Container>
@@ -59,7 +59,7 @@ export const Img = styled.img`
 
 export const NewImg = styled(Img)`
   width: 150px;
-  height: 180px;
+  height: 160px;
 `;
 
 export const ShowTitle = styled(TitleText)`
@@ -70,6 +70,7 @@ export const TitleBox = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-bottom: 10px;
+  color: white;
 `;
 
 export const DefaultIcon = styled.div`

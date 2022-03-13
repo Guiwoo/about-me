@@ -22,7 +22,7 @@ const CareerBox = styled(Box)`
 
 const MainBox = styled.div`
   width: 100%;
-  padding: 20px;
+  padding: 0px 20px;
 `;
 
 const Bar = styled.div`

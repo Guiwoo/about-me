@@ -35,7 +35,7 @@ const Detail_6: React.FC<IisEnProp> = ({isEn}) => {
         <ItemBoxLayout
           text={`• Build With Expo, React, Postgres, GrapQL, Apollo`}
         >
-          <GoThere>
+          <GoThere style={{fontSize: "10px"}}>
             <Demo href="https://nomadcoffee.netlify.app/" target="_blank">
               Demo
             </Demo>

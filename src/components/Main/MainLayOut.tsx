@@ -1,11 +1,13 @@
 import React from "react";
-import { Outlet } from "react-router";
+import {Outlet} from "react-router";
+import {useRecoilState} from "recoil";
 import styled from "styled-components";
-import { aws_address } from "../../utils/aws";
-import { device } from "../../utils/resize";
+import {aws_address} from "../../utils/aws";
+import {darkState} from "../../utils/recoilAtom";
+import {device} from "../../utils/resize";
 import HeaderMenu from "../Project/HeaderMenu";
 
-const SRightMain = styled.section`
+const SRightMain = styled.section<{isDark: boolean}>`
   width: 80%;
   height: 100%;
   border-radius: 30px;
@@ -18,8 +20,11 @@ const SRightMain = styled.section`
     background-position: center;
     background-repeat: none;
     background-size: cover;
-    background-image: url(${aws_address.img.bg});
     padding: 0px;
+    ${(props) =>
+      props.isDark
+        ? `background-image:url(${aws_address.img.bg})`
+        : `background-image:url(${aws_address.img.pinkBg})`}
   }
 
   @media ${device.desktop} {
@@ -29,8 +34,10 @@ const SRightMain = styled.section`
 `;
 
 export const MainLayOut = () => {
+  //@ts-ignore
+  const [isDark, _] = useRecoilState(darkState);
   return (
-    <SRightMain>
+    <SRightMain isDark={isDark}>
       <Outlet />
     </SRightMain>
   );

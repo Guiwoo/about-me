@@ -1,22 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import ReactTextTransition, { presets } from "react-text-transition";
+import ReactTextTransition, {presets} from "react-text-transition";
 import Tooltip from "@mui/material/Tooltip";
-import { TitleText, Summary } from "../../Shared";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMicrosoft, faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
-import { IndexProp } from "./Iam";
+import {TitleText, Summary} from "../../Shared";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faMicrosoft, faGoogle} from "@fortawesome/free-brands-svg-icons";
+import {faMobileAlt} from "@fortawesome/free-solid-svg-icons";
+import {IndexProp} from "./Iam";
 
 const Contact = styled.button`
   display: flex;
   padding: 2px 18px;
-  color: rgba(255, 255, 255, 0.8);
+  color: ${(props) => props.theme.fontColor.main};
 `;
 
 const Email = styled(Contact)`
   &:hover {
-    color: #ffa801;
+    color: ${(props) => props.theme.underline.main};
   }
 `;
 
@@ -32,13 +32,13 @@ const CopyMessage = styled.span`
 
 const CopyText = styled.span`
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
+  color: ${(props) => props.theme.fontColor.main};
   margin-left: 20px;
 `;
 
 const TEXTS = ["Park.guiwoo@hotmail.com", "pbk12568@gmail.com"];
 
-const ContactMe: React.FC<IndexProp> = ({ index }) => {
+const ContactMe: React.FC<IndexProp> = ({index}) => {
   const [copy, setCopy] = React.useState(false);
   return (
     <>
@@ -65,7 +65,7 @@ const ContactMe: React.FC<IndexProp> = ({ index }) => {
               <ReactTextTransition
                 text={TEXTS[index % TEXTS.length]}
                 springConfig={presets.gentle}
-                style={{ margin: "0 4px" }}
+                style={{margin: "0 4px"}}
                 inline
               />
             </span>
