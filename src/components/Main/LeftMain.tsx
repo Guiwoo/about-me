@@ -154,9 +154,14 @@ const LeftMain = () => {
     }, 1500);
   };
   const toggleDark = () => {
+    const amIdark = localStorage.getItem("DARK");
+    if (!amIdark) {
+      localStorage.setItem("DARK", (!isDark).toString());
+    } else {
+      console.log(localStorage.getItem("DARK"));
+    }
     return setIsDark(!isDark);
   };
-
   return (
     <LeftMainBox>
       <Content>

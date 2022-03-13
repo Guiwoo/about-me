@@ -6,6 +6,7 @@
 [x] - Recoil for light dark ,and language mode
 [x] - Mobile Screen remove things and check height
 [x] - Need to fix Light Color
+[] - Need to add LocalStorage on it
 [] - frammer motion for the main page and last page
 
 # Translate En / Ko
