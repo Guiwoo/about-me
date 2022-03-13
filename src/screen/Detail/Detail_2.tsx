@@ -17,6 +17,7 @@ import {
   NavForProject,
   NavForProjectLeft,
   IisEnProp,
+  FixedNav,
 } from "./DetailShare";
 
 const cards = [
@@ -45,9 +46,6 @@ const Detail_2: React.FC<IisEnProp> = ({isEn}) => {
             </Demo>
           </GoThere>
           <Description>{isEn ? "• Preview" : "• 미리보기"}</Description>
-          <NavForProjectLeft onClick={() => navigate(routeName.first)}>
-            ✈️ Project 1
-          </NavForProjectLeft>
           <VideoSection videoUrl={aws_address.modal.video} />
         </ItemBoxLayout>
         <ItemBoxLayout text={isEn ? "• Details" : "• 세부사항"}>
@@ -67,12 +65,17 @@ const Detail_2: React.FC<IisEnProp> = ({isEn}) => {
             <FixedMobileNav onClick={() => navigate(routeName.third)}>
               Project 3 ✈️
             </FixedMobileNav>
-            <NavForProject onClick={() => navigate(routeName.third)}>
-              Project 3 ✈️
-            </NavForProject>
           </TheBox>
         </ItemBoxLayout>
       </MainBox>
+      <FixedNav>
+        <NavForProjectLeft onClick={() => navigate(routeName.first)}>
+          ✈️ Projects 1
+        </NavForProjectLeft>
+        <NavForProject onClick={() => navigate(routeName.third)}>
+          Project 3 ✈️
+        </NavForProject>
+      </FixedNav>
     </DetailLayout>
   );
 };

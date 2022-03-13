@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
-import { TitleText } from "../components/Shared";
+import {TitleText} from "../components/Shared";
 import PieTable from "../components/Project/PieTable";
 import FirstShow from "../components/Project/ShowBox/FirstShow";
 import SecondShow from "../components/Project/ShowBox/SecondShow";
@@ -10,13 +10,14 @@ import FifthShow from "../components/Project/ShowBox/FifthShow";
 import SixthShow from "../components/Project/ShowBox/SixthShow";
 import SevenShow from "../components/Project/ShowBox/SeventhShow";
 import ProjectGrids from "../components/Project/ProjectGrids";
-import { LangContext } from "../utils/toggleLang";
+import {LangContext} from "../utils/toggleLang";
 
 const Container = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 80%;
 `;
 
 const Title = styled(TitleText)`
@@ -32,7 +33,7 @@ const Box = styled.div`
 const ProjectHome = () => {
   const [index, setIndex] = React.useState(0);
   const [show, setShow] = React.useState(false);
-  const { isEn } = useContext(LangContext);
+  const {isEn} = useContext(LangContext);
   const mouseIn = (num?: number): void => {
     if (num) {
       setIndex(num);

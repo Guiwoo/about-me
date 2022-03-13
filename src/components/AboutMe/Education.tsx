@@ -12,7 +12,6 @@ const EducationBox = styled(Box)`
   width: 100%;
   height: 50vh;
   @media ${device.mobile} {
-    padding: 100px 0px;
   }
   @media ${device.laptop} {
     padding: 0px;
@@ -26,6 +25,13 @@ const EducationBox = styled(Box)`
 const MainBox = styled.div`
   display: flex;
   justify-content: center;
+  @media ${device.mobile} {
+    width: 95%;
+  }
+  @media ${device.laptop} {
+  }
+  @media ${device.desktop} {
+  }
 `;
 
 const SpreadBox = keyframes`

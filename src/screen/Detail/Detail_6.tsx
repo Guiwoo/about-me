@@ -1,6 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router";
-import { aws_address } from "../../utils/aws";
+import {useNavigate} from "react-router";
+import {aws_address} from "../../utils/aws";
 import routeName from "../../utils/routeName";
 import {
   DetailLayout,
@@ -17,6 +17,7 @@ import {
   NavForProject,
   NavForProjectLeft,
   IisEnProp,
+  FixedNav,
 } from "./DetailShare";
 
 const cards = [
@@ -26,7 +27,7 @@ const cards = [
   aws_address.coffee.five,
 ];
 
-const Detail_6: React.FC<IisEnProp> = ({ isEn }) => {
+const Detail_6: React.FC<IisEnProp> = ({isEn}) => {
   const navigate = useNavigate();
   return (
     <DetailLayout text={"Coffee App"}>
@@ -58,16 +59,13 @@ const Detail_6: React.FC<IisEnProp> = ({ isEn }) => {
             </Demo>
           </GoThere>
           <Description>{isEn ? "• Preview" : "• 미리보기"}</Description>
-          <NavForProjectLeft onClick={() => navigate(routeName.fifth)}>
-            ✈️ Project 5
-          </NavForProjectLeft>
           <VideoSection videoUrl={aws_address.coffee.video} />
         </ItemBoxLayout>
         <ItemBoxLayout text={isEn ? "• Details" : "• 세부사항"}>
           <TheBox>
             <ImgText cards={cards} />
             <div
-              style={{ display: "flex", alignItems: "end", marginLeft: "15px" }}
+              style={{display: "flex", alignItems: "end", marginLeft: "15px"}}
             >
               <div>
                 <PhotoText>• PostgresSQL & Prisma</PhotoText>
@@ -79,12 +77,17 @@ const Detail_6: React.FC<IisEnProp> = ({ isEn }) => {
             <FixedMobileNav onClick={() => navigate(routeName.seven)}>
               Project 7 ✈️
             </FixedMobileNav>
-            <NavForProject onClick={() => navigate(routeName.seven)}>
-              Project 7 ✈️
-            </NavForProject>
           </TheBox>
         </ItemBoxLayout>
       </MainBox>
+      <FixedNav>
+        <NavForProjectLeft onClick={() => navigate(routeName.fifth)}>
+          ✈️ Projects 5
+        </NavForProjectLeft>
+        <NavForProject onClick={() => navigate(routeName.seven)}>
+          Project 7 ✈️
+        </NavForProject>
+      </FixedNav>
     </DetailLayout>
   );
 };

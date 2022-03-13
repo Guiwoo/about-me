@@ -16,15 +16,15 @@ interface NextPageProps {
 }
 
 export const Container = styled.div`
-  background-image: ${(props) => props.theme.gradient};
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: ${(props) => props.theme.gradient};
   @media ${device.mobile} {
     height: 100%;
   }
   @media ${device.tablet} {
-    height: 100vh;
+    height: 100%;
   }
   @media ${device.laptop} {
     height: 100vh;
@@ -166,8 +166,15 @@ export const TitleText = styled.div`
 `;
 
 export const Summary = styled.div`
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.6;
+  @media ${device.laptop} {
+    font-size: 14px;
+  }
+
+  @media ${device.desktop} {
+    font-size: 16px;
+  }
 `;
 
 export const WhoText = styled.span`

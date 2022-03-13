@@ -17,7 +17,8 @@ const AboutContainer = styled(BgContainer)`
 const FlexContainer = styled.div`
   @media ${device.mobile} {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   @media ${device.laptop} {
     display: grid;

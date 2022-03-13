@@ -11,6 +11,7 @@ const AdditionalBox = styled(Box)`
   display: flex;
   @media ${device.mobile} {
     width: 100%;
+    padding: 0px 20px;
   }
   @media ${device.laptop} {
     width: 30vw;

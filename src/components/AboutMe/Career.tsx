@@ -10,6 +10,7 @@ const CareerBox = styled(Box)`
   opacity: 0;
   @media ${device.mobile} {
     width: 100%;
+    padding: 20px;
   }
   @media ${device.laptop} {
     width: 100%;
@@ -21,6 +22,7 @@ const CareerBox = styled(Box)`
 
 const MainBox = styled.div`
   width: 100%;
+  padding: 20px;
 `;
 
 const Bar = styled.div`

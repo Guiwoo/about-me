@@ -10,9 +10,11 @@ const PersonalBox = styled(Box)`
   animation-duration: 1s;
   @media ${device.mobile} {
     width: 100%;
+    padding: 0px 40px;
   }
   @media ${device.laptop} {
     width: 30vw;
+    padding: 0 20px;
   }
 
   @media ${device.desktop} {

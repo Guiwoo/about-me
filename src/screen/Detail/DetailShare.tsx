@@ -53,6 +53,7 @@ export const MainBox = styled.div`
   }
   @media ${device.laptop} {
     flex-direction: row;
+    /* padding: 70px 0px; */
   }
 
   @media ${device.desktop} {
@@ -73,7 +74,7 @@ const ItemBox = styled.div`
 `;
 export const Description = styled.div`
   font-size: 20px;
-  margin: 10px 0px;
+  padding: 2rem 0rem;
 `;
 
 export const ItemBoxLayout: React.FC<ChildrenProp> = ({text, children}) => {
@@ -107,9 +108,6 @@ export const Demo = styled.a`
 `;
 /** Project links for big screen */
 export const NavForProject = styled.div`
-  position: absolute;
-  bottom: -10%;
-  right: 0;
   cursor: pointer;
   &:hover {
     color: orange;
@@ -126,10 +124,7 @@ export const NavForProject = styled.div`
   }
 `;
 
-export const NavForProjectLeft = styled(NavForProject)`
-  bottom: -4%;
-  left: 5%;
-`;
+export const NavForProjectLeft = styled(NavForProject)``;
 
 /** Project links for mobile*/
 export const FixedMobileNav = styled(MobileNav)`
@@ -144,24 +139,36 @@ type VideoProps = {
 const SVideoSection = styled.div`
   width: 100%;
   height: 70%;
-  background: url(${aws_address.img.mac});
-  background-position: center;
-  background-repeat: none;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media ${device.laptop} {
+    width: 100%;
+    height: 55%;
+    background: url(${aws_address.img.mac});
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+  }
+  @media ${device.desktop} {
+    width: 100%;
+    height: 55%;
+    background: url(${aws_address.img.mac});
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+  }
 `;
 
 const MacBookImg = styled.div``;
 
 const VideoBox = styled.video`
-  width: 85%;
+  width: 90%;
   border-radius: 5px;
-  transform: translateX(9%);
+  transform: translateX(4%);
   @media ${device.laptop} {
-    width: 75%;
-    transform: translateX(17%);
+    width: 65%;
+    transform: translateX(27%);
   }
   @media ${device.desktop} {
   }
@@ -214,11 +221,12 @@ const ImgAnimation = styled.div`
   }
 `;
 
-const AnimationImg = styled(Img)`
-  width: 220px;
-  height: 350px;
-  border-radius: 5px;
-  margin-top: 10px;
+const AnimationImg = styled.div<{hoit: string}>`
+  width: 15vw;
+  height: 110%;
+  background-image: url(${(props) => props.hoit});
+  background-size: cover;
+  background-position: center;
 `;
 
 export const PhotoText = styled.div`
@@ -229,6 +237,14 @@ export const PhotoText = styled.div`
 type ImgTextCards = {
   cards: string[];
 };
+
+export const FixedNav = styled.div`
+  min-width: 95%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  bottom: -3rem;
+`;
 
 export const ImgText: React.FC<ImgTextCards> = ({cards}) => {
   const [num, setNum] = React.useState(0);
@@ -242,7 +258,7 @@ export const ImgText: React.FC<ImgTextCards> = ({cards}) => {
   }, []);
   return (
     <ImgAnimation>
-      <AnimationImg src={cards[num % cards.length]} />
+      <AnimationImg hoit={cards[num % cards.length]} />
     </ImgAnimation>
   );
 };
@@ -255,6 +271,7 @@ export const TheBox = styled.div`
   @media ${device.mobile} {
   }
   @media ${device.laptop} {
+    min-height: 80%;
     justify-content: space-around;
   }
 

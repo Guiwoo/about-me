@@ -13,7 +13,6 @@ const SNavigation = styled.div`
     position: fixed;
     top: 0;
     right: 10%;
-    padding: 20px;
     z-index: 10;
   }
   @media ${device.laptop} {
@@ -30,6 +29,8 @@ const BurgerBox = styled.div`
   background-color: #44616c;
   padding: 5px;
   border-radius: 5px;
+  position: relative;
+  top: 3vh;
   &:hover {
     color: orange;
     background-color: #393e3f;
@@ -45,9 +46,8 @@ const Menuanimation = keyframes`
 `;
 
 const MenuBox = styled.div`
-  width: 20%;
-  height: 17%;
-  padding: 0px 5px;
+  padding: 20px 5px;
+  height: 20vh;
   box-shadow: 2px 2px 5px white;
   border-radius: 5px;
   background: linear-gradient(

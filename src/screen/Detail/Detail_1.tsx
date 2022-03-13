@@ -1,6 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router";
-import { aws_address } from "../../utils/aws";
+import {useNavigate} from "react-router";
+import styled from "styled-components";
+import {aws_address} from "../../utils/aws";
 import routeName from "../../utils/routeName";
 import {
   DetailLayout,
@@ -17,6 +18,7 @@ import {
   NavForProject,
   NavForProjectLeft,
   IisEnProp,
+  FixedNav,
 } from "./DetailShare";
 
 const cards = [
@@ -26,7 +28,7 @@ const cards = [
   aws_address.kakao.four,
 ];
 
-const Detail_1: React.FC<IisEnProp> = ({ isEn }) => {
+const Detail_1: React.FC<IisEnProp> = ({isEn}) => {
   const navigate = useNavigate();
   return (
     <DetailLayout text={isEn ? "Kakao Clone Project" : "Kakao 클론 프로젝트"}>
@@ -53,16 +55,13 @@ const Detail_1: React.FC<IisEnProp> = ({ isEn }) => {
             </Demo>
           </GoThere>
           <Description>{isEn ? "• Preview" : "• 미리보기"}</Description>
-          <NavForProjectLeft onClick={() => navigate(routeName.projects)}>
-            ✈️ Projects
-          </NavForProjectLeft>
           <VideoSection videoUrl={aws_address.kakao.video} />
         </ItemBoxLayout>
         <ItemBoxLayout text={isEn ? "• Details" : "• 세부사항"}>
           <TheBox>
             <ImgText cards={cards} />
             <div
-              style={{ display: "flex", alignItems: "end", marginLeft: "15px" }}
+              style={{display: "flex", alignItems: "end", marginLeft: "15px"}}
             >
               <div>
                 <PhotoText>• {isEn ? "Learn" : "학습"} Html & Css</PhotoText>
@@ -80,12 +79,17 @@ const Detail_1: React.FC<IisEnProp> = ({ isEn }) => {
             <FixedMobileNav onClick={() => navigate(routeName.second)}>
               Project 2 ✈️
             </FixedMobileNav>
-            <NavForProject onClick={() => navigate(routeName.second)}>
-              Project 2 ✈️
-            </NavForProject>
           </TheBox>
         </ItemBoxLayout>
       </MainBox>
+      <FixedNav>
+        <NavForProjectLeft onClick={() => navigate(routeName.projects)}>
+          ✈️ Projects
+        </NavForProjectLeft>
+        <NavForProject onClick={() => navigate(routeName.second)}>
+          Project 2 ✈️
+        </NavForProject>
+      </FixedNav>
     </DetailLayout>
   );
 };

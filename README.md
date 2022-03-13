@@ -4,6 +4,7 @@
 
 [x] - mobile burger menu fixed(08.Feb)
 [x] - Recoil for light dark ,and language mode
+[x] - Mobile Screen remove things and check height
 [] - Need to fix Light Color
 [] - frammer motion for the main page and last page
 

@@ -1,7 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router";
+import {useNavigate} from "react-router";
 import styled from "styled-components";
-import { aws_address } from "../../utils/aws";
+import {aws_address} from "../../utils/aws";
 import routeName from "../../utils/routeName";
 import {
   DetailLayout,
@@ -17,6 +17,7 @@ import {
   NavForProjectLeft,
   NavForProject,
   IisEnProp,
+  FixedNav,
 } from "./DetailShare";
 
 const cards = [
@@ -28,15 +29,11 @@ const cards = [
 ];
 
 const VideoBox = styled.video`
-  border-radius: 50px;
-  height: 320px;
-  width: 380px;
-`;
-const NavForProjectLeft2 = styled(NavForProjectLeft)`
-  bottom: -3%;
+  max-height: 220px;
+  display: flex;
 `;
 
-const Detail_5: React.FC<IisEnProp> = ({ isEn }) => {
+const Detail_5: React.FC<IisEnProp> = ({isEn}) => {
   const navigate = useNavigate();
   return (
     <DetailLayout text={"Movie App Mobie"}>
@@ -54,16 +51,15 @@ const Detail_5: React.FC<IisEnProp> = ({ isEn }) => {
             </Demo>
           </GoThere>
           <Description>{isEn ? "• Preview" : "• 미리보기"}</Description>
-          <NavForProjectLeft2 onClick={() => navigate(routeName.fourth)}>
-            ✈️ Project 4
-          </NavForProjectLeft2>
-          <VideoBox src={aws_address.Mmovie.video} autoPlay loop muted />
+          <div style={{display: "flex", justifyContent: "center"}}>
+            <VideoBox src={aws_address.Mmovie.video} autoPlay loop muted />
+          </div>
         </ItemBoxLayout>
         <ItemBoxLayout text={isEn ? "• Details" : "• 세부사항"}>
           <TheBox>
             <ImgText cards={cards} />
             <div
-              style={{ display: "flex", alignItems: "end", marginLeft: "15px" }}
+              style={{display: "flex", alignItems: "end", marginLeft: "15px"}}
             >
               <div>
                 <PhotoText>• Expo React</PhotoText>
@@ -76,12 +72,17 @@ const Detail_5: React.FC<IisEnProp> = ({ isEn }) => {
             <FixedMobileNav onClick={() => navigate(routeName.sixth)}>
               Project 6 ✈️
             </FixedMobileNav>
-            <NavForProject onClick={() => navigate(routeName.sixth)}>
-              Project 6 ✈️
-            </NavForProject>
           </TheBox>
         </ItemBoxLayout>
       </MainBox>
+      <FixedNav>
+        <NavForProjectLeft onClick={() => navigate(routeName.fourth)}>
+          ✈️ Projects 4
+        </NavForProjectLeft>
+        <NavForProject onClick={() => navigate(routeName.sixth)}>
+          Project 6 ✈️
+        </NavForProject>
+      </FixedNav>
     </DetailLayout>
   );
 };

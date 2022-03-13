@@ -1,12 +1,12 @@
-import { faMoon, faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext } from "react";
-import { useLocation } from "react-router";
-import styled, { keyframes } from "styled-components";
-import { device } from "../../utils/resize";
+import {faMoon, faStar} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import React, {useContext} from "react";
+import {useLocation} from "react-router";
+import styled, {keyframes} from "styled-components";
+import {device} from "../../utils/resize";
 import routeName from "../../utils/routeName";
-import { LangContext } from "../../utils/toggleLang";
-import { LinkToProject } from "./ProjectShare";
+import {LangContext} from "../../utils/toggleLang";
+import {LinkToProject} from "./ProjectShare";
 
 type isOpenProps = {
   readonly isopen: string;
@@ -16,6 +16,7 @@ const Container = styled.div`
   padding: 20px;
   justify-content: flex-end;
   align-items: center;
+  font-size: 10px;
   @media ${device.mobile} {
     display: none;
   }
@@ -42,7 +43,7 @@ const StarAnimation = keyframes`
 
 const MoonMove = keyframes`
     0%{
-      transform:translateX(560px);
+      transform:translateX(400px);
       color:yellow
     }100%{
       color:red
@@ -118,9 +119,9 @@ const SevenMenu = styled(FirstMenu)`
 
 const HeaderMenu = (props: any) => {
   const [show, setShow] = React.useState(false);
-  const { isopen, ...rest } = props;
-  const { pathname } = useLocation();
-  const { isEn } = useContext(LangContext);
+  const {isopen, ...rest} = props;
+  const {pathname} = useLocation();
+  const {isEn} = useContext(LangContext);
   return (
     <>
       <Container {...rest}>
@@ -133,7 +134,7 @@ const HeaderMenu = (props: any) => {
           <Moon isopen={show.toString()} icon={faStar} color="#ffdd59" />
         </MenuBtn>
         {show ? (
-          <div onClick={() => setShow(false)} style={{ display: "flex" }}>
+          <div onClick={() => setShow(false)} style={{display: "flex"}}>
             <FirstMenu>
               <LinkToProject
                 here={pathname === routeName.first}

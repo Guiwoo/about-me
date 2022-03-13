@@ -85,15 +85,9 @@ const Nametag = styled.div`
 `;
 
 const ContactBoxes = styled.div`
-  @media ${device.mobile} {
-    transform: translateY(0px);
-  }
   @media ${device.laptop} {
-    transform: translateY(100px);
   }
-
   @media ${device.desktop} {
-    transform: translateY(150px);
   }
 `;
 
