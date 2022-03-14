@@ -1,18 +1,19 @@
 import { atom } from "recoil";
 
 const getDefatulDark = () => {
-    localStorage.setItem("Dark", "true")
     const amIDark = localStorage.getItem("DARK")
-    console.log(amIDark)
-    if (amIDark) {
-        return false
-    } else {
+    if (!amIDark) {
+        localStorage.setItem("DARK", "true")
+    }
+    if (amIDark === "true") {
         return true
+    } else {
+        return false
     }
 }
-// getDefatulDark()
+
 
 export const darkState = atom({
     key: "isDark",
-    default: false
+    default: getDefatulDark()
 })

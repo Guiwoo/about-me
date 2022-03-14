@@ -145,7 +145,7 @@ const SVideoSection = styled.div`
   align-items: center;
   @media ${device.laptop} {
     width: 100%;
-    height: 45%;
+    height: 60%;
     background: url(${aws_address.img.mac});
     background-position: center;
     background-repeat: none;
@@ -244,7 +244,7 @@ export const FixedNav = styled.div`
   position: absolute;
   display: flex;
   justify-content: space-between;
-  bottom: -3rem;
+  bottom: -5rem;
 `;
 
 export const ImgText: React.FC<ImgTextCards> = ({cards}) => {

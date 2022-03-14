@@ -155,10 +155,10 @@ const LeftMain = () => {
   };
   const toggleDark = () => {
     const amIdark = localStorage.getItem("DARK");
-    if (!amIdark) {
-      localStorage.setItem("DARK", (!isDark).toString());
+    if (amIdark === "true") {
+      localStorage.setItem("DARK", "false");
     } else {
-      console.log(localStorage.getItem("DARK"));
+      localStorage.setItem("DARK", "true");
     }
     return setIsDark(!isDark);
   };

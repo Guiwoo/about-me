@@ -75,7 +75,7 @@ const Detail_5: React.FC<IisEnProp> = ({isEn}) => {
           </TheBox>
         </ItemBoxLayout>
       </MainBox>
-      <FixedNav style={{bottom: "-20px"}}>
+      <FixedNav style={{bottom: "-5rem"}}>
         <NavForProjectLeft onClick={() => navigate(routeName.fourth)}>
           ✈️ Projects 4
         </NavForProjectLeft>
