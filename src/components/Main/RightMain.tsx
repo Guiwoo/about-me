@@ -14,6 +14,7 @@ import Detail5 from "../../screen/Detail/Detail_5";
 import Detail6 from "../../screen/Detail/Detail_6";
 import Detail7 from "../../screen/Detail/Detail_7";
 import {LangContext} from "../../utils/toggleLang";
+import RenewPage from "../../screen/Close";
 
 const NoMatch = () => {
   const navigate = useNavigate();
@@ -29,8 +30,9 @@ const RightMain = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<MainLayOut />}>
-          <Route path="/" element={<Home />} />
+        <Route path="/" element={<RenewPage />} />
+        <Route path="/old" element={<MainLayOut />}>
+          <Route path="/old" element={<Home />} />
           <Route path="me" element={<AboutMe />} />
           <Route path="projects/" element={<ProjectsLayout />}>
             <Route index element={<ProjectHome />} />
