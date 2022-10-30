@@ -30,9 +30,8 @@ const RightMain = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<RenewPage />} />
-        <Route path="/old" element={<MainLayOut />}>
-          <Route path="/old" element={<Home />} />
+        <Route path="/" element={<MainLayOut />}>
+          <Route path="/" element={<Home />} />
           <Route path="me" element={<AboutMe />} />
           <Route path="projects/" element={<ProjectsLayout />}>
             <Route index element={<ProjectHome />} />
